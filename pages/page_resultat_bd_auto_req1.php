@@ -36,9 +36,9 @@ echo '<br />';
     		<div id="titre_left">
       			
 	      		<ul id="nav-mobile" class="left show-on-large">
-	        		<li><a href="http://localhost/stapa3/pages/page_admin.html">Administration</a></li>
-	        		<li><a href="http://localhost/stapa3/pages/page_gestion.html">Supervision</a></li>
-	        		<li><a href="http://localhost/stapa3/pages/page2.html">Opération de saisie</a></li>
+	        		<li><a href="http://localhost/stapa3/projet2/pages/page_admin.html">Administration</a></li>
+	        		<li><a href="http://localhost/stapa3/projet2/pages/page_gestion.html">Supervision</a></li>
+	        		<li><a href="http://localhost/stapa3/projet2/pages/page2.html">Opération de saisie</a></li>
 	        		<!--<li><a href="localhost/stapa2/index.html"><i class="material-icons">exit_to_app</i></a></li>-->
 	      		</ul>
 	      		<a href="#" class="brand-logo center">STAPA3 Bus</a>
@@ -115,7 +115,7 @@ echo '<br />';
 
 		?>
 		<p> <!-- il faudra revenir au user menu --> 
-			<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/pages/page2.php'">Revenir à la page requête</button>
+			<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page requête</button>
 		</p>
 
 		

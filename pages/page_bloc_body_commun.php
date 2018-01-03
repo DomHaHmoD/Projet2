@@ -70,7 +70,8 @@ else {
 	// connexion bd
 	try
 		{
-			$bdd = new PDO('mysql:host=localhost;dbname=stapa;charset=utf8', 'root', 'root1234');
+			$bdd = new PDO('mysql:host=' .DB_HOST. ';dbname=' .DB_NAME. ';charset=utf8', DB_USER, DB_PASS);
+			/*$bdd = new PDO('mysql:host=localhost;dbname=stapa;charset=utf8', 'user', 'password');*/
 		}
 		catch (Exception $e)
 		{
