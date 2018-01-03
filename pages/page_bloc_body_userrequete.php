@@ -11,13 +11,13 @@
 		<form id="form_requete" action="Immo2000.php" method="post">
 			
 			<p>
-				<button type="button" class="btn btn-primary btn-lg" id="at1" value="" name="page_at1" action="page_at1"  ONCLICK="window.location.href='http://localhost/stapa3php/pages/page_resultat_bd_auto_req1.php'" /><h6 class="left-align">Les propriétés des usagers</h6></button>
+				<button type="button" class="btn btn-primary btn-lg" id="at1" value="" name="page_at1" action="page_at1"  ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_resultat_bd_auto_req1.php'" /><h6 class="left-align">Les propriétés des usagers</h6></button>
 			</p>
 			<p>
-				<button type="button" class="btn btn-primary btn-lg" id="at2" value="" name="page_at2" action="page_at2"  ONCLICK="window.location.href='http://localhost/stapa3php/pages/page_resultat_bd_auto_req2.php'" /><h6 class="left-align">Le nombre d’usagers mineurs ayant un abonnement en cours de validité</h6></button>
+				<button type="button" class="btn btn-primary btn-lg" id="at2" value="" name="page_at2" action="page_at2"  ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_resultat_bd_auto_req2.php'" /><h6 class="left-align">Le nombre d’usagers mineurs ayant un abonnement en cours de validité</h6></button>
 			</p>
 			<p>
-				<button type="button" class="btn btn-primary btn-lg" id="at3" value="" name="page_at3" action="page_at3"  ONCLICK="window.location.href='http://localhost/stapa3php/pages/page_resultat_bd_auto_req3.php'" /><h6 class="left-align">Les usagers ayant des abonnements en cours de validité</h6></button>
+				<button type="button" class="btn btn-primary btn-lg" id="at3" value="" name="page_at3" action="page_at3"  ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_resultat_bd_auto_req3.php'" /><h6 class="left-align">Les usagers ayant des abonnements en cours de validité</h6></button>
 			</p>
 			<p>
 				<button type="button" class="btn btn-primary btn-lg" id="at4" value="" name="page_at4" action="page_at4"  ONCLICK="window.location.href='http://localhost/stapa/pages/page_at1'" /><h6 class="left-align">Les usagers ayant des abonnements en cours de validité et classée par commune</h6></button>
