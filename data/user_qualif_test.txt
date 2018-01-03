@@ -1,0 +1,3 @@
+'admin','dominique.hathi@wanadoo.fr'
+'gestion','dominique.hathi@gmail.fr'
+'user','dominique.hathi@gmail.com'

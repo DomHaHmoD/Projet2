@@ -1,0 +1,18 @@
+# on precise le type MIME
+
+
+# creer en htaccess.txt ensuite copier sur le suerver en .htaccess
+
+# commentaire media
+AddType video/mp4 .mp4
+AddType image/png .png
+AddType image/jpg .jpg
+
+#appli
+AddType application/x-httpd-php .html
+
+# CSS
+AddType text/css .css
+
+# HTML
+AddType text/html .html

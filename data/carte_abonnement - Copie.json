@@ -1,0 +1,9 @@
+[
+{"type":"header","version":"4.7.4","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"stapa"},
+{"type":"table","name":"carte_abonnement","database":"stapa","data":
+[
+{"POUR L ANNEE":"2017","MINEURS AVEC ABO VALIDE":"2"}
+]
+}
+]

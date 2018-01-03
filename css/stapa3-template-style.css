@@ -1,0 +1,65 @@
+body {
+	font-family: Arial;
+	/*background-color: #657bab;*/
+	/*background-image: url('images/monimage4.png');*/
+}
+
+/* ----------- debut bloc titre - commun à toutes les pages ----------- */
+#row_bloc_titre {
+	/*background-color: blue;*/
+}
+
+#titre_left {
+	height: 100px;
+	padding-left: 50px;
+	/*background-color: blue;*/
+}
+
+#titre_right {
+	height: 100px;
+	padding-top: 20px;
+	/*background-color: green;*/
+	/*background-color: red;*/
+}
+
+#button_exit {
+	display: block;
+   	margin : auto;
+}
+/* ----------- fin bloc titre - commun à toutes les pages ----------- */
+
+/* login - page index */
+#login {
+	margin-left: 50px;
+	width: 500px;
+}
+
+
+
+/* bloc_requete - page 2 */
+#bloc_requete {
+	margin-left: 50px;
+	width: 800px;
+}
+
+/* --------------------- debut page at1 ----------------------------- */
+	/* bloc_config - page at1 */
+#bloc_config {
+	margin-left: 50px;
+	width: 800px;
+}
+
+	/* bloc_config - page at1 = dropdown */
+input[type=checkbox] {
+    display: none;
+}
+
+ul {
+    display: none;
+}
+
+input[type=checkbox]:checked ~ ul {
+    display: block
+}
+/* --------------------- fin page at1 ------------------------------------ */
+
