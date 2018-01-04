@@ -101,18 +101,18 @@ else {
 			{
 				if (array_search($password_averifier, $value))
 				{
-					echo 'login = '.$value['LOGIN'];
+					/*echo 'login = '.$value['LOGIN'];
 					echo 'password = '.$value['PASSWORD'];
 					echo 'qualification = '.$value['QUALIFICATION'];
-					echo '<br />';
+					echo '<br />';*/
 					//$qualification = $value['QUALIFICATION'];
 					//$value_qualification = $value['QUALIFICATION'];
 					$_SESSION['qualification'] = $value['QUALIFICATION'];
 
-					echo '$value["QUALIFICATION"] = '.$value['QUALIFICATION'];
+					/*echo '$value["QUALIFICATION"] = '.$value['QUALIFICATION'];
 					echo '<br />';
 					echo '$_SESSION["QUALIFICATION"] = '.$_SESSION['QUALIFICATION'];
-					echo '<br />';
+					echo '<br />';*/
 				}
 			}
 		}
