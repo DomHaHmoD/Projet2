@@ -94,7 +94,7 @@ require('../config.inc.php');
 			    </tbody>';
 		}*/
 
-		/*echo '<pre>';
+			/*echo '<pre>';
 			print_r($reponse->fetchAll(PDO::FETCH_ASSOC));
 			die();*/
 
@@ -115,6 +115,7 @@ require('../config.inc.php');
 	    			foreach ($valArray as $key => $value) {
 			            echo '<td>'.$value.'</td>';			       
 	    			}
+	    			echo '<td><a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">mode_edit</i></a></td>';
 		          	echo '</tr>';
 				}
 			echo'</tbody>';

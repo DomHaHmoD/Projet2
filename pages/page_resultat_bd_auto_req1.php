@@ -31,7 +31,7 @@ echo '<br />';
 
 <body>
 	<!-- bloc titre -->
-	<nav id="row_bloc_titre">
+	<!--<nav id="row_bloc_titre">
     	<div class="nav-wrapper teal lighten">
     		<div id="titre_left">
       			
@@ -43,76 +43,24 @@ echo '<br />';
 	      		<a href="#" class="brand-logo center">STAPA3 Bus</a>
 	      		<ul id="nav-mobile" class="right show-on-large">	
 	      			<li><a><?php echo htmlspecialchars($_SESSION['email']); ?></a></li>	
-	      			<!--<li><a><?php /*echo htmlspecialchars($_COOKIE['email']);*/ ?></a></li>
-	      			<li><a>dominique.hathi@gmail.fr</a></li>-->
 	        		<li><a href="../index.php"><i class="material-icons btn-right">exit_to_app</i></a></li>
 	      		</ul>
 	      		</a>
       		</div>
     	</div>
-  	</nav>
+  	</nav>-->
+  	<?php
+  	require('page_bloc_titre_other.php');
+  	?>
 
 	<fieldset id="bloc_config">
-		<legend id="legend_other_page"><h4>STAPA User Résultat</h4></legend>
-
-		<p>voici le résultat pour :
-		<!-- en suivant nous placerons le nom de la requette en variable -->
-		 Les propriétés des usagers</p>
-		
+		<legend id="legend_other_page"><h4>STAPA Utilsateur</h4></legend>
 
 		<!-- le tableau de résultat sera ici -->
-
 		<?php 
-		
-		// ouverture de la bd
-		try
-		{
-			$bdd = new PDO('mysql:host=' .DB_HOST. ';dbname=' .DB_NAME. ';charset=utf8', $_SESSION["email"], $_SESSION["password"]);
-		}
-		catch (Exception $e)
-		{
-		        die('Erreur : ' . $e->getMessage());
-		}
-
-		// envoie de la requete et elle est placée ds $reponse
-		$reponse = $bdd->query("/*Afficher la liste des selections suivantes*/ SELECT   personnes.prenom      AS 'PRENOM' ,personnes.nom      AS 'NOM' ,date_format(personnes.naissance ,'%d/%m/%Y') AS 'DATE DE NAISSANCE'   /* fonction 'date_format()' utilisée pour changer la forme de la date en jj/mm/aaa */ ,concat( adresse.num_rue    ,' ',        /* fonction 'concat()' utilisée pour rassembler differentes données dans une seule colonne */    adresse.rue     ,'   ',    ifnull(adresse.residence, ''),         /* fonction 'ifnull()' utilisée pour remplacer les valeurs 'null' par la valeur souhaitée */    ifnull(adresse.batiment,  '')     )          AS 'ADRESSE' ,ville_cp.nom_commune    AS 'VILLE' ,ville_cp.code_post     AS 'CODE POSTAL' ,telephone.num_telephone    AS 'NUMERO DE TELEPHONE' ,type_telephone.denom_typ_tel   AS 'TYPE DE TELEPHONE' 
- 
-			/*venant de la table personnes: */ FROM  personnes      /*jointe avec les tables suivantes*/  INNER JOIN joindre ON personnes.id_personne = joindre.id_personne  INNER JOIN telephone ON joindre.id_tel = telephone.id_tel  INNER JOIN type_telephone ON telephone.id_type_tel = type_telephone.id_type_tel  INNER JOIN habite ON personnes.id_personne = habite.id_personne  INNER JOIN adresse ON habite.id_adresse = adresse.id_adresse  INNER JOIN ville_cp ON adresse.id_ville = ville_cp.id_ville       /* DESACTIVER LES BALISES POUR CHERCHER UNE PERSONNE PRECISE */ # where nom =  'Bouzigon' # and prenom = 'Matthieu' 
-			 
-			/*regroupe les lignes qui ont la même valeur*/ # GROUP BY nom 
-			 
-			/*Classe le résultat par ordre croissant de la valeur*/ ORDER BY personnes.nom ASC
-			;");
-
-			/*echo '<pre>';
-			print_r($reponse->fetchAll(PDO::FETCH_ASSOC));
-			die();*/
-
-			$line = $reponse->fetchAll(PDO::FETCH_ASSOC);
-
-			echo '<table class="striped">
-	    		<thead>';
-
-	        	foreach ($line[0] as $key => $value) {
-	        		echo '<th>'.$key.'</th>';
-	        	}
-
-		    echo '</thead>';
-		       
-	    	echo '<tbody>';
-	    		foreach ($line as $key => $valArray) {
-	    			echo '<tr>';
-	    			foreach ($valArray as $key => $value) {
-			            echo '<td>'.$value.'</td>';			       
-	    			}
-		          	echo '</tr>';
-				}
-			echo'</tbody>';
-			
-
-			$reponse->closeCursor();
-
+		require('code_requete.php');
 		?>
+		
 		<p> <!-- il faudra revenir au user menu --> 
 			<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page requête</button>
 		</p>

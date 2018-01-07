@@ -16,9 +16,11 @@ require('cookie_modify.php');
 	        		<li>
 						<a class="waves-effect waves-light btn-flat disabled" href="http://localhost/stapa3/pages/page_admin.php">Administrateur</a>
 					</li>
-	        		<li><a href="http://localhost/stapa3/pages/page_gestion.php">Gestionnaire</a></li>
-	        		<li><a href="http://localhost/stapa3/pages/page_bloc_body_userrequete.php">Utilisateur</a></li>
-	        		<!--<li><a href="localhost/stapa2/index.html"><i class="material-icons">exit_to_app</i></a></li>-->
+	        		<li>
+	        			<a href="http://localhost/stapa3/pages/page_gestion.php">Gestionnaire</a></li>
+	        		<li>
+	        			<a href="http://localhost/stapa3/pages/page_bloc_body_userrequete.php">Utilisateur</a>
+	        		</li>
 	      		</ul>
 	      		<a href="#" class="brand-logo center">STAPA3 Bus</a>
 	      		<ul id="nav-mobile" class="right show-on-large">
