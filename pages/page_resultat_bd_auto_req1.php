@@ -31,24 +31,6 @@ echo '<br />';
 
 <body>
 	<!-- bloc titre -->
-	<!--<nav id="row_bloc_titre">
-    	<div class="nav-wrapper teal lighten">
-    		<div id="titre_left">
-      			
-	      		<ul id="nav-mobile" class="left show-on-large">
-	        		<li><a href="http://localhost/stapa3/pages/page_admin.php">Administrateur</a></li>
-	        		<li><a href="http://localhost/stapa3/pages/page_gestion.php">Gestionnaire</a></li>
-	        		<li><a href="http://localhost/stapa3/pages/page_bloc_body_userrequete.php">Utilisateur</a></li>
-	      		</ul>
-	      		<a href="#" class="brand-logo center">STAPA3 Bus</a>
-	      		<ul id="nav-mobile" class="right show-on-large">	
-	      			<li><a><?php echo htmlspecialchars($_SESSION['email']); ?></a></li>	
-	        		<li><a href="../index.php"><i class="material-icons btn-right">exit_to_app</i></a></li>
-	      		</ul>
-	      		</a>
-      		</div>
-    	</div>
-  	</nav>-->
   	<?php
   	require('page_bloc_titre_other.php');
   	?>

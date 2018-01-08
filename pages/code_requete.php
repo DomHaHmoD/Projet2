@@ -58,12 +58,18 @@
 
 		
 		foreach ($requete[0] as $key => $value) {
-
+			$reponse = $bdd->query($value);
 		}
 
 		// la vrai requete 
-		$reponse = $bdd->query($value);
+		//$reponse = $bdd->query($value);
 		$line = $reponse->fetchAll(PDO::FETCH_ASSOC);
+
+		/*print_r($reponse);
+		echo "<br/>";
+		echo "-------";
+		print_r($line);
+		die();*/
 
 		// affichage du head du tableau
 			echo '<table class="striped">
