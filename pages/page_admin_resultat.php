@@ -1,7 +1,3 @@
-<!-- fichier page admin
-	bloc commun -->
-
-<!-- start de la seesion -->
 <?php 
 // appel config.inc.php
 session_start();
@@ -12,19 +8,10 @@ echo '<br />';
 
 ?>
 
-<!-- le html -->
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Ma super page PHP</title>
-    </head>
-    <body>
-    
-    <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<title>STAPA3</title>
+	<title>STAPA</title>
 
 	<!-- meta -->
 	<meta charset="utf-8">
@@ -35,26 +22,35 @@ echo '<br />';
 	<meta name="copyright" content="STAPA Bordeaux">
 	<meta name="google" content="translate">
 	
-	<link href="../../css/stapa3-template-style.css" rel="stylesheet" type="text/css">
-	<link href="../../images/bus.jpg" rel="shortcut icon" type="image/jpg">
+	<link href="../css/stapa3-template-style.css" rel="stylesheet" type="text/css">
+	<link href="../images/bus.jpg" rel="shortcut icon" type="image/jpg">
 	<!-- add bibliotheque Materialize -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-	<!-- test de cookie -->
+
+
+
+<!-- bloc titre -->
+  	<?php
+  	require('page_bloc_titre_other.php');
+  	?>
 
 	<fieldset id="bloc_config">
-		<legend id="legend_other_page"><h4>STAPA Administrateur</h4></legend>
-	
+		<legend id="legend_other_page"><h4>STAPA administrateur</h4></legend>
 
-	<!-- bloc titre commun à toutes les pages -->
-	<?php include("./page_bloc_titre_other.php"); ?>
+		<!-- le tableau de résultat sera ici -->
+		<?php 
+		require('code_admin.php');
+		?>
+		
+		<p> <!-- il faudra revenir au user menu --> 
+			<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_adminold.php'">Revenir à la page requête</button>
+		</p>
 
-    <!-- bloc admin commun -->
-	<?php include("page_bloc_body_commun.php"); ?>
-	
+		
 	</fieldset>
 </body>
 </html>

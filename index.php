@@ -3,7 +3,7 @@
 
 <!-- start de la session : appel seesion_start.php-->
 <?php 
-if ((isset($_CCOKIE['email']))&(isset($_COOKIE['password']))) {
+if ((isset($_COOKIE['email']))&(isset($_COOKIE['password']))) {
 require('pages/session_destroy.php');
 }
 require('pages/session_start.php');

@@ -68,6 +68,7 @@
 		/*print_r($reponse);
 		echo "<br/>";
 		echo "-------";
+		print_r($reponse->fetchAll(PDO::FETCH_ASSOC));
 		print_r($line);
 		die();*/
 

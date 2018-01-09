@@ -3,7 +3,7 @@
 	User Requete -->
 
 <fieldset id="bloc_requete">
-		<legend id="legend_other_page"><h4>STAPA3 User Requete</h4></legend>
+		<legend id="legend_other_page"><h4>STAPA3 Utilisateur</h4></legend>
 		
 		<label for="action_type"><h5>Quel souhaitez vous faire ?</h5></label>
 		
@@ -29,10 +29,10 @@
 				<button type="submit" class="btn btn-primary btn-lg" id="6" value="6" name="requete6" action="6"  ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_resultat_bd_auto_req1.php'" /><h6 class="left-align">Le chiffre d’affaires réalisé sur l’année en cours pour chacun des types d’abonnements</h6></button>
 			</p>
 			<p>
-				<button type="submit" class="btn btn-primary btn-lg" id="7" value="7" name="requete7" action="7"  ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_resultat_bd_auto_req1.php'" /><h6 class="left-align">La liste des usagers ayant des abonnements en cours de validité et classée par commune</h6></button>
+				<button type="submit" class="btn btn-primary btn-lg" id="7" value="7" name="requete7" action="7"  ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_resultat_bd_auto_req1.php'" /><h6 class="left-align">Les informations du représentant légal d’un usager donné</h6></button>	
 			</p>
 			<p>
-				<button type="submit" class="btn btn-primary btn-lg" id="8" value="8" name="requete8" action="8"  ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_resultat_bd_auto_req1.php'" /><h6 class="left-align">Le nombre d’abonnements en cours de validité pour chacun des types d’abonnements</h6></button>
+				<button type="submit" class="btn btn-primary btn-lg" id="8" value="8" name="requete8" action="8"  ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_resultat_bd_auto_req1.php'" /><h6 class="left-align">Le nombre d’usagers par année et par établissement scolaire</h6></button>
 			</p>
 			
 		</form>	

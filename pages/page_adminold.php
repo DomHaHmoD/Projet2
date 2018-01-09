@@ -28,46 +28,36 @@
 		<label for="action_type"><h5>Merci de saisir les informations de l'utilisateur/gestionnaire</h5></label>
 		
 		<!-- le .php est le lien avec le fichier php -->
-		<form id="form1" action="Immo2000.php" method="post">
+		<form id="form1" action="page_admin_resultat.php" method="post">
 			<p>
 				<!--<div class="row">-->
-			    <form class="col s12">
+			    <!--<form class="col s12">-->
 			    	<div class="row">
-				     	<div class="input-field col s6">
+				     	<div class="input-field col s12">
 					        <i class="material-icons prefix">account_circle</i>
-					        <input id="nom" type="text" class="validate">
-					        <label for="nom">Nom de l'utilisateur/gestionnaire</label>
+					        <input id="nom_user" type="text" name="nom_user" class="validate">
+					        <label for="nom_user">Nom de l'utilisateur/gestionnaire</label>
 					  	</div>
-				        <div class="input-field col s6">
-				          <input id="prenom" type="text" class="validate">
-				          <label for="prenom">Prénom de l'utilisateur/gestionnaire</label>
-				        </div>
+				        
 					</div>     
 			       	<div class="row">
 				        <div class="input-field col s12">
-				          	<input id="login_client" type="text" class="validate">
-				          	<label for="login_client">login</label>
+				          	<input id="login_user" type="text" name="login_user" class="validate">
+				          	<label for="login_user">login</label>
 				        </div>
 				    </div>
-				   	<div class="row">
-				        <div class="input-field col s12">
-				          <input id="password" type="password" class="validate">
-				          <label for="password">Password</label>
-				        </div>
-				    </div>
+				   	
 				    <div class="row">
 				        <div class="input-field col s12">
-				          	<input id="email" type="email" class="validate">
-				          	<label for="email">Email</label>
+				          	<input id="email" type="email" name="email_user" class="validate">
+				          	<label for="email_user">Email</label>
 				        </div>
 				    </div>
-			    </form>
-			  
+			    <!--</form>-->
 			</p>
 			
 			<p>
-				<button class="btn waves-effect waves-light" type="submit" name="action">Valider
-    			
+				<button class="btn waves-effect waves-light" type="submit" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_resultat.php'" name="action">Valider
   				</button>
 			</p>
 			

@@ -1,0 +1,45 @@
+
+
+/*Afficher la liste des selections suivantes*/ SELECT   personnes.prenom      AS 'PRENOM' ,personnes.nom      AS 'NOM' ,date_format(personnes.naissance ,'%d/%m/%Y') AS 'DATE DE NAISSANCE'   /* fonction 'date_format()' utilisée pour changer la forme de la date en jj/mm/aaa */ ,concat( adresse.num_rue    ,' ',        /* fonction 'concat()' utilisée pour rassembler differentes données dans une seule colonne */    adresse.rue     ,'   ',    ifnull(adresse.residence, ''),         /* fonction 'ifnull()' utilisée pour remplacer les valeurs 'null' par la valeur souhaitée */    ifnull(adresse.batiment,  '')     )          AS 'ADRESSE' ,ville_cp.nom_commune    AS 'VILLE' ,ville_cp.code_post     AS 'CODE POSTAL' ,telephone.num_telephone    AS 'NUMERO DE TELEPHONE' ,type_telephone.denom_typ_tel   AS 'TYPE DE TELEPHONE' 
+ 
+			/*venant de la table personnes: */ FROM  personnes      /*jointe avec les tables suivantes*/  INNER JOIN joindre ON personnes.id_personne = joindre.id_personne  INNER JOIN telephone ON joindre.id_tel = telephone.id_tel  INNER JOIN type_telephone ON telephone.id_type_tel = type_telephone.id_type_tel  INNER JOIN habite ON personnes.id_personne = habite.id_personne  INNER JOIN adresse ON habite.id_adresse = adresse.id_adresse  INNER JOIN ville_cp ON adresse.id_ville = ville_cp.id_ville       /* DESACTIVER LES BALISES POUR CHERCHER UNE PERSONNE PRECISE */ # where nom =  'Bouzigon' # and prenom = 'Matthieu' 
+			 
+			/*regroupe les lignes qui ont la même valeur*/ # GROUP BY nom 
+			 
+			/*Classe le résultat par ordre croissant de la valeur*/ ORDER BY personnes.nom ASC;
+
+/*------------------------------------------------------------------------------------------------------*/ 
+SET @annee =  year('2017/05/01') /*  VALEUR MODIFIABLE POUR OBTENIR LES CHIFFRES D'AFFAIRE DES AUTRES ANNEES */; /*------------------------------------------------------------------------------------------------------*/ 
+ 
+SELECT  carte_abonnement.id_type_ab     AS 'N° ABONNEMENT' ,type_abonnement.denom_ab     AS 'TYPE ABONNEMENT' 
+ 
+/* somme des tarifs d'abonnements + somme des duplicatas - somme des résiliations */ 
+,CONCAT(( (sum(if( year(carte_abonnement.date_paiement) = year('2017/05/01'), if(prix_duplicata != 0, 0, histo_tarif_abo.tarif),0))) + (sum(if(year(duplicata.date_duplicata) = year('2017/05/01'), duplicata.prix_duplicata, 0))) - (sum(if(year(resilie.date_resiliation) =year('2017/05/01'), if(prix_duplicata != 0, 0, resilie.montant_remb)   ,0 )))),'€')      AS 'CHIFFRE D AFFAIRE TOTAL SUR L ANNEE' 
+ 
+, year('2017/05/01')      AS 'ANNEE' 
+ 
+FROM carte_abonnement INNER JOIN type_abonnement ON carte_abonnement.id_type_ab = type_abonnement.id_type_ab INNER JOIN histo_tarif_abo ON carte_abonnement.id_type_ab = histo_tarif_abo.id_type_ab left JOIN duplicata ON carte_abonnement.id_abonnement = duplicata.id_abonnement left join resilie ON carte_abonnement.id_abonnement = resilie.id_abonnement 
+ 
+/*CONDITIONS POUR SELECTIONNER LES TARIFS CORRESPONDANTS A L'ANNEE CHOISIE*/      WHERE (year(histo_tarif_abo.date_prise_effet) = year('2017/05/01') )       GROUP BY type_abonnement.denom_ab order by carte_abonnement.id_type_ab;
+
+
+requete7
+
+# REQUETE DE CONSULTATION DE DONNEES - 7 # ## Afficher les informations du représentant légal d’un usager donné. ## 
+ 
+/*---------------------------------------------------------------*/ set @id_mineur = ""  /*  ID DE LA PERSONNE MINEURE   */; /*---------------------------------------------------------------*/ 
+ 
+/*Afficher la liste des selections suivantes*/ SELECT   personnes.id_personne     AS 'USAGER N°' ,concat(personnes.prenom, '  ',personnes.nom)  AS 'USAGER' ,concat(year(now()) - year(personnes.naissance), ' ans')  AS 'AGE' ,concat(representant.prenom, '  ',representant.nom)   AS 'REPRESENTANT' ,concat( r_adresse.num_rue    ,' ',    r_adresse.rue     ,'   ',    ifnull(r_adresse.residence, ''),    ifnull(r_adresse.batiment,  ''))  AS 'ADRESSE REPRESENTANT' ,r_ville_cp.nom_commune      AS 'VILLE REPRESENTANT' ,r_ville_cp.code_post      AS 'CODE POSTAL REPRESENTANT' ,representant.email      AS 'E-MAIL REPRESENTANT' ,r_telephone.num_telephone      AS 'N° de TELEPHONE TUTEUR' ,r_type_telephone.denom_typ_tel    AS 'TYPE de TELEPHONE REPRESENTANT' 
+ 
+/* table 'personne' pour les informations du mineur */ FROM personnes     INNER JOIN joindre ON personnes.id_personne = joindre.id_personne  INNER JOIN telephone ON joindre.id_tel = telephone.id_tel  INNER JOIN type_telephone ON telephone.id_type_tel = type_telephone.id_type_tel  INNER JOIN habite ON personnes.id_personne = habite.id_personne     INNER JOIN adresse ON habite.id_adresse = adresse.id_adresse     INNER JOIN ville_cp ON adresse.id_ville = ville_cp.id_ville       /* table 'personne' renommée 'représentant' pour associer les informations du tuteur au mineur */      left join personnes as representant on personnes.id_personne_1 = representant.id_personne  inner join joindre as r_joindre on representant.id_personne = r_joindre.id_personne  inner join telephone as r_telephone on r_joindre.id_tel = r_telephone.id_tel  inner join type_telephone as r_type_telephone on r_telephone.id_type_tel = r_type_telephone.id_type_tel  inner join habite as r_habite on representant.id_personne = r_habite.id_personne  inner join adresse as r_adresse on r_habite.id_adresse = r_adresse.id_adresse  inner join ville_cp as r_ville_cp on r_adresse.id_ville = r_ville_cp.id_ville 
+ 
+ 
+where personnes.id_personne = "8" group by r_telephone.num_telephone; 
+
+requete 8
+# REQUETE DE CONSULTATION DE DONNEES - 8 ## # Afficher le nombre d’usagers par année et par établissement scolaire ### 
+ 
+SELECT  year(descend_point.date_debut_descent)   AS 'ANNEE' ,list_etablissement.id_etablissement    AS 'N° ETAB' ,list_etablissement.denomination_etablissement  AS 'ETABLISSEMENT' ,count(descend_point.date_debut_descent)   AS 'NOMBRE USAGERS' 
+ 
+ 
+FROM descend_point INNER JOIN passe ON descend_point.id_arret = passe.id_arret LEFT JOIN list_etablissement ON passe.id_etablissement = list_etablissement.id_etablissement INNER JOIN carte_abonnement ON descend_point.id_abonnement = carte_abonnement.id_abonnement GROUP BY ANNEE, list_etablissement.denomination_etablissement ORDER BY ANNEE desc, passe.id_etablissement ;
