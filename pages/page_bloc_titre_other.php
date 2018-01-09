@@ -24,10 +24,8 @@ require('cookie_modify.php');
 	      		</ul>
 	      		<a href="#" class="brand-logo center">STAPA3 Bus</a>
 	      		<ul id="nav-mobile" class="right show-on-large">
-	      			<li><a><?php echo htmlspecialchars($_SESSION['email']); ?></a></li>	
-	      			<!--<li><a><?php /*echo htmlspecialchars($_COOKIE['email']);*/ ?></a></li>-->
-	        		<!--<li><a href="../index.php"><i class="material-icons btn-right">exit_to_app</i></a></li>-->
-	        		<li><a class="btn-right tooltipped" data-position="top" data-delay="50" data-tooltip="sortir de l'appli" href="../index.php"><i class="material-icons btn-right">exit_to_app</i>sortir de l'appli</a></li>
+	      			<li><a><?php echo htmlspecialchars($_SESSION['email']); ?></a></li>
+	        		<li><a class="btn-right tooltipped" data-position="top" data-delay="50" data-tooltip="sortir de l'appli" action="session_destroy.php" href="../index.php"><i class="material-icons btn-right">exit_to_app</i>sortir de l'appli</a></li>
 	      		</ul>
 	      		</a>
       		</div>

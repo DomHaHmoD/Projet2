@@ -21,8 +21,14 @@
 			echo '<br/>';*/
 			$recupnom = $_POST['nom_user'];
 			$recupnom = '"'.$recupnom.'"';
-			$req = $bdd->query("SELECT * FROM utilisateur WHERE nom_utilisateur = ".$recupnom.";");
-			/*print_r($req);
+			$req = $bdd->query("SELECT utilisateur.nom_utilisateur AS 'NOM AGENT', 
+                                                utilisateur.prenom_utilisateur AS 'PRENOM', 
+                                                utilisateur.login AS 'LOGIN',
+                                                utilisateur.password_utilisateur AS 'PASSWORD'
+                                                FROM utilisateur WHERE nom_utilisateur = ".$recupnom.";");
+			/*echo '<pre>';
+			print_r($req);
+			echo '</pre>';
 			echo '<br/>';*/
 			} else {
 				echo 'pas de nom récupéré';
@@ -46,15 +52,21 @@
 		
 		foreach ($requete[0] as $key => $value) {
 			/*echo 'requete[0] =';
+			echo '<pre>';
 			print_r($requete[0]);
+			echo '<pre>';
 			echo '<br/>';
 			echo '--------------';
 			echo '$key =';
+			echo '<pre>';
 			print_r($key);
+			echo '<pre>';
 			echo '<br/>';
 			echo '--------------';
 			echo '$value =';
+			echo '<pre>';
 			print_r($value);
+			echo '<pre>';
 			echo '<br/>';
 			echo '--------------';*/
 			//$reponse = $bdd->query($value);
@@ -72,6 +84,7 @@
 		die();*/
 
 		// affichage du head du tableau
+        echo '<form  action="page_adminold.php" method="POST">';
 			echo '<table class="striped">
 	    		<thead>';
 
@@ -86,13 +99,16 @@
 	    			echo '<tr>';
 	    			foreach ($valArray as $key => $value) {
 			            echo '<td>'.$value.'</td>';
+                        $array_data[] = $value;
+                        $_SESSION['data_to_modify'] = $array_data;
 	    			}
-                    echo '<td><a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">mode_edit</i></a></td>';
+                    echo '<td><a class="btn-floating btn-large waves-effect waves-light red" type="submit" onclick="window.location.href=\'http://localhost/stapa3php/projet2/pages/page2.php\'"><i class="material-icons">mode_edit</i></a></td>';
                     echo '</tr>';
 		          	echo '</tr>';
 				}
 			echo'</tbody>';
-			
+        echo '</form>';
+        /*var_dump($array_data);*/
 
 			$req->closeCursor();
 

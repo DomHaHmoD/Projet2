@@ -19,6 +19,7 @@ setcookie('qualification', $value_qualification, time() + 3600, null, null, fals
 $_SESSION['email'] = '';
 $_SESSION['password'] ='';
 $_SESSION['qualification'] = '';
+$_SESSION['data_to_modify'] = [];
 
 /*setcookie('email', $value_email, time() + 3600, null, null, false, true);
 setcookie('email_cookie', $value_email_cookie, time() + 3600, null, null, false, true);

@@ -1,3 +1,15 @@
+<?php
+// appel config.inc.php
+//session_start();
+//require('../config.inc.php');
+/*echo '<pre>';
+print_r($_SESSION['data_to_modify']);
+echo '</pre>';
+echo '<br />';*/
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -21,6 +33,8 @@
 
 <body>
 
+
+
     <!-- bloc requete -->
 	<fieldset id="bloc_requete">
 		<legend id="legend_other_page"><h4>STAPA Administrateur</h4></legend>
@@ -30,27 +44,60 @@
 		<!-- le .php est le lien avec le fichier php -->
 		<form id="form1" action="page_admin_resultat.php" method="post">
 			<p>
-				<!--<div class="row">-->
-			    <!--<form class="col s12">-->
-			    	<div class="row">
-				     	<div class="input-field col s12">
-					        <i class="material-icons prefix">account_circle</i>
-					        <input id="nom_user" type="text" name="nom_user" class="validate">
-					        <label for="nom_user">Nom de l'utilisateur/gestionnaire</label>
-					  	</div>
-				        
-					</div>     
+				<div class="row">
+			        <div class="col s12">
+			    	    <div class="row">
+				     	    <div class="input-field col s6">
+					            <i class="material-icons prefix">account_circle</i>
+					            <input id="nom_user" type="text" name="nom_user" class="validate"
+                                   value="<?php
+                                   if (!empty($_SESSION['data_to_modify'])) {
+                                       echo $_SESSION['data_to_modify'][0];
+                                   } else {
+                                       echo '';
+                                   }
+                                   ?>">
+					            <label class="active" id="label_form" for="nom_user">Nom de l'utilisateur/gestionnaire</label>
+					  	    </div>
+                            <div class="input-field col s6">
+                                <input id="prenom_user" type="text" name="prenom_user" class="validate"
+                                       value="<?php
+                                       if (!empty($_SESSION['data_to_modify'])) {
+                                           echo $_SESSION['data_to_modify'][1];
+                                       } else {
+                                           echo '';
+                                       }
+                                       ?>">
+                                <label class="active" id="label_form"for="prenom_user">Prénom</label>
+                            </div>
+                        </div>
+					</div>
+                </div>
 			       	<div class="row">
 				        <div class="input-field col s12">
-				          	<input id="login_user" type="text" name="login_user" class="validate">
-				          	<label for="login_user">login</label>
+				          	<input id="login_user" type="text" name="login_user" class="validate"
+                                   value="<?php
+                                   if (!empty($_SESSION['data_to_modify'])) {
+                                       echo $_SESSION['data_to_modify'][2];
+                                   } else {
+                                       echo '';
+                                   }
+                                   ?>">
+				          	<label class="active" id="label_form" for="login_user">Login</label>
 				        </div>
 				    </div>
 				   	
 				    <div class="row">
 				        <div class="input-field col s12">
-				          	<input id="email" type="email" name="email_user" class="validate">
-				          	<label for="email_user">Email</label>
+				          	<input id="email" type="email" name="email_user" class="validate"
+                                   value="<?php
+                                   if (!empty($_SESSION['data_to_modify'])) {
+                                       echo $_SESSION['data_to_modify'][3];
+                                   } else {
+                                       echo '';
+                                   }
+                                   ?>">
+                            <label class="active" for="email_user">Email</label>
 				        </div>
 				    </div>
 			    <!--</form>-->

@@ -63,3 +63,9 @@ input[type=checkbox]:checked ~ ul {
 }
 /* --------------------- fin page at1 ------------------------------------ */
 
+
+/* label color */
+.input-field label {
+	/*color: #000;*/
+
+}
