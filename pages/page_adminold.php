@@ -104,8 +104,19 @@ echo '<br />';*/
 			</p>
 			
 			<p>
-				<button class="btn waves-effect waves-light" type="submit" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_resultat.php'" name="action">Valider
-  				</button>
+                <div class="row">
+                    <div class="col s6">
+                        <button class="btn waves-effect waves-light tooltipped" type="submit"
+                                ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_resultat.php'"
+                                name="action" data-position="top" data-delay="50" data-tooltip="valider votre recherche">
+                                Rechercher
+                        </button>
+                    </div>
+                    <div class="col s6">
+                        <button class="btn waves-effect waves-light" type="submit" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_resultat.php'" name="action">Enregistrer
+                        </button>
+                    </div>
+                </div>
 			</p>
 			
 		</form>	
