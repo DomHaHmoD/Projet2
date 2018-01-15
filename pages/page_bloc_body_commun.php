@@ -59,9 +59,11 @@ if ((isset($_SESSION['email']))&(isset($_SESSION['password']))) {
 		}
 }
 else {
-	// si le login et password n'existe pas
-	echo 'Mauvais. email ou password ';
-	
+	/* si le login et password existe pas */
+
+	echo 'Mauvais email ou password ';
+	/*$email_averifier = $_COOKIE['email'];
+	$password_averifier = $_COOKIE['password'];*/
 	$email_averifier = $_SESSION['email'];
 	$password_averifier = $_SESSION['password'];
 

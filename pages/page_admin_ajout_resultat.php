@@ -3,8 +3,8 @@
 session_start();
 require('../config.inc.php');
 
-echo $_SESSION['qualification'];
-echo '<br />';
+//echo $_SESSION['qualification'];
+//echo '<br />';
 
 ?>
 
@@ -43,11 +43,11 @@ echo '<br />';
 
 		<!-- le tableau de résultat sera ici -->
 		<?php 
-		require('code_admin.php');
+		require('code_admin_test.php');
 		?>
 		
 		<p> <!-- il faudra revenir au user menu --> 
-			<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page requête</button>
+			<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_recherche.php'">Revenir à la page requête</button>
 		</p>
 
 		

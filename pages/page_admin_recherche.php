@@ -1,11 +1,11 @@
 <?php
-// appel config.inc.php
-//session_start();
-//require('../config.inc.php');
-/*echo '<pre>';
-print_r($_SESSION['data_to_modify']);
-echo '</pre>';
-echo '<br />';*/
+ //appel config.inc.php
+session_start();
+require('../config.inc.php');
+//echo '<pre>';
+//print_r($_SESSION['data_to_modify']);
+//echo '</pre>';
+//echo '<br />';
 
 ?>
 
@@ -33,7 +33,9 @@ echo '<br />';*/
 
 <body>
 
-
+<?php
+  	require('page_bloc_titre_other.php');
+?>
 
     <!-- bloc requete -->
 	<fieldset id="bloc_requete">
@@ -42,20 +44,46 @@ echo '<br />';*/
 		<label for="action_type"><h5>Merci de saisir les informations de l'utilisateur/gestionnaire</h5></label>
 		
 		<!-- le .php est le lien avec le fichier php -->
+		<form id="form1" action="page_admin_resultat.php" method="post" name="rechercher">
+        
+			<p>
+				<div class="row">
+			        <div class="col s12">
+			    	    <div class="row">
+				     	    <div class="input-field col s6">
+					            <i class="material-icons prefix">account_circle</i>
+					            <input id="nom_user" type="text" name="nom_user" class="validate"
+                                   value="<?php
+                                   if (!empty($_SESSION['data_to_modify'])) {
+                                       echo $_SESSION['data_to_modify'][0];
+                                   } else {
+                                       echo '';
+                                   }
+                                   ?>">
+					            <label class="active" id="label_form" for="nom_user">Nom de l'utilisateur/gestionnaire</label>
+					  	    </div>
+                        </div>   
+                    </div>
+                </div>
+			</p>
+			
+			<p>
+                <div class="row">
+                    <div class="col s6">
                         <button class="btn waves-effect waves-light tooltipped" type="submit"
                                 ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_recherche.php'"
                                 name="rechercher" data-position="top" data-delay="50" data-tooltip="valider votre recherche">
                                 Rechercher
                         </button>
                     </div>
-                    <div class="col s6">
-                        <button class="btn waves-effect waves-light" type="submit" name="ajouter" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_ajout.php'">Ajouter
-                        </button>
-                    </div>
+                    
                 </div>
 			</p>
+			
 		</form>	
-		</form>	
+        <p> <!-- il faudra revenir au user menu --> 
+			<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page précédente</button>
+		</p>
 	</fieldset>
 
 </body>

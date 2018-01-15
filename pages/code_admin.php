@@ -24,7 +24,9 @@
 			$req = $bdd->query("SELECT utilisateur.nom_utilisateur AS 'NOM AGENT', 
                                                 utilisateur.prenom_utilisateur AS 'PRENOM', 
                                                 utilisateur.login AS 'LOGIN',
-                                                utilisateur.password_utilisateur AS 'PASSWORD'
+                                                utilisateur.password_utilisateur AS 'PASSWORD',
+												utilisateur.id_type_utilisateur AS 'PRIVILEGE',
+												utilisateur.id_utilisateur AS 'ID'
                                                 FROM utilisateur WHERE nom_utilisateur = ".$recupnom.";");
 			/*echo '<pre>';
 			print_r($req);
@@ -84,7 +86,7 @@
 		die();*/
 
 		// affichage du head du tableau
-        echo '<form  action="page_adminold.php" method="POST">';
+        echo '<form  action="page_admin_resultat.php" method="POST">';
 			echo '<table class="striped">
 	    		<thead>';
 
@@ -102,7 +104,7 @@
                         $array_data[] = $value;
                         $_SESSION['data_to_modify'] = $array_data;
 	    			}
-                    echo '<td><a class="btn-floating btn-large waves-effect waves-light red" type="submit" onclick="window.location.href=\'http://localhost/stapa3php/projet2/pages/page2.php\'"><i class="material-icons">mode_edit</i></a></td>';
+                    echo '<td><a class="btn-floating btn-large waves-effect waves-light red" type="submit" onclick="window.location.href=\'http://localhost/stapa3php/projet2/pages/page_admin_modif.php\'"><i class="material-icons">mode_edit</i></a></td>';
                     echo '</tr>';
 		          	echo '</tr>';
 				}
