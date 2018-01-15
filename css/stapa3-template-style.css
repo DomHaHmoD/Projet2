@@ -30,15 +30,22 @@ body {
 
 /* ----------- fin bloc titre - commun à toutes les pages ----------- */
 
+#bloc_body_global {
+	margin-left: 0;
+	width: 1000px;
+	/*background-color: #00b3ff;*/
+}
+
 /* login - page index */
 #login {
+	/*position: absolute;*/
 	margin-left: 50px;
 	width: 500px;
 }
 
 /* bloc_requete - page 2 */
 #bloc_requete {
-	position: absolute;
+	/*position: absolute;*/
 	margin-left: 50px;
 	width: 800px;
 }
@@ -50,8 +57,8 @@ body {
 }*/
 
 #bloc_infos {
-	position: relative;
-	margin-left: 900px; 
+	/*position: relative;*/
+	margin-left: 50px;
 	padding-left: 0;
 	margin-top: 50px;
 	width: 250px;
