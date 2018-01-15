@@ -29,6 +29,7 @@ require('pages/session_start.php');
 	<!-- add bibliotheque Materialize -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
 
 <!-- page index login -->
@@ -38,6 +39,7 @@ require('pages/session_start.php');
 
     <!-- bloc body login -->
 	<?php include("pages/page_bloc_body_index.php"); ?>
-	<!--<a href="pages/page2.php?email=dominique.hathi@gmail.com">coucou</a>-->
+
+
 </body>
 </html>

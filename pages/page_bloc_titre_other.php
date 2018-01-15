@@ -4,7 +4,9 @@
 
 <!-- start de la seesion -->
 <?php 
-require('cookie_modify.php'); 
+require('cookie_modify.php'); // obligatoire
+//echo '-----';
+//echo $_SESSION['qualification'];
 ?>
 
 
@@ -14,18 +16,39 @@ require('cookie_modify.php');
       			
 	      		<ul id="nav-mobile" class="left show-on-large">
 	        		<li>
-						<a class="waves-effect waves-light btn-flat disabled" href="http://localhost/stapa3/pages/page_admin.php">Administrateur</a>
+						<a href="http://localhost/stapa3/projet2/pages/page_admin.php">
+							<?php 
+							if ($_SESSION['qualification'] === "3") {
+								echo 'Administrateur';
+							} else {echo '';}
+							?>
+							<!--Administrateur-->
+						</a>
 					</li>
 	        		<li>
-	        			<a href="http://localhost/stapa3/pages/page_gestion.php">Gestionnaire</a></li>
+	        			<a href="http://localhost/stapa3/projet2/pages/page_gestion.php">
+	        				<?php 
+							if ($_SESSION['qualification'] === "2") {
+								echo 'Gestionnaire';
+							} else {echo '';} 
+							?>
+							<!--Gestionnaire-->
+						</a>
+					</li>
 	        		<li>
-	        			<a href="http://localhost/stapa3/pages/page_bloc_body_userrequete.php">Utilisateur</a>
+	        			<a href="http://localhost/stapa3/projet2/pages/page_bloc_body_userrequete.php">		<?php 
+							if ($_SESSION['qualification'] === "1") {
+								echo 'Utilisateur';
+							} else {echo '';} 
+							?>
+							<!--Utilisateur-->
+						</a>
 	        		</li>
 	      		</ul>
 	      		<a href="#" class="brand-logo center">STAPA3 Bus</a>
 	      		<ul id="nav-mobile" class="right show-on-large">
 	      			<li><a><?php echo htmlspecialchars($_SESSION['email']); ?></a></li>
-	        		<li><a class="btn-right tooltipped" data-position="top" data-delay="50" data-tooltip="sortir de l'appli" action="session_destroy.php" href="../index.php"><i class="material-icons btn-right">exit_to_app</i>sortir de l'appli</a></li>
+	        		<li><a class="btn-right tooltipped" data-position="top" data-delay="50" data-tooltip="sortir de l'appli" action="session_destroy.php" href="../index.php"><i class="material-icons btn-right">exit_to_app</i>Déconnexion</a></li>
 	      		</ul>
 	      		</a>
       		</div>

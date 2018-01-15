@@ -3,7 +3,7 @@
 session_start();
 require('../config.inc.php');
 
-echo $_SESSION['qualification'];
+print_r($_SESSION['qualification']);
 echo '<br />';
 
 ?>
@@ -36,7 +36,7 @@ echo '<br />';
   	?>
 
 	<fieldset id="bloc_config">
-		<legend id="legend_other_page"><h4>STAPA Utilsateur</h4></legend>
+		<legend id="legend_other_page"><h4>STAPA Utilisateur</h4></legend>
 
 		<!-- le tableau de résultat sera ici -->
 		<?php 
@@ -49,6 +49,9 @@ echo '<br />';
 
 		
 	</fieldset>
+
+	<!-- bloc footer -->
+	<?php include("page_footer.php"); ?>
 
 </body>
 </html>
