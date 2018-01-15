@@ -31,7 +31,9 @@ echo '<br />';
 
 <body>
 	<!-- bloc titre -->
+
   	<?php
+  	
   	require('page_bloc_titre_other.php');
   	?>
 

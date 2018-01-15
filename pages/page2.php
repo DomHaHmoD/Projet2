@@ -6,6 +6,8 @@
 <?php 
 session_start();
 //require('cookie_modify.php'); 
+ print_r($_SESSION);
+
 ?>
 
 <!-- le html -->
