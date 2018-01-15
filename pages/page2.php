@@ -1,7 +1,12 @@
-
-<!-- fichier page suivante
-	générée en fonction du login -->
-
+<!--*****************************************************************************************************
+	*			      						"PAGE" 2 / Accès au 3 pages									*
+	*							Utilisateur, Gestionnaire et Administrateur								*
+	*				                   		                                                        	*
+	* 		Author = Equipe projet 2																	*
+	* 		Version = 1.0																	            *
+	* 		Date = 26/01/2018													        				*
+	*****************************************************************************************************
+-->
 <!-- maj des cookies -->
 <?php 
 session_start();
@@ -40,8 +45,8 @@ session_start();
     <!-- bloc requete -->
 	<?php include("bloc_body_commun.php"); ?>
 
-	<!-- bloc footer -->
-	<?php include("bloc_footer.php"); ?>
-	
+    <!-- bloc footer -->
+    <?php include("bloc_footer.php"); ?>
+
 </body>
 </html>

@@ -3,8 +3,8 @@
 session_start();
 require('../config.inc.php');
 
-print_r($_SESSION['qualification']);
-echo '<br />';
+//print_r($_SESSION['qualification']);
+//echo '<br />';
 
 ?>
 
@@ -51,9 +51,6 @@ echo '<br />';
 
 		
 	</fieldset>
-
-	<!-- bloc footer -->
-	<?php include("bloc_footer.php"); ?>
 
 </body>
 </html>

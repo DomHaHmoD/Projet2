@@ -1,6 +1,12 @@
-<!-- page bloc_titre_other -->
-<!-- Bloc de titre pour toutes las pages 
-	EXCEPTE INDEX (login) -->
+<!--*****************************************************************************************************
+	*			      						"BLOC" TITRE											*
+	*																									*
+	*				Barre de navigation commune en "haut" pour toutes les pages sauf l'index.			*
+	* 		Author = Equipe projet 2																	*
+	* 		Version = 1.0																	            *
+	* 		Date = 26/01/2018													        				*
+	*****************************************************************************************************
+-->
 
 <!-- start de la seesion -->
 <?php 
@@ -48,9 +54,12 @@ require('cookie_modify.php'); // obligatoire
 	      		<a href="#" class="brand-logo center">STAPA3 Bus</a>
 	      		<ul id="nav-mobile" class="right show-on-large">
 	      			<li><a><?php echo htmlspecialchars($_SESSION['email']); ?></a></li>
-	        		<li><a class="btn-right tooltipped" data-position="top" data-delay="50" data-tooltip="sortir de l'appli" action="session_destroy.php" href="../index.php"><i class="material-icons btn-right">exit_to_app</i>Déconnexion</a></li>
+	        		<li><a class="btn-right tooltipped" data-position="top" data-delay="50" data-tooltip="sortir de l'appli"
+                           onclick="session_start.php"
+                           href="../index.php"><i
+                                    class="material-icons btn-right">exit_to_app</i>Déconnexion</a></li>
 	      		</ul>
-	      		</a>
+
       		</div>
     	</div>
   	</nav>
