@@ -1,19 +1,8 @@
-
-<!-- fichier page suivante
-	générée en fonction du login -->
-
-<!-- maj des cookies -->
-<?php 
-session_start();
-//require('cookie_modify.php');
-
-?>
-
-<!-- le html -->
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-	<title>STAPA3</title>
+	<title>STAPA</title>
 
 	<!-- meta -->
 	<meta charset="utf-8">
@@ -29,19 +18,25 @@ session_start();
 	<!-- add bibliotheque Materialize -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 </head>
 
 <body>
-	
-	<!-- bloc titre commun à toutes les pages -->
-	<?php include("page_bloc_titre_other.php"); ?>
 
-    <!-- bloc requete -->
-	<?php include("page_bloc_body_commun.php"); ?>
+<!-- bloc de requete -->
+	<fieldset id="bloc_requete">
+		<legend id="legend_other_page"><h4>STAPA | Gestionnaire</h4></legend>
 
-	<!-- bloc footer -->
-	<?php include("page_footer.php"); ?>
-	
+		<label for="action_type"><h5>Merci de saisir les informations afin de rechercher l'abonné que vous souhaitez modifier</h5></label>
+
+		<!-- le tableau de résultat sera ici -->
+		<?php 
+		include('resultat_abonne.php');
+		?>
+
+		<!-- il faudra revenir au user menu --> 
+		<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_adminold.php'">Revenir à la page requête</button>
+		
+
+	</fieldset>
 </body>
 </html>

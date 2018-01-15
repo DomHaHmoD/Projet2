@@ -124,7 +124,7 @@ switch ($qualification) {
 		$_SESSION['qualification'] = $qualification;
 		//var_dump($_SESSION['qualification']);
 		//echo $_SESSION['qualification'];
-		include('page_supervision.php');
+		include('page_gestionnaire_abonnes.php');
 		break;
 	case '3':
 		$_SESSION['qualification'] = $qualification;
