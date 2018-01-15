@@ -16,7 +16,7 @@ require('cookie_modify.php'); // obligatoire
       			
 	      		<ul id="nav-mobile" class="left show-on-large">
 	        		<li>
-						<a href="http://localhost/stapa3/projet2/pages/page_admin.php">
+						<a href="http://localhost/stapa3/projet2/pages/page_adminold.php">
 							<?php 
 							if ($_SESSION['qualification'] === "3") {
 								echo 'Administrateur';
@@ -26,7 +26,7 @@ require('cookie_modify.php'); // obligatoire
 						</a>
 					</li>
 	        		<li>
-	        			<a href="http://localhost/stapa3/projet2/pages/page_gestion.php">
+	        			<a href="http://localhost/stapa3/projet2/pages/page_gestionnaire_abonnes.php">
 	        				<?php 
 							if ($_SESSION['qualification'] === "2") {
 								echo 'Gestionnaire';
@@ -36,7 +36,7 @@ require('cookie_modify.php'); // obligatoire
 						</a>
 					</li>
 	        		<li>
-	        			<a href="http://localhost/stapa3/projet2/pages/page_bloc_body_userrequete.php">		<?php 
+	        			<a href="http://localhost/stapa3/projet2/pages/bloc_body_userrequete.php">		<?php
 							if ($_SESSION['qualification'] === "1") {
 								echo 'Utilisateur';
 							} else {echo '';} 

@@ -34,7 +34,7 @@ echo '<br />';
 
   	<?php
   	
-  	require('page_bloc_titre_other.php');
+  	require('bloc_titre_other.php');
   	?>
 
 	<fieldset id="bloc_config">
@@ -53,7 +53,7 @@ echo '<br />';
 	</fieldset>
 
 	<!-- bloc footer -->
-	<?php include("page_footer.php"); ?>
+	<?php include("bloc_footer.php"); ?>
 
 </body>
 </html>

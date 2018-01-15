@@ -22,7 +22,7 @@
 <body>
 
 	<!-- bloc titre commun à toutes les pages -->
-	<?php include("./page_bloc_titre_other.php"); ?>
+	<?php include("bloc_titre_other.php"); ?>
 	<!-- bloc titre -->
 	<!--<nav id="row_bloc_titre">
     	<div class="nav-wrapper teal lighten">

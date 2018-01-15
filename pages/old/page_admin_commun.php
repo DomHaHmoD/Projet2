@@ -50,10 +50,10 @@ echo '<br />';
 	
 
 	<!-- bloc titre commun à toutes les pages -->
-	<?php include("./page_bloc_titre_other.php"); ?>
+	<?php include("bloc_titre_other.php"); ?>
 
     <!-- bloc admin commun -->
-	<?php include("page_bloc_body_commun.php"); ?>
+	<?php include("bloc_body_commun.php"); ?>
 	
 	</fieldset>
 </body>

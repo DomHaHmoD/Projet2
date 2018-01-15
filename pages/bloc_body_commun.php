@@ -136,7 +136,7 @@ switch ($qualification) {
 		$_SESSION['qualification'] = $qualification;
 		//var_dump($_SESSION['qualification']);
 		//echo $_SESSION['qualification'];
-		include('page_bloc_body_userrequete.php');
+		include('bloc_body_userrequete.php');
 		break;
 	default:
 		echo 'attention';

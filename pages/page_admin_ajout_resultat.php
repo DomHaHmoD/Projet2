@@ -35,7 +35,7 @@ require('../config.inc.php');
 
 <!-- bloc titre -->
   	<?php
-  	require('page_bloc_titre_other.php');
+  	require('bloc_titre_other.php');
   	?>
 
 	<fieldset id="bloc_config">

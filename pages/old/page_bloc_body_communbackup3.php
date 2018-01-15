@@ -77,7 +77,7 @@ switch ($qualification) {
 		include('page_adminold.php');
 		break;
 	case '1':
-		include('page_bloc_body_userrequete.php');
+		include('bloc_body_userrequete.php');
 		break;
 	default:
 		echo 'attention';

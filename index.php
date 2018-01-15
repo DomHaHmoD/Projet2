@@ -35,10 +35,10 @@ require('pages/session_start.php');
 <!-- page index login -->
 <body>
 	<!-- bloc titre -->
-	<?php include("pages/page_bloc_titre_index.php"); ?>
+	<?php include("pages/bloc_titre_index.php"); ?>
 
     <!-- bloc body login -->
-	<?php include("pages/page_bloc_body_index.php"); ?>
+	<?php include("pages/bloc_body_index.php"); ?>
 
 
 </body>
