@@ -34,11 +34,9 @@
         <fieldset id="bloc_infos">
             <label for="action_type"><h5>Informations</h5></label>
             <form>
-                <p>cliquez sur la requête que vous souhaitez
-                    visualisez.
+                <p>vore login est composé de votre <b>prénom.nom</b>, merci de le saisir en lettre minuscule.
 
-                    Vous aurez un bouton "revenir" aux requêtes,
-                    pour revenir sur cette page.
+
                 </p>
                 <form>
         </fieldset>
