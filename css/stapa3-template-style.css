@@ -38,46 +38,38 @@ body {
 
 /* login - page index */
 #login {
-	/*position: absolute;*/
 	margin-left: 50px;
 	width: 500px;
 }
 
 /* bloc_requete - page 2 */
 #bloc_requete {
-	/*position: absolute;*/
+	position: absolute;
+	float: left;
 	margin-left: 50px;
 	width: 800px;
 }
 
-/*#bloc_admin {
-	position: absolute;
-	margin-left: 50px;
-	width: 800px;
-}*/
-
 #bloc_infos {
-	/*position: relative;*/
-	margin-left: 50px;
+	position: absolute;
+	float: left;
+	left: 950px;
 	padding-left: 0;
 	margin-top: 50px;
 	width: 250px;
 }
 
-.label_requete {
-	font-weight: normal;
-	text-transform: none;
-}
-
-.no-uppercase {
-     text-transform: none; /*ne fct pas*/
+#btn_radio_style {
+	text-transform: unset;
+	text-align: left;
 }
 
 /* -------------------- début footer -----------------------------------*/
-.bloc-footer {
-    position : absolute;
-    /*float: bottom;*/
-	padding-top: auto;
+#bloc-footer {
+	/*clear: both;*/
+    position: absolute;
+    /*float: none;*/
+	/*padding-top: inherit;*/
     bottom: 0;
     height: 60px;
     width: 100%;
