@@ -1,12 +1,20 @@
-<!-- fichier de démarrage
-	login -->
+<!--*****************************************************************************************************
+	*			      						"PAGE" INDEX / LOGIN										*
+	*																									*
+	*				Page HTML démarrage de l'application. L'appli débute avec le login      			*
+	* 		Author = Equipe projet 2																	*
+	* 		Version = 1.0																	            *
+	* 		Date = 26/01/2018													        				*
+	*****************************************************************************************************
+-->
 
 <!-- start de la session : appel seesion_start.php-->
-<?php 
-if ((isset($_COOKIE['email']))&(isset($_COOKIE['password']))) {
-require('pages/session_destroy.php');
-}
+<?php
 require('pages/session_start.php');
+if ((isset($_COOKIE['email']))&(isset($_COOKIE['password']))) {
+//require('pages/session_destroy.php');
+}
+
 ?>
 
 <!-- le html -->
@@ -29,15 +37,17 @@ require('pages/session_start.php');
 	<!-- add bibliotheque Materialize -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <!-- page index login -->
 <body>
 	<!-- bloc titre -->
-	<?php include("pages/page_bloc_titre_index.php"); ?>
+	<?php include("pages/bloc_titre_index.php"); ?>
 
     <!-- bloc body login -->
-	<?php include("pages/page_bloc_body_index.php"); ?>
-	<!--<a href="pages/page2.php?email=dominique.hathi@gmail.com">coucou</a>-->
+	<?php include("pages/bloc_body_index.php"); ?>
+
+
 </body>
 </html>

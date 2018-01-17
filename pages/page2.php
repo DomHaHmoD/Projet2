@@ -1,23 +1,24 @@
-<!-- fichier page suivante
-	générée en fonction du login -->
-
+<!--*****************************************************************************************************
+	*			      						"PAGE" 2 / Accès au 3 pages									*
+	*							Utilisateur, Gestionnaire et Administrateur								*
+	*				                   		                                                        	*
+	* 		Author = Equipe projet 2																	*
+	* 		Version = 1.0																	            *
+	* 		Date = 26/01/2018													        				*
+	*****************************************************************************************************
+-->
 <!-- maj des cookies -->
 <?php 
 session_start();
+
 require('cookie_modify.php');
+
+//require('cookie_modify.php');
 
 ?>
 
 <!-- le html -->
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>stapa</title>
-    </head>
-    <body>
-    
-    <!DOCTYPE html>
 <html lang="fr">
 <head>
 	<title>STAPA3</title>
@@ -36,17 +37,19 @@ require('cookie_modify.php');
 	<!-- add bibliotheque Materialize -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body>
-	<!-- test de cookie -->
 	
-
 	<!-- bloc titre commun à toutes les pages -->
-	<?php include("page_bloc_titre_other.php"); ?>
+	<?php include("bloc_titre_other.php"); ?>
 
     <!-- bloc requete -->
-	<?php include("page_bloc_body_commun.php"); ?>
+	<?php include("bloc_body_commun.php"); ?>
+
+    <!-- bloc footer -->
+    <?php include("bloc_footer.php"); ?>
 
 
 

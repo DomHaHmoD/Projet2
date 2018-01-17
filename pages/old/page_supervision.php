@@ -12,7 +12,7 @@
 	<meta name="copyright" content="STAPA Bordeaux">
 	<meta name="google" content="translate">
 
-	<link href="../css/stapa3-template-style.css" rel="stylesheet" type="text/css">
+	<link href="../../css/stapa3-template-style.css" rel="stylesheet" type="text/css">
 	<link href="../images/bus.jpg" rel="shortcut icon" type="image/jpg">
 	<!-- add bibliotheque Materialize -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">

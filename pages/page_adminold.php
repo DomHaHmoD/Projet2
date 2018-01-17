@@ -39,88 +39,44 @@ echo '<br />';*/
 	<fieldset id="bloc_requete">
 		<legend id="legend_other_page"><h4>STAPA Administrateur</h4></legend>
 
-		<label for="action_type"><h5>Merci de saisir les informations de l'utilisateur/gestionnaire</h5></label>
+		<label for="action_type"><h5>Quelle action souhaitez vous traitez?</h5></label>
 		
-		<!-- le .php est le lien avec le fichier php -->
-		<form id="form1" action="page_admin_resultat.php" method="post">
-			<p>
-				<div class="row">
-			        <div class="col s12">
-			    	    <div class="row">
-				     	    <div class="input-field col s6">
-					            <i class="material-icons prefix">account_circle</i>
-					            <input id="nom_user" type="text" name="nom_user" class="validate"
-                                   value="<?php
-                                   if (!empty($_SESSION['data_to_modify'])) {
-                                       echo $_SESSION['data_to_modify'][0];
-                                   } else {
-                                       echo '';
-                                   }
-                                   ?>">
-					            <label class="active" id="label_form" for="nom_user">Nom de l'utilisateur/gestionnaire</label>
-					  	    </div>
-                            <div class="input-field col s6">
-                                <input id="prenom_user" type="text" name="prenom_user" class="validate"
-                                       value="<?php
-                                       if (!empty($_SESSION['data_to_modify'])) {
-                                           echo $_SESSION['data_to_modify'][1];
-                                       } else {
-                                           echo '';
-                                       }
-                                       ?>">
-                                <label class="active" id="label_form"for="prenom_user">Prénom</label>
-                            </div>
-                        </div>
-					</div>
+		<!--  -->
+        <div class="row">
+            <div class="col s9">
+                <div>
+                    <button class="btn waves-effect waves-light tooltipped" type="submit"
+                            ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_recherche.php'"
+                                    name="rechercher" data-position="top" data-delay="50" data-tooltip="valider votre recherche">
+                                    Rechercher
+                    </button>
                 </div>
-			       	<div class="row">
-				        <div class="input-field col s12">
-				          	<input id="login_user" type="text" name="login_user" class="validate"
-                                   value="<?php
-                                   if (!empty($_SESSION['data_to_modify'])) {
-                                       echo $_SESSION['data_to_modify'][2];
-                                   } else {
-                                       echo '';
-                                   }
-                                   ?>">
-				          	<label class="active" id="label_form" for="login_user">Login</label>
-				        </div>
-				    </div>
-				   	
-				    <div class="row">
-				        <div class="input-field col s12">
-				          	<input id="email" type="email" name="email_user" class="validate"
-                                   value="<?php
-                                   if (!empty($_SESSION['data_to_modify'])) {
-                                       echo $_SESSION['data_to_modify'][3];
-                                   } else {
-                                       echo '';
-                                   }
-                                   ?>">
-                            <label class="active" for="email_user">Email</label>
-				        </div>
-				    </div>
-			    <!--</form>-->
-			</p>
-			
-			<p>
-                <div class="row">
-                    <div class="col s6">
-                        <button class="btn waves-effect waves-light tooltipped" type="submit"
-                                ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_resultat.php'"
-                                name="action" data-position="top" data-delay="50" data-tooltip="valider votre recherche">
-                                Rechercher
-                        </button>
-                    </div>
-                    <div class="col s6">
-                        <button class="btn waves-effect waves-light" type="submit" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_resultat.php'" name="action">Enregistrer
-                        </button>
-                    </div>
+                <br/>
+                <br/>
+                <div>
+                    <button class="btn waves-effect waves-light" type="submit" name="ajouter" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_ajout.php'">Ajouter
+                    </button>
                 </div>
-			</p>
-			
-		</form>	
+            </div>
+
+
+
+        </div>
+
 	</fieldset>
+    <div class="col s3"> <!-- zone d'iformations de droite -->
+        <fieldset id="bloc_infos">
+            <label for="action_type"><h5>Informations</h5></label>
+            <form>
+                <p>cliquez sur la requête que vous souhaitez
+                    visualisez.
+
+                    Vous aurez un bouton "revenir" aux requêtes,
+                    pour revenir sur cette page.
+                </p>
+                <form>
+        </fieldset>
+    </div>
 
 </body>
 </html>

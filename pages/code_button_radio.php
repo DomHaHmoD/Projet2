@@ -1,43 +1,12 @@
 <?php 
 
-		// ouverture de la bd
-		try
-		{
-			$bdd = new PDO('mysql:host=' .DB_HOST. ';dbname=' .DB_NAME. ';charset=utf8', $_SESSION["email"], $_SESSION["password"]);
-		}
-		catch (Exception $e)
-		{
-		        die('Erreur : ' . $e->getMessage());
-		}
-
-		
-		/*if (empty($_POST['requete_input'])) {
-			echo 'pas de input';
-			echo '<br/>';
-			echo $_POST['requete'];
-		} else {
-		echo 'ya un input';
-		echo '<br/>';
-		echo $_POST['requete_input'];
-		echo '<br/>------------';
-		echo $_POST['requete'];
-		echo '<br/>------------';
-		}
-		
-		die();*/
-
 		// teste si c'est une requete avec un input
-		if (empty($_POST['requete_input'])) {
-			$nbreq = $_POST['requete'];
-			$req = $bdd->query("SELECT requetesql FROM requete WHERE numero = ".$nbreq.";");
-			$nomreq = $bdd->query("SELECT nom FROM requete WHERE numero = ".$nbreq.";");
-
+		if (isset($_POST['requete']) && $_POST['requete'] === '7') {
+			if (!isset($_POST['requete_input'])) {
+				
+			}
 		} else {
-			//$requete_name_minor = substr($_POST['requete7_name_minor'], 1);
-			$requete_input = $_POST['requete_input'];
-			$nbreq = $_POST['requete'];
-			$req = $bdd->query("SELECT requetesql FROM requete WHERE numero = ".$nbreq.";");
-			$nomreq = $bdd->query("SELECT nom FROM requete WHERE numero = ".$nbreq.";");
+			
 			}
 
 
