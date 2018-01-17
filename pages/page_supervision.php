@@ -77,8 +77,9 @@
 				    <div class="row">
 				    	<div class="input-field col s12">
 				        	<i class="material-icons prefix">email</i>
-				          	<input id="email" type="email" class="validate">
 				          	<label for="email">Email</label>
+							  <input id="email" type="email" class="validate">
+				          	
 				        </div>
 				     </div>
 			    </form>
