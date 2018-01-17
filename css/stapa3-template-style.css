@@ -48,6 +48,7 @@ body {
 	float: left;
 	margin-left: 50px;
 	width: 800px;
+	margin-top: 0;
 }
 
 #bloc_infos {
@@ -55,7 +56,7 @@ body {
 	float: left;
 	left: 950px;
 	padding-left: 0;
-	margin-top: 50px;
+	margin-top: 35px;
 	width: 250px;
 }
 
@@ -67,12 +68,12 @@ body {
 /* -------------------- début footer -----------------------------------*/
 #bloc-footer {
 	/*clear: both;*/
-    position: absolute;
-    /*float: none;*/
-	/*padding-top: inherit;*/
-    bottom: 0;
+    /*position: absolute;*/ /* absolute */
+	position: fixed;
+	bottom: 0;
+	left:0;
     height: 60px;
-    width: 100%;
+    width: 300px;
 }
 
 
@@ -80,7 +81,7 @@ body {
 	/* bloc_config - page at1 */
 #bloc_config {
 	margin-left: 50px;
-	width: 800px;
+	width: auto;
 }
 
 	/* bloc_config - page at1 = dropdown */

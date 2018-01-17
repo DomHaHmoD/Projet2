@@ -9,7 +9,7 @@
 			<label for="action_type"><h5>Quelle requête souhaitez vous afficher ?</h5></label>
 			
 			<div class="row">
-				<form action="page_resultat_bd_auto_req1.php" method="post">
+				<form action="page_resultat_utilisateur.php" method="post">
 				    <div class="col s12">
 				      	<input class="with-gap" name="requete" type="radio" id="1" value="1" />
 				      	<label for="1" class="label_requete"><a id="btn_radio_style" class="btn-flat" onclick="";
@@ -77,7 +77,7 @@
                     <br/>
                     <br/>
 				    <div class="col s12">
-				    	<button class="btn waves-effect waves-light" type="submit" name="action" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_resultat_bd_auto_req1.php'">Valider votre choix
+				    	<button class="btn waves-effect waves-light" type="submit" name="action" ONCLICK="window.location.href='page_resultat_utilisateur.php'">Valider votre choix
     					<i class="material-icons right">send</i>
   					    </button>
 				    </div>
