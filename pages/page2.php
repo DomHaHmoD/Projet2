@@ -4,7 +4,8 @@
 <!-- maj des cookies -->
 <?php 
 session_start();
-require('cookie_modify.php'); 
+require('cookie_modify.php');
+
 ?>
 
 <!-- le html -->
@@ -46,6 +47,8 @@ require('cookie_modify.php');
 
     <!-- bloc requete -->
 	<?php include("page_bloc_body_commun.php"); ?>
+
+
 
 </body>
 </html>

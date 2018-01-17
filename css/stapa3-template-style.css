@@ -39,7 +39,7 @@ body {
 /* bloc_requete - page 2 */
 #bloc_requete {
 	margin-left: 50px;
-	width: 800px;
+	width: 950px;
 }
 
 /* --------------------- debut page at1 ----------------------------- */
@@ -68,4 +68,7 @@ input[type=checkbox]:checked ~ ul {
 .input-field label {
 	/*color: #000;*/
 
+}
+h5{
+    color:black;
 }
