@@ -2,10 +2,12 @@
 	*			      			PROFIL "GESTIONNAIRE" - AFFICHAGE RESULTATS RECHERCHE					*
 	*																									*
 	*						Le gestionnaire peut voir l'aboutissement de sa recherche.					*
-	* 																									*	*****************************************************************************************************
+	*****************************************************************************************************																									*
 -->
 <?php
 session_start();
+
+?>
 
 ?>
 

@@ -85,8 +85,8 @@
 			</div>
 		</fieldset>
 	</div>
-	<div class="col s3" id="bloc_infos"> <!-- zone d'iformations de droite -->
-		<fieldset>
+	<div class="col s3" >
+		<fieldset id="bloc_infos2"><!-- zone d'iformations de droite -->
 		<label for="action_type"><h5>Informations</h5></label>
 			<form>
 				<p>cliquez sur la requête que vous souhaitez

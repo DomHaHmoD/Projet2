@@ -47,18 +47,48 @@ body {
 	position: absolute;
 	float: left;
 	margin-left: 50px;
-	width: 800px;
-	margin-top: 0;
+	margin_bottom:25px;
+	width: 950px;
 }
 
 #bloc_infos {
 	position: absolute;
 	float: left;
 	left: 950px;
-	padding-left: 0;
-	margin-top: 35px;
+	padding-left: 25px;
+	padding-bottom: 64px;
+	margin-left: 90px;
+	margin-top: 34px;
 	width: 250px;
 }
+#bloc_infos1 {
+	position: absolute;
+	float: left;
+	left: 570px;
+	padding-left: 25px;
+    padding-bottom:33.5px;
+    margin-top: 33.5px;
+
+}
+#bloc_infos2 {
+    position: absolute;
+    float: left;
+    left: 1050px;
+    padding-left: 25px;
+    padding-bottom:25px;
+    margin-top:34px;
+    width: 250px;
+}
+#bloc_infos3 {
+    position: absolute;
+    float: left;
+    left: 950px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+
+
+}
+
 
 #btn_radio_style {
 	text-transform: unset;
@@ -105,4 +135,7 @@ input[type=checkbox]:checked ~ ul {
 
 }
 
+h5{
+    color:black;
+}
 
