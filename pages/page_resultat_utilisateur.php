@@ -40,7 +40,7 @@ require('../config.inc.php');
             <div class="col s9">
                 <fieldset id="bloc_config">
                     <legend id="legend_other_page"><h4>STAPA Utilisateur</h4></legend>
-                        <div  id="pagination">
+                        <div  id="user_resultat">
 
                             <!-- le tableau de résultat sera ici -->
                             <?php
@@ -51,18 +51,17 @@ require('../config.inc.php');
                         <button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page requête</button>
                     </p>
                 </fieldset>
-
-             <div class="col s3">
-                    <fieldset id="bloc_infos3"><!-- zone d'iformations de droite -->
-                        <label for="action_type"><h5>Informations</h5></label>
-                        <form>
-                            <p>Pour revenir à la page des requêtes,
-                                cliquez sur le bouton.
-                            </p>
-                            <form>
-                    </fieldset>
-             </div>
             </div>
+             <div class="col s3">
+                <fieldset id="bloc_infos3"><!-- zone d'iformations de droite -->
+                    <label for="action_type"><h5>Informations</h5></label>
+                    <form>
+                        <p>Pour revenir à la page des requêtes,
+                                cliquez sur le bouton.
+                        </p>
+                    <form>
+                </fieldset>
+             </div>
         </div>
     </div>
 

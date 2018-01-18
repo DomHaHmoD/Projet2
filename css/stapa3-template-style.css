@@ -27,7 +27,6 @@ body {
    	margin : auto;
 }
 
-
 /* ----------- fin bloc titre - commun à toutes les pages ----------- */
 
 #bloc_body_global {
@@ -42,7 +41,7 @@ body {
 	width: 500px;
 }
 
-/* bloc_requete - page 2 */
+/* bloc_requete - page 2 - bloc body userrequete */
 #bloc_requete {
 	position: absolute;
 	float: left;
@@ -50,11 +49,30 @@ body {
 	margin_bottom:25px;
 	width: 950px;
 }
+/* fin bloc_requete - page 2 - bloc body userrequete */
+
+/* bouton de la page des requetes utilisateurs */
+#btn_radio_style {
+	text-transform: unset;
+	text-align: left;
+}
+/* fin ----- */
+
+#bloc_config {
+	position: absolute;
+	float: left;
+	margin-left: 50px;
+	width: 950px;
+}
+
+/*#user_resultat {
+	width: 950px;
+}*/
 
 #bloc_infos {
 	position: absolute;
 	float: left;
-	left: 950px;
+	left: 950px; 
 	padding-left: 25px;
 	padding-bottom: 64px;
 	margin-left: 90px;
@@ -82,17 +100,12 @@ body {
 #bloc_infos3 {
     position: absolute;
     float: left;
-    left: 950px;
+    left: 1050px; // j'ai changé de 950 à 1050
+    padding-left: 25px;
     margin-bottom: 50px;
     padding-bottom: 50px;
 
 
-}
-
-
-#btn_radio_style {
-	text-transform: unset;
-	text-align: left;
 }
 
 /* -------------------- début footer -----------------------------------*/
@@ -109,13 +122,13 @@ body {
 
 /* --------------------- debut page at1 ----------------------------- */
 	/* bloc_config - page at1 */
-#bloc_config {
+/*bloc_config {
 	margin-left: 50px;
 	width: auto;
-}
+}*/
 
 	/* bloc_config - page at1 = dropdown */
-input[type=checkbox] {
+/*input[type=checkbox] {
     display: none;
 }
 
@@ -125,7 +138,7 @@ ul {
 
 input[type=checkbox]:checked ~ ul {
     display: block
-}
+}*/
 /* --------------------- fin page at1 ------------------------------------ */
 
 
