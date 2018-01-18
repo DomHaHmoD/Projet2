@@ -120,30 +120,21 @@ echo '</tbody>';
 /*echo '<div></div>';*/
 echo '</table>';
 
-// ligne ajoutée pour la pagination
-echo '<p align="center">Page : '; //Pour l'affichage, on centre la liste des pages
+/* affiche de la pagination */
+echo '</p>';
+//echo '<p align="center">Page : '; //Pour l'affichage, on centre la liste des pages
+echo '<ul class="pagination">
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>';
 for($i = 1; $i <= $nombreDePages; $i++) //On fait notre boucle
 {
-    //On va faire notre condition
-    if($i == $pageActuelle) //Si il s'agit de la page actuelle...
-    {
-        echo ' [ '.$i.' ] ';
-    }
-    else //Sinon...
-    {
-        echo ' <a href="page='.$i.'">'.$i.'</a> ';
-    }
-}
-echo '</p>';
-echo '<p align="center">Page : '; //Pour l'affichage, on centre la liste des pages
-echo '<ul class="pagination">
-        <li class="active"><a href="#!">$i</a></li>
-        <li class="waves-effect"><a href="#!">2</a></li>
-        <li class="waves-effect"><a href="#!">3</a></li>
-        <li class="waves-effect"><a href="#!">4</a></li>
-        <li class="waves-effect"><a href="#!">5</a></li>
-        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-    </ul>';
+    if ($i == $pageActuelle) {
+        echo '<li class="active"><a href="#!">'.$i.'</a></li>';
+    } else {
+        echo '<li class="waves-effect"><a href="#!">'.$i.'</a></li>';
+            }
+} 
+echo '<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>';
+echo '</ul>';
 
 
 $reponse->closeCursor();
