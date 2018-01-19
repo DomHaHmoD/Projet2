@@ -43,7 +43,6 @@ else
        }
 // sélection de la base  
 
-    
      
     // on écrit la requête sql 
     if (isset($_POST['enregistrer'])){
@@ -54,13 +53,23 @@ else
                                                      id_utilisateur = '$privilege'
                                                      WHERE `utilisateur`.`id_utilisateur` = '$id';")
                          OR die (mysql_error());
-    echo 'Vos infos on été ajoutées.'; 
+    //echo 'Vos infos on été ajoutées.';
+   /* <!-- Modal Structure --> */
+   echo '
+   <script>
+          alert ("Vos informations ont bien été enregistrées");
+           document.location.replace("page2.php" );
+   </script>';
     
         }else if(isset($_POST['supprimer'])){
         
         $reponse = $bdd->prepare("DELETE FROM utilisateur WHERE id_utilisateur='$id'")
-                         OR die (mysql_error()); 
-                         echo 'Vos infos on été supprimées.';
+                         OR die (mysql_error());
+        echo '
+   <script>
+          alert ("Vos informations ont bien été supprimées");
+           document.location.replace("page2.php");
+   </script>';
         }
     }
      
@@ -74,6 +83,3 @@ else
     
     
 ?>
-<p> <!-- il faudra revenir au user menu --> 
-	<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page Recherche/Ajouter</button>
-</p>

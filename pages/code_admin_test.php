@@ -65,13 +65,17 @@ else
         $reponse = $bdd->prepare('CREATE USER "'.$login.'"@"localhost" IDENTIFIED WITH mysql_native_password AS "'.$password.'";GRANT SELECT, INSERT, UPDATE, DELETE, FILE ON *.* TO "'.$login.'"@"localhost" REQUIRE NONE WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0');
         $reponse -> execute() or die();
     }
-    // on affiche le résultat pour le visiteur 
-    echo 'Vos infos on été ajoutées.'; 
+    // on affiche le résultat pour le visiteur
+    echo '
+   <script>
+          alert ("Vos informations ont bien été ajoutées");
+           document.location.replace("page2.php" );
+   </script>';
     
     //$req->closeCursor();  // on ferme la connexion ?????
     }  
     
 ?>
-<p> <!-- il faudra revenir au user menu --> 
-	<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page Recherche/Ajouter</button>
-</p>
+<!--<p> <!-- il faudra revenir au user menu -->
+	<!--<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page Recherche/Ajouter</button>
+</p>-->

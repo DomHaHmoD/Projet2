@@ -29,6 +29,7 @@ require('../config.inc.php');
 	<!-- add bibliotheque Materialize -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body>
@@ -55,7 +56,7 @@ require('../config.inc.php');
         
 			<p>
 				<div class="row">
-			        <div class="col s12">
+			        <!--<div class="col s12">-->
 			    	    <div class="row">
 				     	    <div class="input-field col s6">
 					            <i class="material-icons prefix">account_circle</i>
@@ -81,37 +82,35 @@ require('../config.inc.php');
                                 <label class="active" id="label_form"for="prenom_user">Prénom</label>
                             </div>
                         </div>
-					</div>
+					<!--</div>-->
                 </div>
 			       	<div class="row">
-				        <div class="input-field col s12">
+				        <div class="input-field col s6">
 							<div class="row">
 								<div class="input-field col s6">
-				          		<input id="login_user" type="text" name="login" class="validate"
-                                   value="<?php
-                                   if (!empty($_SESSION['data_to_modify'])) {
-                                       echo $_SESSION['data_to_modify'][2];
-                                   } else {
-                                       echo '';
-                                   }
-                                   ?>">
-				          	<label class="active" id="label_form" for="login">Login</label>
-				        	</div>
-							<div class="input-field col s6">
-				          	<input id="password_user" type="text" name="password" class="validate"
-                                   value="<?php
-                                   if (!empty($_SESSION['data_to_modify'])) {
+                                    <input id="login_user" type="text" name="login" class="validate"
+                                       value="<?php
+                                       if (!empty($_SESSION['data_to_modify'])) {
+                                           echo $_SESSION['data_to_modify'][2];
+                                       } else {
+                                           echo '';
+                                       }
+                                       ?>">
+                                    <label class="active" id="label_form" for="login">Login</label>
+				        	    </div>
+							    <div class="input-field col s6">
+				          	        <input id="password_user" type="text" name="password" class="validate"
+                                    value="<?php
+                                    if (!empty($_SESSION['data_to_modify'])) {
                                        echo $_SESSION['data_to_modify'][3];
-                                   } else {
+                                    } else {
                                        echo '';
-                                   }
-                                   ?>">
-                            <label class="active" for="password_user">Password</label>
-				        </div>
-				    </div>
-				   	
-				    
-
+                                    }
+                                    ?>">
+                                    <label class="active" for="password_user">Password</label>
+				                </div>
+				            </div>
+                        </div>
                     </div>
 			       	<div class="row">
 				        <div class="input-field col s12">
@@ -143,13 +142,13 @@ require('../config.inc.php');
 			</p>
 			
 			<p>
-            <button class="btn waves-effect waves-light tooltipped" type="submit"
+            <button class="btn waves-effect waves-light tooltipped" type="submit" onclick="window.location.href='http:/localhost/stapa3php/pages/page2.php'" target="_parent"
                                 name="enregistrer" data-position="top" data-delay="50" data-tooltip="valider votre modif">
                                 Enregistrer les modifications
             </button>
 			</p>
 			<p>
-            <button class="btn waves-effect waves-light tooltipped" type="submit ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/code_admin_delete_user.php'""
+            <button class="btn waves-effect waves-light tooltipped" type="submit" onclick="window.location.href='http:/localhost/stapa3php/pages/page2.php'" target="_parent"
                                 name="supprimer" data-position="top" data-delay="50" data-tooltip="valider la suppression">
                                 Delete
             </button>
