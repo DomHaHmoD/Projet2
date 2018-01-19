@@ -39,23 +39,42 @@ echo '<br />';*/
 	<fieldset id="bloc_requete">
 		<legend id="legend_other_page"><h4>STAPA Administrateur</h4></legend>
 
-		<label for="action_type"><h5>Merci de saisir les informations de l'utilisateur/gestionnaire</h5></label>
+		<label for="action_type"><h5>Quelle action souhaitez vous traitez?</h5></label>
 		
-		<!-- le .php est le lien avec le fichier php -->
-                        <button class="btn waves-effect waves-light tooltipped" type="submit"
-                                ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_recherche.php'"
-                                name="rechercher" data-position="top" data-delay="50" data-tooltip="valider votre recherche">
-                                Rechercher
-                        </button>
-                    </div>
-                    <div class="col s6">
-                        <button class="btn waves-effect waves-light" type="submit" name="ajouter" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_ajout.php'">Ajouter
-                        </button>
-                    </div>
+		<!--  -->
+        <div class="row">
+            <div class="col s9">
+                <div>
+                    <button class="btn waves-effect waves-light tooltipped" type="submit"
+                            ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_recherche.php'"
+                                    name="rechercher" data-position="top" data-delay="50" data-tooltip="valider votre recherche">
+                                    Rechercher
+                    </button>
                 </div>
-			</p>
-		</form>	
-		</form>	
+                <br/>
+                <br/>
+                <div>
+                    <button class="btn waves-effect waves-light" type="submit" name="ajouter" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_ajout.php'">Ajouter
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="col s3"> <!-- zone d'iformations de droite -->
+                <fieldset id="bloc_infos">
+                    <label for="action_type"><h5>Informations</h5></label>
+                    <form>
+                        <p>cliquez sur la requête que vous souhaitez
+                            visualisez.
+
+                            Vous aurez un bouton "revenir" aux requêtes,
+                            pour revenir sur cette page.
+                        </p>
+                        <form>
+                </fieldset>
+            </div>
+        </div>
+
 	</fieldset>
 
 </body>

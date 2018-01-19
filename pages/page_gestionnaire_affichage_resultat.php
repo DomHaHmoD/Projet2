@@ -1,15 +1,6 @@
-<?php 
-// appel config.inc.php
-session_start();
-require('../config.inc.php');
-
-//echo $_SESSION['qualification'];
-//echo '<br />';
-
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 	<title>STAPA</title>
 
@@ -31,26 +22,21 @@ require('../config.inc.php');
 
 <body>
 
+<!-- bloc de requete -->
+	<fieldset id="bloc_requete">
+		<legend id="legend_other_page"><h4>STAPA | Gestionnaire</h4></legend>
 
-
-<!-- bloc titre -->
-  	<?php
-  	require('bloc_titre_other.php');
-  	?>
-
-	<fieldset id="bloc_config">
-		<legend id="legend_other_page"><h4>STAPA administrateur</h4></legend>
+		<label for="action_type"><h5>Merci de saisir les informations afin de rechercher l'abonné que vous souhaitez modifier</h5></label>
 
 		<!-- le tableau de résultat sera ici -->
 		<?php 
-		require('code_admin_test.php');
+		include('resultat_abonne.php');
 		?>
-		
-		<p> <!-- il faudra revenir au user menu --> 
-			<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_recherche.php'">Revenir à la page requête</button>
-		</p>
 
+		<!-- il faudra revenir au user menu --> 
+		<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_adminold.php'">Revenir à la page requête</button>
 		
+
 	</fieldset>
 </body>
 </html>

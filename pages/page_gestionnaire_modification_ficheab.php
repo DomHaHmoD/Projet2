@@ -1,3 +1,8 @@
+<?php 
+session_start();
+//require('cookie_modify.php');
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -20,6 +25,9 @@
 </head>
 
 <body>
+
+	<!-- bloc titre commun à toutes les pages -->
+	<?php include("bloc_titre_other.php"); ?>
 	<!-- bloc titre -->
 	<!--<nav id="row_bloc_titre">
     	<div class="nav-wrapper teal lighten">
@@ -42,44 +50,36 @@
 
     <!-- bloc requete -->
 	<fieldset id="bloc_requete">
-		<legend id="legend_other_page"><h4>STAPA Gestionnaire</h4></legend>
+		<legend id="legend_other_page"><h4>STAPA | Gestionnaire</h4></legend>
 
-		<label for="action_type"><h5>Merci de saisir les informations du client</h5></label>
+		<label for="action_type"><h5>Merci de saisir les informations de l'abonné</h5></label>
 		
 		<!-- le .php est le lien avec le fichier php -->
-		<form id="form1" action="Immo2000.php" method="post">
+		<form id="form1" action="code_gest_modif.php" method="post">
 			<p>
 				<div class="row">
 			    <form class="col s12">
 				     <div class="row">
 				     	<div class="input-field col s6">
 					        <i class="material-icons prefix">account_circle</i>
-					        <input id="nom" type="text" class="validate">
-					        <label for="nom">Nom du client</label>
+					        <input id="nom" type="text" placeholder="Nom de l'abonné" class="validate">
+					        <label for="nom"></label>
 					  	</div>
 				        <div class="input-field col s6">
-				          <input id="prenom" type="text" class="validate">
-				          <label for="prenom">Prénom du client</label>
+				          <input id="prenom" type="text" placeholder="Prénom de l'abonné" class="validate">
+				          <label for="prenom"></label>
 				        </div>
 				    </div>
 			       	<div class="input-field col s6">
-			          	<i class="material-icons prefix">phone</i>
-			          	<input id="icon_telephone" type="tel" class="validate">
-			          	<label for="icon_telephone">Telephone du client</label>
+			          	<i class="material-icons prefix">Date de naissance</i>
+			          	<input id="naissance" type="date" placeholder="" class="validate">
+			          	<label for="naissance"></label>
 			        </div>
-				    <div class="row">
-				        <div class="input-field col s12">
-				        	<i class="material-icons prefix">vpn_key</i>
-				          	<input id="password" type="password" class="validate">
-				          	<label for="password">Password</label>
-				        </div>
-				    </div>
 				    <div class="row">
 				    	<div class="input-field col s12">
 				        	<i class="material-icons prefix">email</i>
-				          	<label for="email">Email</label>
-							  <input id="email" type="email" class="validate">
-				          	
+				          	<input id="email" type="email" placeholder="Courrier éléctronique" class="validate">
+				          	<label for="email">Courrier éléctronique</label>
 				        </div>
 				     </div>
 			    </form>
@@ -87,7 +87,7 @@
 			</p>
 			
 			<p>
-				<button class="btn waves-effect waves-light" type="submit" name="action">Valider
+				<button class="btn waves-effect waves-light" type="submit" name="action">Enregistrer
     			
   				</button>
 			</p>

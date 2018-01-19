@@ -34,7 +34,7 @@ require('../config.inc.php');
 <body>
 
 <?php
-  	require('page_bloc_titre_other.php');
+  	require('bloc_titre_other.php');
 ?>
 
     <!-- bloc requete -->

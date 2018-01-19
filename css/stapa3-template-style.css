@@ -30,39 +30,51 @@ body {
 
 /* ----------- fin bloc titre - commun à toutes les pages ----------- */
 
+#bloc_body_global {
+	margin-left: 0;
+	width: 1000px;
+	/*background-color: #00b3ff;*/
+}
+
 /* login - page index */
 #login {
 	margin-left: 50px;
 	width: 500px;
 }
 
-.bloc_global_body_requete {
-
-}
-
 /* bloc_requete - page 2 */
 #bloc_requete {
 	position: absolute;
+	float: left;
 	margin-left: 50px;
 	width: 800px;
 }
 
 #bloc_infos {
-	position: relative;
-	margin-left: 900px; 
+	position: absolute;
+	float: left;
+	left: 950px;
 	padding-left: 0;
 	margin-top: 50px;
 	width: 250px;
 }
 
-.label_requete {
-	font-weight: normal;
-	text-transform: none;
+#btn_radio_style {
+	text-transform: unset;
+	text-align: left;
 }
 
-.no-uppercase {
-     text-transform: none;
-} 
+/* -------------------- début footer -----------------------------------*/
+#bloc-footer {
+	/*clear: both;*/
+    position: absolute;
+    /*float: none;*/
+	/*padding-top: inherit;*/
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+}
+
 
 /* --------------------- debut page at1 ----------------------------- */
 	/* bloc_config - page at1 */
@@ -93,10 +105,3 @@ input[type=checkbox]:checked ~ ul {
 }
 
 
-/* -------------------- début footer -----------------------------------*/
-.bloc_footer {
-	position : absolute;
-	bottom: 0;
-	height: 60px;
-	width: 100%;
-}
