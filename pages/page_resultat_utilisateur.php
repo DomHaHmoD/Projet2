@@ -27,6 +27,8 @@ require('../config.inc.php');
 	<!-- add bibliotheque Materialize -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="materialize-pagination.min.js"></script>
 </head>
 
 <body>
@@ -38,28 +40,28 @@ require('../config.inc.php');
             <div class="col s9">
                 <fieldset id="bloc_config">
                     <legend id="legend_other_page"><h4>STAPA Utilisateur</h4></legend>
+                        <div  id="user_resultat">
 
-                    <!-- le tableau de résultat sera ici -->
-                    <?php
-                    require('code_requete.php');
-                    ?>
-
+                            <!-- le tableau de résultat sera ici -->
+                            <?php
+                            require('code_user_requete.php');
+                            ?>
+                        </div>
                     <p> <!-- button user menu back-->
                         <button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page requête</button>
                     </p>
                 </fieldset>
-
-             <div class="col s3" id="bloc_infos"> <!-- zone d'iformations de droite -->
-                    <fieldset>
-                        <label for="action_type"><h5>Informations</h5></label>
-                        <form>
-                            <p>Pour revenir à la page des requêtes,
-                                cliquez sur le bouton.
-                            </p>
-                            <form>
-                    </fieldset>
-             </div>
             </div>
+             <div class="col s3">
+                <fieldset id="bloc_infos3"><!-- zone d'iformations de droite -->
+                    <label for="action_type"><h5>Informations</h5></label>
+                    <form>
+                        <p>Pour revenir à la page des requêtes,
+                                cliquez sur le bouton.
+                        </p>
+                    <form>
+                </fieldset>
+             </div>
         </div>
     </div>
 

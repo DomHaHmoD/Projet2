@@ -46,22 +46,32 @@ else
     
      
     // on écrit la requête sql 
+    if (isset($_POST['enregistrer'])){
     $reponse = $bdd->prepare("UPDATE utilisateur SET nom_utilisateur = '$nom',
                                                      prenom_utilisateur = '$prenom',
                                                      login = '$login',
                                                      password_utilisateur = '$password',
                                                      id_utilisateur = '$privilege'
                                                      WHERE `utilisateur`.`id_utilisateur` = '$id';")
+                         OR die (mysql_error());
+    echo 'Vos infos on été ajoutées.'; 
+    
+        }else if(isset($_POST['supprimer'])){
+        
+        $reponse = $bdd->prepare("DELETE FROM utilisateur WHERE id_utilisateur='$id'")
                          OR die (mysql_error()); 
+                         echo 'Vos infos on été supprimées.';
+        }
+    }
      
     // on insère les informations du formulaire dans la table 
     $reponse -> execute() or die(); 
 
     // on affiche le résultat pour le visiteur 
-    echo 'Vos infos on été ajoutées.'; 
     
+
     //$req->closeCursor();  // on ferme la connexion ?????
-    }  
+    
     
 ?>
 <p> <!-- il faudra revenir au user menu --> 

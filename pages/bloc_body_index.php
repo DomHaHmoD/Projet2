@@ -16,7 +16,7 @@
 
                 <form id="form_login" action="pages/page2.php" method="post">
                     <div class="form-group">
-                        <label for="InputEmail">Email address</label>
+                        <label for="InputEmail">Login</label>
                         <input type="text" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Saisissez votre login" size="50" required>
                         <small id="email" class="form-text text-muted">Ne donner jamais votre mot de passe</small>
                     </div>
@@ -31,10 +31,11 @@
         </fieldset>
     </div>
     <div class="col s3"> <!-- zone d'iformations de droite -->
-        <fieldset id="bloc_infos">
+        <fieldset id="bloc_infos1">
+            <p><br></p>
             <label for="action_type"><h5>Informations</h5></label>
             <form>
-                <p>vore login est composé de votre <b>prénom.nom</b>, merci de le saisir en lettre minuscule.
+                <p>Votre login est composé de votre <b>prénom.nom</b>, merci de le saisir en lettre minuscule.
 
 
                 </p>

@@ -2,11 +2,19 @@
 	*			      			PROFIL "GESTIONNAIRE" - AFFICHAGE RESULTATS RECHERCHE					*
 	*																									*
 	*						Le gestionnaire peut voir l'aboutissement de sa recherche.					*
-	* 																									*	*****************************************************************************************************
+	*****************************************************************************************************																									*
 -->
+<<<<<<< HEAD
 <?php 
 session_start();
 //require('cookie_modify.php');
+=======
+<?php
+session_start();
+
+?>
+
+>>>>>>> f669f5bb41e17f4401df958b1bb7f8f919b561f3
 ?>
 
 <!DOCTYPE html>

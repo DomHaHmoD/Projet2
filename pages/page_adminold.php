@@ -60,22 +60,23 @@ echo '<br />';*/
             </div>
 
 
-            <div class="col s3"> <!-- zone d'iformations de droite -->
-                <fieldset id="bloc_infos">
-                    <label for="action_type"><h5>Informations</h5></label>
-                    <form>
-                        <p>cliquez sur la requête que vous souhaitez
-                            visualisez.
 
-                            Vous aurez un bouton "revenir" aux requêtes,
-                            pour revenir sur cette page.
-                        </p>
-                        <form>
-                </fieldset>
-            </div>
         </div>
 
 	</fieldset>
+    <div class="col s3"> <!-- zone d'iformations de droite -->
+        <fieldset id="bloc_infos">
+            <label for="action_type"><h5>Informations</h5></label>
+            <form>
+                <p>cliquez sur la requête que vous souhaitez
+                    visualisez.
+
+                    Vous aurez un bouton "revenir" aux requêtes,
+                    pour revenir sur cette page.
+                </p>
+                <form>
+        </fieldset>
+    </div>
 
 </body>
 </html>

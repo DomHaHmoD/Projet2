@@ -27,7 +27,6 @@ body {
    	margin : auto;
 }
 
-
 /* ----------- fin bloc titre - commun à toutes les pages ----------- */
 
 #bloc_body_global {
@@ -42,49 +41,95 @@ body {
 	width: 500px;
 }
 
-/* bloc_requete - page 2 */
+/* bloc_requete - page 2 - bloc body userrequete */
 #bloc_requete {
 	position: absolute;
 	float: left;
 	margin-left: 50px;
-	width: 800px;
+	margin_bottom:25px;
+	width: 950px;
 }
+/* fin bloc_requete - page 2 - bloc body userrequete */
+
+/* bouton de la page des requetes utilisateurs */
+#btn_radio_style {
+	text-transform: unset;
+	text-align: left;
+}
+/* fin ----- */
+
+#bloc_config {
+	position: absolute;
+	float: left;
+	margin-left: 50px;
+	width: 950px;
+	font-size: 12.5px;
+}
+
+/*#user_resultat {
+	width: 950px;
+}*/
 
 #bloc_infos {
 	position: absolute;
 	float: left;
-	left: 950px;
-	padding-left: 0;
-	margin-top: 50px;
+	left: 950px; 
+	padding-left: 25px;
+	padding-bottom: 64px;
+	margin-left: 90px;
+	margin-top: 34px;
 	width: 250px;
 }
+#bloc_infos1 {
+	position: absolute;
+	float: left;
+	left: 570px;
+	padding-left: 25px;
+    padding-bottom:33.5px;
+    margin-top: 33.5px;
 
-#btn_radio_style {
-	text-transform: unset;
-	text-align: left;
+}
+#bloc_infos2 {
+    position: absolute;
+    float: left;
+    left: 1050px;
+    padding-left: 25px;
+    padding-bottom:25px;
+    margin-top:34px;
+    width: 250px;
+}
+#bloc_infos3 {
+    position: absolute;
+    float: left;
+    left: 1050px; // j'ai changé de 950 à 1050
+    padding-left: 25px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+
+
 }
 
 /* -------------------- début footer -----------------------------------*/
 #bloc-footer {
 	/*clear: both;*/
-    position: absolute;
-    /*float: none;*/
-	/*padding-top: inherit;*/
-    bottom: 0;
+    /*position: absolute;*/ /* absolute */
+	position: fixed;
+	bottom: 0;
+	left:0;
     height: 60px;
-    width: 100%;
+    width: 300px;
 }
 
 
 /* --------------------- debut page at1 ----------------------------- */
 	/* bloc_config - page at1 */
-#bloc_config {
+/*bloc_config {
 	margin-left: 50px;
-	width: 800px;
-}
+	width: auto;
+}*/
 
 	/* bloc_config - page at1 = dropdown */
-input[type=checkbox] {
+/*input[type=checkbox] {
     display: none;
 }
 
@@ -94,7 +139,7 @@ ul {
 
 input[type=checkbox]:checked ~ ul {
     display: block
-}
+}*/
 /* --------------------- fin page at1 ------------------------------------ */
 
 
@@ -104,4 +149,7 @@ input[type=checkbox]:checked ~ ul {
 
 }
 
+h5{
+    color:black;
+}
 
