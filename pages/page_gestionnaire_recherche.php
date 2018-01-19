@@ -26,7 +26,7 @@
 				    </div>    
 			    </div>
 
-            <button class="btn waves-effect waves-light" type="submit" name="rechercher" ONCLICK="window.location.href='http://localhost/interface/projet2/pages/page_gestionnaire_affichage_resultat.php'">Valider
+            <button class="btn waves-effect waves-light" type="submit" name="rechercher" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_gestionnaire_affichage_resultat.php'">Valider
     			
             </button>
 			

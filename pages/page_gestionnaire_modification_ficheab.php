@@ -129,7 +129,7 @@ session_start();
 			</p>
 			
 			<p>
-				<button class="btn waves-effect waves-light" ONCLICK="window.location.href='http://localhost/interface/projet2/pages/code_gest_modif.php'"
+				<button class="btn waves-effect waves-light" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/code_gest_modif.php'"
                     type="submit" name="enregistrer">Enregistrer
 
   				</button>
