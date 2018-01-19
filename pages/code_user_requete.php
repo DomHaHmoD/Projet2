@@ -125,12 +125,12 @@ echo '</p>';
 //echo '<p align="center">Page : '; //Pour l'affichage, on centre la liste des pages
 echo '<ul class="pagination">
         <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>';
-for($i = 1; $i <= $nombreDePages; $i++) //On fait notre boucle
-{
+
+for($i = 1; $i <= $nombreDePages; $i++) { //On fait notre boucle
     if ($i == $pageActuelle) {
-        echo '<li class="active"><a href="#!">'.$i.'</a></li>';
+        echo '<li class="active"><a href="code_user_requete.php?page='.$i.'">'.$i.'</a></li>';
     } else {
-        echo '<li class="waves-effect"><a href="#!">'.$i.'</a></li>';
+        echo '<li class="waves-effect"><a href="code_user_requete.php?page='.$i.'">'.$i.'</a></li>';
             }
 } 
 echo '<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>';

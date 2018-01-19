@@ -34,7 +34,7 @@
 		?>
 
 		<!-- il faudra revenir au user menu --> 
-		<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_adminold.php'">Revenir à la page requête</button>
+		<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/interface/projet2/pages/page_adminold.php'">Revenir à la page requête</button>
 		
 
 	</fieldset>

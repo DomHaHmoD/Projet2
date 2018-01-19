@@ -2,15 +2,13 @@
 	*			      			PROFIL "GESTIONNAIRE" - AFFICHAGE RESULTATS RECHERCHE					*
 	*																									*
 	*						Le gestionnaire peut voir l'aboutissement de sa recherche.					*
-	*****************************************************************************************************																									*
+	* 																									*	*****************************************************************************************************
 -->
+
 <?php
 session_start();
 
 ?>
-
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -67,10 +65,11 @@ session_start();
 			echo '<br/>';*/
 			$recupnom = $_POST['nom'];
 			$recupnom = '"'.$recupnom.'"';
-			$req = $bdd->query("SELECT personnes.nom AS 'NOM ABONNE', 
+			$req = $bdd->query("SELECT personnes.nom AS 'NOM', 
                                                 personnes.prenom AS 'PRENOM', 
                                                 personnes.naissance AS 'DATE NAISSANCE',
-                                                personnes.email AS 'EMAIL'
+                                                personnes.email AS 'EMAIL',
+                                                personnes.id_personne AS 'ID'
                                                 FROM personnes WHERE personnes.nom = ".$recupnom.";");
 			/*echo '<pre>';
 			print_r($req);
@@ -125,7 +124,7 @@ session_start();
 		print_r($line);
 		die();*/
 		// affichage du head du tableau
-        echo '<form  action="page_gestionnaire_abonnes.php" method="POST">';
+        echo '<form  action="resultat_abonne.php" method="POST">';
 			echo '<table class="striped">
 	    		<thead>';
 	        	foreach ($requete[0] as $key => $value) {
@@ -141,7 +140,7 @@ session_start();
                         $array_data[] = $value;
                         $_SESSION['data_to_modify'] = $array_data;
 	    			}
-                    echo '<td><a class="btn-floating btn-large waves-effect waves-light red" type="submit" onclick="window.location.href=\'http://localhost/stapa3php/projet2/pages/page_gestionnaire_modification_ficheab.php\'"><i class="material-icons">mode_edit</i></a></td>';
+                    echo '<td><a class="btn-floating btn-large waves-effect waves-light red" type="submit" onclick="window.location.href=\'http://localhost/interface/projet2/pages/page_gestionnaire_modification_ficheab.php\'"><i class="material-icons">mode_edit</i></a></td>';
                     echo '</tr>';
 		          	echo '</tr>';
 				}
