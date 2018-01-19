@@ -99,6 +99,6 @@ if(empty($nom) OR empty($prenom) OR empty($date) OR empty($email))
 
 ?>
 <p> <!-- il faudra revenir au user menu -->
-    <button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/interface/projet2/pages/page2.php'">Revenir à la page Recherche/Ajouter</button>
+    <button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stap3phpF/projet2/pages/page2.php'">Revenir à la page Recherche/Ajouter</button>
 </p>
 

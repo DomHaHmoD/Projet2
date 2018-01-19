@@ -140,7 +140,7 @@ session_start();
                         $array_data[] = $value;
                         $_SESSION['data_to_modify'] = $array_data;
 	    			}
-                    echo '<td><a class="btn-floating btn-large waves-effect waves-light red" type="submit" onclick="window.location.href=\'http://localhost/interface/projet2/pages/page_gestionnaire_modification_ficheab.php\'"><i class="material-icons">mode_edit</i></a></td>';
+                    echo '<td><a class="btn-floating btn-large waves-effect waves-light red" type="submit" onclick="window.location.href=\'http://localhost/stapa3php/projet2/pages/page_gestionnaire_modification_ficheab.php\'"><i class="material-icons">mode_edit</i></a></td>';
                     echo '</tr>';
 		          	echo '</tr>';
 				}

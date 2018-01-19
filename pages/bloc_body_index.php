@@ -35,9 +35,9 @@
             <p><br></p>
             <label for="action_type"><h5>Informations</h5></label>
             <form>
-                <p>Votre login est composé de votre <b>prénom.nom</b>, merci de le saisir en lettre minuscule.
-
-
+                <p>Votre login est composé de votre prénom asocié à votre prénom,
+                    voici un exemple <b>prénom.nom</b>
+                    merci de le saisir en lettre minuscule.
                 </p>
                 <form>
         </fieldset>
