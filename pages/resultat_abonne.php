@@ -2,21 +2,13 @@
 	*			      			PROFIL "GESTIONNAIRE" - AFFICHAGE RESULTATS RECHERCHE					*
 	*																									*
 	*						Le gestionnaire peut voir l'aboutissement de sa recherche.					*
-	*****************************************************************************************************																									*
+	* 																									*	*****************************************************************************************************
 -->
-<<<<<<< HEAD
-<?php 
-session_start();
-//require('cookie_modify.php');
-=======
+
 <?php
 session_start();
 
 ?>
-
->>>>>>> f669f5bb41e17f4401df958b1bb7f8f919b561f3
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -74,10 +66,11 @@ session_start();
 			echo '<br/>';*/
 			$recupnom = $_POST['nom'];
 			$recupnom = '"'.$recupnom.'"';
-			$req = $bdd->query("SELECT personnes.nom AS 'NOM ABONNE', 
+			$req = $bdd->query("SELECT personnes.nom AS 'NOM', 
                                                 personnes.prenom AS 'PRENOM', 
                                                 personnes.naissance AS 'DATE NAISSANCE',
-                                                personnes.email AS 'EMAIL'
+                                                personnes.email AS 'EMAIL',
+                                                personnes.id_personne AS 'ID'
                                                 FROM personnes WHERE personnes.nom = ".$recupnom.";");
 			/*echo '<pre>';
 			print_r($req);
@@ -148,7 +141,7 @@ session_start();
                         $array_data[] = $value;
                         $_SESSION['data_to_modify'] = $array_data;
 	    			}
-                    echo '<td><a class="btn-floating btn-large waves-effect waves-light red" type="submit" onclick="window.location.href=\'http://localhost/stapa3php/projet2/pages/page_gestionnaire_modification_ficheab.php\'"><i class="material-icons">mode_edit</i></a></td>';
+                    echo '<td><a class="btn-floating btn-large waves-effect waves-light red" type="submit" onclick="window.location.href=\'http://localhost/interface/projet2/pages/page_gestionnaire_modification_ficheab.php\'"><i class="material-icons">mode_edit</i></a></td>';
                     echo '</tr>';
 		          	echo '</tr>';
 				}

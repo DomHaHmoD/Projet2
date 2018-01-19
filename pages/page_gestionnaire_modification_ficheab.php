@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-<?php 
-session_start();
-//require('cookie_modify.php');
-=======
 <?php
 session_start();
->>>>>>> f669f5bb41e17f4401df958b1bb7f8f919b561f3
 
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -60,44 +55,86 @@ session_start();
 		<label for="action_type"><h5>Merci de saisir les informations de l'abonné</h5></label>
 		
 		<!-- le .php est le lien avec le fichier php -->
-		<form id="form1" action="code_gest_modif.php" method="post">
+		<form id="form1" action="code_gest_modif.php" method="post" name="rechercher">
 			<p>
 				<div class="row">
-			    <form class="col s12">
+			    <div class="col s12">
 				     <div class="row">
 				     	<div class="input-field col s6">
 					        <i class="material-icons prefix">account_circle</i>
-					        <input id="nom" type="text" placeholder="Nom de l'abonné" class="validate">
+					        <input id="nom" type="text" name="nom" placeholder="Nom de l'abonné" class="validate"
+                                   value="<?php
+                                    if (!empty($_SESSION['data_to_modify'])) {
+                                    echo $_SESSION['data_to_modify'][0];
+                                    } else {
+                                        echo '';
+                                    }
+                            ?>">
+
 					        <label for="nom"></label>
 					  	</div>
 				        <div class="input-field col s6">
-				          <input id="prenom" type="text" placeholder="Prénom de l'abonné" class="validate">
+				          <input id="prenom" type="text" name="prenom" placeholder="Prénom de l'abonné" class="validate"
+                                 value="<?php
+                                 if (!empty($_SESSION['data_to_modify'])) {
+                                     echo $_SESSION['data_to_modify'][1];
+                                 } else {
+                                     echo '';
+                                 }
+                                 ?>">
 				          <label for="prenom"></label>
 				        </div>
 				    </div>
 			       	<div class="input-field col s6">
 			          	<i class="material-icons prefix">Date de naissance</i>
-			          	<input id="naissance" type="date" placeholder="" class="validate">
+			          	<input id="naissance" type="text" name="date" placeholder="" class="validate"
+                               value="<?php
+                            if (!empty($_SESSION['data_to_modify'])) {
+                                echo $_SESSION['data_to_modify'][2];
+                            } else {
+                                echo '';
+                                }
+                            ?>">
 			          	<label for="naissance"></label>
 			        </div>
 				    <div class="row">
 				    	<div class="input-field col s12">
 				        	<i class="material-icons prefix">email</i>
-				          	<input id="email" type="email" placeholder="Courrier éléctronique" class="validate">
+				          	<input id="email" type="text" name="email" placeholder="" class="validate"
+                                   value="<?php
+                                   if (!empty($_SESSION['data_to_modify'])) {
+                                       echo $_SESSION['data_to_modify'][3];
+                                   } else {
+                                       echo '';
+                                   }
+                                   ?>">
 				          	<label for="email">Courrier éléctronique</label>
 				        </div>
 				     </div>
-			    </form>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">id</i>
+                            <input id="id_personne" type="text" name="id" placeholder="" class="validate" value="<?php
+                            if (!empty($_SESSION['data_to_modify'])) {
+                                echo $_SESSION['data_to_modify'][4];
+                            } else {
+                                echo '';
+                            }
+                            ?>">
+                            <label for="id">Id</label>
+                        </div>
+                    </div>
+			    </div>
 			  </div>
 			</p>
 			
 			<p>
-				<button class="btn waves-effect waves-light" type="submit" name="action">Enregistrer
-    			
+				<button class="btn waves-effect waves-light" ONCLICK="window.location.href='http://localhost/interface/projet2/pages/code_gest_modif.php'"
+                    type="submit" name="enregistrer">Enregistrer
+
   				</button>
 			</p>
-			
-		</form>	
+        </form>
 	</fieldset>
 
 </body>

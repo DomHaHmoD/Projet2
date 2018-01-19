@@ -22,7 +22,7 @@ require('cookie_modify.php');
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<title>STAPA3</title>
+	<title>STAPA</title>
 
 	<!-- meta -->
 	<meta charset="utf-8">
