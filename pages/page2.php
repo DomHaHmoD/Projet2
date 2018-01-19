@@ -9,6 +9,7 @@
 -->
 <!-- maj des cookies -->
 <?php 
+
 session_start();
 
 require('cookie_modify.php');
@@ -27,11 +28,9 @@ require('cookie_modify.php');
 	<meta charset="utf-8">
 	<meta name="description=" content="appli STAPA">
 	<meta name="author" content="Prénom HA-THI">
-	
 	<meta name="category" content="template">
 	<meta name="copyright" content="STAPA Bordeaux">
 	<meta name="google" content="translate">
-	
 	<link href="../css/stapa3-template-style.css" rel="stylesheet" type="text/css">
 	<link href="../images/bus.jpg" rel="shortcut icon" type="image/jpg">
 	<!-- add bibliotheque Materialize -->

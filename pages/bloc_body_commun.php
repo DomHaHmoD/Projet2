@@ -13,6 +13,7 @@
 // appel config.inc.php
 require('../config.inc.php');
 
+
 // si le login et password exist
 if ((isset($_SESSION['email']))&(isset($_SESSION['password']))) {
 

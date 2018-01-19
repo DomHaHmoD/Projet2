@@ -46,10 +46,25 @@ else
     $reponse = $bdd->prepare("INSERT INTO utilisateur(nom_utilisateur,prenom_utilisateur,login,password_utilisateur,id_type_utilisateur)
                          VALUES ('$nom', '$prenom', '$login', '$password', '$privilege');")
                          OR die (mysql_error()); 
+    
+       
      
     // on insère les informations du formulaire dans la table 
     $reponse -> execute() or die(); 
+    
+    if ($privilege =1){
+    $reponse = $bdd->prepare('CREATE USER "'.$login.'"@"localhost" IDENTIFIED WITH mysql_native_password AS "'.$password.'";GRANT SELECT ON *.* TO "'.$login.'"@"localhost" REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0');
+    $reponse -> execute() or die();
 
+    }else if($privilege =2){
+        $reponse = $bdd->prepare('CREATE USER "'.$login.'"@"localhost" IDENTIFIED WITH mysql_native_password AS "'.$password.'";GRANT SELECT, INSERT ON *.* TO "'.$login.'"@"localhost" REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0');
+        $reponse -> execute() or die();
+    
+
+    }else if($privilege =3){
+        $reponse = $bdd->prepare('CREATE USER "'.$login.'"@"localhost" IDENTIFIED WITH mysql_native_password AS "'.$password.'";GRANT SELECT, INSERT, UPDATE, DELETE, FILE ON *.* TO "'.$login.'"@"localhost" REQUIRE NONE WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0');
+        $reponse -> execute() or die();
+    }
     // on affiche le résultat pour le visiteur 
     echo 'Vos infos on été ajoutées.'; 
     

@@ -44,7 +44,14 @@ require('../config.inc.php');
 		<label for="action_type"><h5>Merci de saisir les informations de l'utilisateur/gestionnaire</h5></label>
 		
 		<!-- le .php est le lien avec le fichier php -->
-		<form id="form1" action="code_admin_modif.php" method="post" name="rechercher">
+		<?php
+		if (isset($_POST['enregistrer'])){
+		}
+		?>
+		<form id="form1" action="code_admin_modif.php" method="post" name="rechercher">	
+		
+		
+		<!--<form id="form1" action="code_admin_delete_user.php" method="post" name="rechercher">-->
         
 			<p>
 				<div class="row">
@@ -78,7 +85,9 @@ require('../config.inc.php');
                 </div>
 			       	<div class="row">
 				        <div class="input-field col s12">
-				          	<input id="login_user" type="text" name="login" class="validate"
+							<div class="row">
+								<div class="input-field col s6">
+				          		<input id="login_user" type="text" name="login" class="validate"
                                    value="<?php
                                    if (!empty($_SESSION['data_to_modify'])) {
                                        echo $_SESSION['data_to_modify'][2];
@@ -87,11 +96,8 @@ require('../config.inc.php');
                                    }
                                    ?>">
 				          	<label class="active" id="label_form" for="login">Login</label>
-				        </div>
-				    </div>
-				   	
-				    <div class="row">
-				        <div class="input-field col s12">
+				        	</div>
+							<div class="input-field col s6">
 				          	<input id="password_user" type="text" name="password" class="validate"
                                    value="<?php
                                    if (!empty($_SESSION['data_to_modify'])) {
@@ -103,6 +109,8 @@ require('../config.inc.php');
                             <label class="active" for="password_user">Password</label>
 				        </div>
 				    </div>
+				   	
+				    
 
                     </div>
 			       	<div class="row">
@@ -138,6 +146,12 @@ require('../config.inc.php');
             <button class="btn waves-effect waves-light tooltipped" type="submit"
                                 name="enregistrer" data-position="top" data-delay="50" data-tooltip="valider votre modif">
                                 Enregistrer les modifications
+            </button>
+			</p>
+			<p>
+            <button class="btn waves-effect waves-light tooltipped" type="submit ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/code_admin_delete_user.php'""
+                                name="supprimer" data-position="top" data-delay="50" data-tooltip="valider la suppression">
+                                Delete
             </button>
 			</p>
 			
