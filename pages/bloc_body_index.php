@@ -10,18 +10,18 @@
 <div class="row" id="bloc_body_global">
     <div class="col s9">
         <fieldset id="login">
-                <legend id="legend_login"><h4>Bienvenue sur STAPA3 Login</h4></legend>
+                <legend id="legend_login"><h4>Bienvenue sur STAPA | Login</h4></legend>
 
                 <label for="action_type"><h5>Merci de saisir vos identifiants</h5></label>
 
                 <form id="form_login" action="pages/page2.php" method="post">
                     <div class="form-group">
-                        <label for="InputEmail">Login</label>
-                        <input type="text" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Saisissez votre login" size="50" required>
+                        <label for="InputEmail">Identifiant</label>
+                        <input type="text" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Saisissez votre identifiant" size="50" required>
                         <small id="email" class="form-text text-muted">Ne donner jamais votre mot de passe</small>
                     </div>
                     <div class="form-group">
-                        <label for="InputPassword">Password</label>
+                        <label for="InputPassword">Mot de passe</label>
                         <input type="password" name="password" class="form-control" id="InputPassword" placeholder="Saisissez votre mot de passe" required>
                     </div>
 
@@ -33,11 +33,12 @@
     <div class="col s3"> <!-- zone d'iformations de droite -->
         <fieldset id="bloc_infos1">
             <p><br></p>
-            <label for="action_type"><h5>Informations</h5></label>
+
+            <legend><h5>Informations</h5></legend>
             <form>
-                <p>Votre login est composé de votre prénom asocié à votre prénom,
-                    voici un exemple <b>prénom.nom</b>
-                    merci de le saisir en lettre minuscule.
+                <p>Afin de vous connecter au système, merci de saisir votre identifiant et votre mot de passe.
+                    Votre identifiant est composé de votre <b>prénom.nom</b>, merci de le saisir en lettres minuscules.
+                    Si vous rencontrez un souci, merci de contacter le service technique.
                 </p>
                 <form>
         </fieldset>

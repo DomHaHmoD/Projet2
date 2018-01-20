@@ -40,9 +40,9 @@ require('../config.inc.php');
 
     <!-- bloc requete -->
 	<fieldset id="bloc_requete">
-		<legend id="legend_other_page"><h4>STAPA Administrateur</h4></legend>
+		<legend id="legend_other_page"><h4>STAPA | Administrateur</h4></legend>
 
-		<label for="action_type"><h5>Merci de saisir les informations de l'utilisateur/gestionnaire</h5></label>
+		<label for="action_type"><h5>Merci de saisir les informations de l'utilisateur/gestionnaire:</h5></label>
 		
 		<!-- le .php est le lien avec le fichier php -->
 		<?php
@@ -54,9 +54,8 @@ require('../config.inc.php');
 		
 		<!--<form id="form1" action="code_admin_delete_user.php" method="post" name="rechercher">-->
         
-			<p>
-				<div class="row">
-			        <!--<div class="col s12">-->
+
+
 			    	    <div class="row">
 				     	    <div class="input-field col s6">
 					            <i class="material-icons prefix">account_circle</i>
@@ -82,12 +81,11 @@ require('../config.inc.php');
                                 <label class="active" id="label_form"for="prenom_user">Prénom</label>
                             </div>
                         </div>
-					<!--</div>-->
-                </div>
-			       	<div class="row">
-				        <div class="input-field col s6">
+
+
 							<div class="row">
 								<div class="input-field col s6">
+                                    <i class="material-icons prefix">account_box</i>
                                     <input id="login_user" type="text" name="login" class="validate"
                                        value="<?php
                                        if (!empty($_SESSION['data_to_modify'])) {
@@ -110,10 +108,10 @@ require('../config.inc.php');
                                     <label class="active" for="password_user">Password</label>
 				                </div>
 				            </div>
-                        </div>
-                    </div>
+
 			       	<div class="row">
-				        <div class="input-field col s12">
+				        <div class="input-field col s16">
+                            <i class="material-icons prefix">vpn_key</i>
 				          	<input id="privilege_user" type="text" name="privilege" class="validate"
                                    value="<?php
                                    if (!empty($_SESSION['data_to_modify'])) {
@@ -124,10 +122,8 @@ require('../config.inc.php');
                                    ?>">
 				          	<label class="active" id="label_form" for="privilege_user">Privilege</label>
 				        </div>
-				    </div>
-					<div class="row">
-				        <div class="input-field col s12">
-				          	<input id="id_user" type="text" name="id" class="validate"
+                        <div class="input-field col s16">
+				          	    <input id="id_user" type="text" name="id" class="validate"
                                    value="<?php
                                    if (!empty($_SESSION['data_to_modify'])) {
                                        echo $_SESSION['data_to_modify'][5];
@@ -135,30 +131,57 @@ require('../config.inc.php');
                                        echo '';
                                    }
                                    ?>">
-				          	<label class="active" id="label_form" for="id_user">Id</label>
-				        </div>
-				    </div>
+				          	    <label class="active" id="label_form" for="id_user">Id</label>
+                        </div>
+                    </div>
 			    <!--</form>-->
-			</p>
+
 			
-			<p>
-            <button class="btn waves-effect waves-light tooltipped" type="submit" onclick="window.location.href='http:/localhost/stapa3php/pages/page2.php'" target="_parent"
-                                name="enregistrer" data-position="top" data-delay="50" data-tooltip="valider votre modif">
-                                Enregistrer les modifications
-            </button>
-			</p>
-			<p>
-            <button class="btn waves-effect waves-light tooltipped" type="submit" onclick="window.location.href='http:/localhost/stapa3php/pages/page2.php'" target="_parent"
-                                name="supprimer" data-position="top" data-delay="50" data-tooltip="valider la suppression">
-                                Delete
-            </button>
-			</p>
+			<div class="row">
+                <div class="col s6">
+                <button class="btn waves-effect waves-light tooltipped modal-trigger" type="submit" onclick="window.location.href='http:/localhost/stapa3php/pages/page_admin_modif.php'"  href="#modal1" target="_self"
+                        data-target="modal1" name="enregistrer" data-position="top" data-delay="50" data-tooltip="valider votre modif">
+                    Enregistrer les modifications
+                </button>
+                </div>
+                <div class="col s6">
+                    <button class="btn waves-effect waves-light tooltipped" type="submit" onclick="window.location.href='http:/localhost/stapa3php/pages/page2.php'" href="#modal1" target="_parent"
+                            name="supprimer" data-position="top" data-delay="50" data-tooltip="valider la suppression">
+                        Delete
+                    </button>
+                </div>
+            </div>
+
+
 			
 		</form>	
         <p> <!-- il faudra revenir au user menu --> 
 			<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page précédente</button>
 		</p>
+        <a class="btn" onclick="Materialize.toast('I am a toast', 4000)">Toast!</a>
 	</fieldset>
+
+
+<!-- modal -->
+<div id="modal1" class="modal">
+    <div class='modal-content'>
+        <h4>Modal Header</h4>
+        <p>Vos informations ont bien été enregistrées</p>
+    </div>
+    <div class='modal-footer'>
+        <a href='#!' class='modal-action modal-close waves-effect waves-green btn-flat'>Agree</a>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('.tooltipped').tooltip({delay: 50});
+    });
+    $(document).ready(function(){
+        // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+        $(".modal").modal();
+    });
+</script>
 
 </body>
 </html>

@@ -24,33 +24,51 @@ body {
 
 #button_exit {
 	display: block;
-	margin : auto;
+   	margin : auto;
 }
+
 /* ----------- fin bloc titre - commun à toutes les pages ----------- */
 
-/* container global in index and page2 */
 #bloc_body_global {
 	margin-left: 0;
-	width: 1200px;
+	width: 1000px;
 	/*background-color: #00b3ff;*/
 }
 
-/* bloc login - dans page index/bloc_body global */
+/* login - page index */
 #login {
 	margin-left: 50px;
 	width: 500px;
-	/*background-color: #5f46cf;*/
-	height: 100%;
 }
 
-/* bloc_requete - page 2 */
+/* bloc_requete - page 2 - bloc body userrequete */
 #bloc_requete {
 	position: absolute;
 	float: left;
 	margin-left: 50px;
 	margin_bottom:25px;
-	width: 850px;
+	width: 950px;
 }
+/* fin bloc_requete - page 2 - bloc body userrequete */
+
+/* bouton de la page des requetes utilisateurs */
+#btn_radio_style {
+	text-transform: unset;
+	text-align: left;
+}
+/* fin ----- */
+
+#bloc_config {
+	position: absolute;
+	float: left;
+	margin-left: 50px;
+	width: 950px;
+	font-size: 12.5px;
+}
+
+/*#user_resultat {
+	width: 950px;
+}*/
 
 #bloc_infos {
 	position: absolute;
@@ -62,71 +80,62 @@ body {
 	margin-top: 34px;
 	width: 250px;
 }
-/* bloc infos1 - dans page index/bloc_body global */
 #bloc_infos1 {
 	position: absolute;
 	float: left;
-	left: 600px;
+	left: 570px;
 	padding-left: 25px;
 	padding-bottom:33.5px;
-	margin-top: 11.5px;
-	width: 250px;
+	margin-top: 33.5px;
 }
-
-/* bloc infos2 - dans page index/bloc_body userrequete */
 #bloc_infos2 {
 	position: absolute;
 	float: left;
-	left: 950px;
+	left: 1050px;
 	padding-left: 25px;
 	padding-bottom:25px;
-	margin-top: 11.5px;
+	margin-top:34px;
 	width: 250px;
 }
-
-/* bloc infos3 - dans page utilisateur resultat */
 #bloc_infos3 {
 	position: absolute;
 	float: left;
 	left: 950px;
 	margin-bottom: 50px;
-	/*padding-bottom: 25px;*/
-	margin-top: 11.5px;
-	width: 250px;
-
-}
-
-
-#btn_radio_style {
-	text-transform: unset;
-	text-align: left;
+	padding-bottom: 50px;
 }
 
 /* -------------------- début footer -----------------------------------*/
 #bloc-footer {
 	/*clear: both;*/
-	position: absolute;
-	/*float: none;*/
-	/*padding-top: inherit;*/
-	margin-top: 10px;
+    /*position: absolute;*/ /* absolute */
+	position: fixed;
 	bottom: 0;
-	height: 30px;
-	width: 100%;
+	left:0;
+    height: 60px;
+    width: 300px;
 }
 
 
-/* --------------------- debut page resultat utilisateur ----------------------------- */
-/* bloc_config - page resultat utilisateur*/
-
-#bloc_config {
-	position: absolute;
-	float: left;
+/* --------------------- debut page at1 ----------------------------- */
+	/* bloc_config - page at1 */
+/*bloc_config {
 	margin-left: 50px;
-	width: 850px;
-	font-size: 12.5px;
+	width: auto;
+}*/
+
+	/* bloc_config - page at1 = dropdown */
+/*input[type=checkbox] {
+    display: none;
 }
 
+ul {
+    display: none;
+}
 
+input[type=checkbox]:checked ~ ul {
+    display: block
+}*/
 /* --------------------- fin page at1 ------------------------------------ */
 
 
@@ -137,6 +146,6 @@ body {
 }
 
 h5{
-	color:black;
+    color:black;
 }
 

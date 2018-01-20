@@ -87,15 +87,16 @@
 	</div>
 	<div class="col s3" >
 		<fieldset id="bloc_infos2"><!-- zone d'iformations de droite -->
-		<label for="action_type"><h5>Informations</h5></label>
-			<form>
-				<p>cliquez sur la requête que vous souhaitez
-				 visualisez.
+            <!--<p><br></p>-->
+		    <legend><h5>Informations</h5></legend>
+			    <form>
+				    <p>cliquez sur la requête que vous souhaitez
+				    visualisez.
 
-				 Vous aurez un bouton "revenir" aux requêtes, 
-				 pour revenir sur cette page.
-				</p>
-			<form>
+				    Vous aurez un bouton "revenir" aux requêtes,
+				    pour revenir sur cette page.
+				    </p>
+			    <form>
 		</fieldset>
 	</div>
 </div>

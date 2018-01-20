@@ -54,11 +54,9 @@ else
                                                      WHERE `utilisateur`.`id_utilisateur` = '$id';")
                          OR die (mysql_error());
     //echo 'Vos infos on été ajoutées.';
-   /* <!-- Modal Structure --> */
    echo '
    <script>
-          alert ("Vos informations ont bien été enregistrées");
-           document.location.replace("page2.php" );
+        $("#modal1").modal("open");
    </script>';
     
         }else if(isset($_POST['supprimer'])){
