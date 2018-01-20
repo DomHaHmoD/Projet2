@@ -11,19 +11,44 @@ if (empty($_POST['requete_input'])) {
     $nbreq = $_POST['requete'];
     $req = $bdd->query("SELECT requetesql FROM requete WHERE numero = " . $nbreq . ";");
     $nomreq = $bdd->query("SELECT nom FROM requete WHERE numero = " . $nbreq . ";");
+    $tablereq = $bdd->query("SELECT table_request FROM requete WHERE numero = " . $nbreq . ";");
+    $tablereq = $tablereq->fetchAll(PDO::FETCH_ASSOC);
 } else {
     //$requete_name_minor = substr($_POST['requete7_name_minor'], 1);
     $requete_input = $_POST['requete_input'];
     $nbreq = $_POST['requete'];
     $req = $bdd->query("SELECT requetesql FROM requete WHERE numero = " . $nbreq . ";");
     $nomreq = $bdd->query("SELECT nom FROM requete WHERE numero = " . $nbreq . ";");
+    $tablereq = $bdd->query("SELECT table_request FROM requete WHERE numero = " . $nbreq . ";");
+    $tablereq = $tablereq->fetchAll(PDO::FETCH_ASSOC);
 }
+
+/*echo '$nbreq :'.$nbreq;
+echo '$req : ';
+echo '<pre>';
+print_r($req);
+echo '</pre>';
+echo "<br/>";
+echo "-------";
+echo '$nom_requete : ';
+echo '<pre>';
+print_r($nomreq);
+echo '</pre>';
+echo "<br/>";
+echo "-------";
+echo '$tablereq : ';
+echo '<pre>';
+print_r($tablereq[0]['table_request']);
+echo '</pre>';
+echo "<br/>";
+echo "-------";
+die();*/
 
 /* ligne ajoutée pour la pagination */
 //Nous allons afficher 5 messages par page.
 $dataParPage = 5; 
 //Nous récupérons le contenu de la requête dans $retour_total
-$retour_total = $bdd->query('SELECT COUNT(*) AS total FROM personnes');
+$retour_total = $bdd->query("SELECT COUNT(*) AS total FROM " . $tablereq[0]['table_request'] . ";");
 //On range retour sous la forme d'un tableau. 
 $donnees_total = $retour_total->fetchAll(PDO::FETCH_ASSOC);
 //On récupère le total pour le placer dans la variable $total.
@@ -62,12 +87,27 @@ if (empty($_POST['requete_input'])) {
     $requete = $donnees_total;
 } else {
     $requete = $req->fetchAll(PDO::FETCH_ASSOC);
-    foreach ($requete[0] as $key => $value1) {
-        $reponse2 = $bdd->query($value1);
-        $requete = str_replace('$requete_input', $requete_input, $value1);
+
+    foreach ($requete[0] as $key => $value) {
+        $reponse = $bdd->query($value);
+        $requete = str_replace('$requete_input', $requete_input, $value);
         $requete = array('0' => Array('requetesql' => $requete));
             $donnees_total = $requete;
-            $donnees_total = substr($donnees_total[0]['requetesql'], 0,-1);
+                /*echo '$donnees_total : ';
+                echo '<pre>';
+                print_r($donnees_total);
+                echo '</pre>';
+                echo "<br/>";
+                echo "-------";*/
+            $nb_donnees_total = strlen($donnees_total[0]['requetesql']);
+                /*echo $nb_donnees_total;*/
+            $donnees_total = substr($donnees_total[0]['requetesql'], 0, $nb_donnees_total);
+                /*echo '$donnees_total : ';
+                echo '<pre>';
+                print_r($donnees_total);
+                echo '</pre>';
+                echo "<br/>";
+                echo "-------";*/
             $donnees_total = $donnees_total.' LIMIT '.$premiereEntree.', '.$dataParPage;
             $donnees_total = array('0' => array('requetesql' => $donnees_total));
         $requete = $donnees_total;
@@ -75,6 +115,7 @@ if (empty($_POST['requete_input'])) {
     $nom_requete = $nomreq->fetchAll(PDO::FETCH_ASSOC);
 }
 /* verif si la requete est correcte */
+
 /*echo '$requete : ';
 echo '<pre>';
 print_r($requete);
@@ -94,11 +135,19 @@ foreach ($nom_requete[0] as $key => $value) {
     $nom_requetetitre = $value;
 }
 echo '<p>voici le résultat pour : ' . $nom_requetetitre . '</p>';
-foreach ($requete[0] as $key => $value) {
-    $reponse = $bdd->query($value);
-}
+
 /* la vrai requete  pour les datas du tableau */
-$line = $reponse->fetchAll(PDO::FETCH_ASSOC);
+foreach ($requete[0] as $key => $value) {
+    $reponsetableau = $bdd->query($value);
+    /*echo '$reponsetableau : ';
+    echo '<pre>';
+    print_r($reponsetableau);
+    echo '</pre>';
+    echo "<br/>";
+    echo "-------";
+    die();*/
+}
+$line = $reponsetableau->fetchAll(PDO::FETCH_ASSOC);
 
 /* affichage du head du tableau */
 echo '<table class="striped">
@@ -137,5 +186,5 @@ echo '<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_ri
 echo '</ul>';
 
 
-$reponse->closeCursor();
+$reponsetableau->closeCursor();
 ?>
