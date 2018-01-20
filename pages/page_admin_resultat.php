@@ -38,19 +38,36 @@ echo '<br />';
   	require('bloc_titre_other.php');
   	?>
 
-	<fieldset id="bloc_config">
-		<legend id="legend_other_page"><h4>STAPA administrateur</h4></legend>
+    <div id="bloc_body_global">
+        <div class="col s9">
+            <fieldset id="bloc_requete">
+                <legend id="legend_other_page"><h4>STAPA administrateur</h4></legend>
 
-		<!-- le tableau de résultat sera ici -->
-		<?php 
-		require('code_admin.php');
-		?>
-		
-		<p> <!-- il faudra revenir au user menu --> 
-			<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page requête</button>
-		</p>
+                <!-- le tableau de résultat sera ici -->
+                <?php
+                require('code_admin.php');
+                ?>
 
-		
-	</fieldset>
+                <p> <!-- il faudra revenir au user menu -->
+                    <button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page requête</button>
+                </p>
+
+            </fieldset>
+        </div>
+
+        <div class="col s3"> <!-- zone d'iformations de droite -->
+            <fieldset id="bloc_infos">
+                <legend><h5>Informations</h5></legend>
+                <form>
+                    <p>cliquez sur la requête que vous souhaitez
+                        visualisez.
+
+                        Vous aurez un bouton "revenir" aux requêtes,
+                        pour revenir sur cette page.
+                    </p>
+                    <form>
+            </fieldset>
+        </div>
+    </div>
 </body>
 </html>

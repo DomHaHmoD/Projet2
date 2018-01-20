@@ -50,17 +50,19 @@ body {
 	margin-left: 50px;
 	margin_bottom:25px;
 	width: 850px;
+	/*background-color: #5feecf;*/
 }
-
+/* bloc infos - dans page admin */
 #bloc_infos {
 	position: absolute;
 	float: left;
 	left: 950px;
 	padding-left: 25px;
-	padding-bottom: 64px;
-	margin-left: 90px;
-	margin-top: 34px;
+	/*padding-bottom: 64px;*/
+	margin-left: 0px;
+	margin-top: 11.5px;
 	width: 250px;
+	/*background-color: #ffe34f;*/
 }
 /* bloc infos1 - dans page index/bloc_body global */
 #bloc_infos1 {

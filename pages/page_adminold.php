@@ -32,51 +32,49 @@ echo '<br />';*/
 </head>
 
 <body>
+    <div class="row" id="bloc_body_global">
+        <!-- bloc requete -->
+        <div class="col s9">
+            <fieldset id="bloc_requete">
+                <legend><h4>STAPA | Administrateur</h4></legend>
 
-
-
-    <!-- bloc requete -->
-	<fieldset id="bloc_requete">
-		<legend id="legend_other_page"><h4>STAPA Administrateur</h4></legend>
-
-		<label for="action_type"><h5>Quelle action souhaitez vous traitez?</h5></label>
-		
-		<!--  -->
-        <div class="row">
-            <div class="col s9">
-                <div>
-                    <button class="btn waves-effect waves-light tooltipped" type="submit"
-                            ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_recherche.php'"
-                                    name="rechercher" data-position="top" data-delay="50" data-tooltip="valider votre recherche">
-                                    Rechercher
-                    </button>
-                </div>
+                <label for="action_type"><h5>Quelle action souhaitez vous traitez?</h5></label>
+                    <div>
+                        <br />
+                        <br />
+                    </div>
+                    <div>
+                        <button class="btn waves-effect waves-light tooltipped" type="submit"
+                                ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_recherche.php'"
+                                        name="rechercher" data-position="top" data-delay="50" data-tooltip="valider votre recherche">
+                                        Rechercher  un utilisateur
+                        </button>
+                    </div>
+                    <br/>
+                    <br/>
+                    <div>
+                        <button class="btn waves-effect waves-light" type="submit" name="ajouter un utilisateur"
+                                ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_ajout.php'">
+                                Ajouter  un utilisateur
+                        </button>
+                    </div>
                 <br/>
                 <br/>
-                <div>
-                    <button class="btn waves-effect waves-light" type="submit" name="ajouter" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_ajout.php'">Ajouter
-                    </button>
-                </div>
-            </div>
-
-
-
+            </fieldset>
         </div>
-
-	</fieldset>
-    <div class="col s3"> <!-- zone d'iformations de droite -->
-        <fieldset id="bloc_infos">
-            <label for="action_type"><h5>Informations</h5></label>
-            <form>
-                <p>cliquez sur la requête que vous souhaitez
-                    visualisez.
-
-                    Vous aurez un bouton "revenir" aux requêtes,
-                    pour revenir sur cette page.
-                </p>
+        <div class="col s3"> <!-- zone d'iformations de droite -->
+            <fieldset id="bloc_infos">
+                <legend><h5>Informations</h5></legend>
                 <form>
-        </fieldset>
-    </div>
+                    <p>cliquez sur la requête que vous souhaitez
+                        visualisez.
 
+                        Vous aurez un bouton "revenir" aux requêtes,
+                        pour revenir sur cette page.
+                    </p>
+                    <form>
+            </fieldset>
+        </div>
+    </div>
 </body>
 </html>

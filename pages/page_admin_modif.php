@@ -147,7 +147,7 @@ require('../config.inc.php');
                 <div class="col s6">
                     <button class="btn waves-effect waves-light tooltipped" type="submit" onclick="window.location.href='http:/localhost/stapa3php/pages/page2.php'" href="#modal1" target="_parent"
                             name="supprimer" data-position="top" data-delay="50" data-tooltip="valider la suppression">
-                        Delete
+                        Supprimer l'utilisateur
                     </button>
                 </div>
             </div>
@@ -156,11 +156,32 @@ require('../config.inc.php');
 			
 		</form>	
         <p> <!-- il faudra revenir au user menu --> 
-			<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page précédente</button>
-		</p>
+			<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">
+                <i class="material-icons left">keyboard_arrow_left</i>
+                Revenir à la page précédente</button>
+        </p>
         <a class="btn" onclick="Materialize.toast('I am a toast', 4000)">Toast!</a>
 	</fieldset>
 
+<div class="col s3"> <!-- zone d'iformations de droite -->
+    <fieldset id="bloc_infos">
+        <legend><h5>Informations</h5></legend>
+        <form>
+            <p>pour les privilèges, utiliser les codes:
+                <br />
+                1- adminsitrateur
+                <br />
+                2- gestionnaire
+                <br />
+                3-utilisateur
+                <br />
+                <br />
+                Vous aurez un bouton "revenir" aux requêtes,
+                pour revenir sur cette page.
+            </p>
+            <form>
+    </fieldset>
+</div>
 
 <!-- modal -->
 <div id="modal1" class="modal">
