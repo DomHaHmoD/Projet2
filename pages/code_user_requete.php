@@ -1,10 +1,40 @@
 <?php
+/*echo '$_SESSION["page"]'.$_SESSION['page'];
+echo '---------';
+echo '<br/>';
+echo '$_SESSION[\'email\']'.$_SESSION['email'];
+echo '---------';
+echo '<br/>';
+echo '$_SESSION[\'password\']'.$_SESSION['password'];
+echo '---------';
+echo '<br/>';
+echo '$_SESSION[\'qualification\']'.$_SESSION['qualification'];
+echo '---------';
+echo '<br/>';
+echo '$_SESSION["data_to_modify"]';
+print_r($_SESSION['data_to_modify']);
+echo '---------';
+echo '<br/>';
+echo '$_POST["requete"]'.$_POST['requete'];
+echo '---------';
+echo '<br/>';
+echo '$_SESSION["requete"]'.$_SESSION['requete'];
+echo '---------';
+echo '<br/>';*/
+
+
 /* ouverture de la bd */
 try {
     $bdd = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', $_SESSION["email"], $_SESSION["password"]);
 } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }
+if (isset($_POST['requete'])) {
+    $_POST['requete'] = $_POST['requete'];
+} else {
+    $_POST['requete'] = $_SESSION['requete'];
+}
+
 
 /* teste si c'est une requete avec un input */
 if (empty($_POST['requete_input'])) {
@@ -22,6 +52,7 @@ if (empty($_POST['requete_input'])) {
     $tablereq = $bdd->query("SELECT table_request FROM requete WHERE numero = " . $nbreq . ";");
     $tablereq = $tablereq->fetchAll(PDO::FETCH_ASSOC);
 }
+
 
 /*echo '$nbreq :'.$nbreq;
 echo '$req : ';
@@ -56,21 +87,24 @@ $total = $donnees_total[0]['total'];
 //Nous allons maintenant compter le nombre de pages.
 $nombreDePages = ceil($total/$dataParPage);
 //echo '$nombreDePages :'.$nombreDePages;
+
 // vérif de la page
-if(isset($_GET['page'])) // Si la variable $_GET['page'] existe...
+if(isset($_SESSION['page'])) // Si la variable $_GET['page'] existe...
 {
-     $pageActuelle = intval($_GET['page']);
- 
+     $pageActuelle = $_SESSION['page'];
+
      if($pageActuelle > $nombreDePages) // Si la valeur de $pageActuelle (le numéro de la page) est plus grande que $nombreDePages...
      {
           $pageActuelle = $nombreDePages;
+          $_SESSION['page'] = $pageActuelle;
      }
 }
 else // Sinon
 {
-     $pageActuelle = 1; // La page actuelle est la n°1    
+     $pageActuelle = 1; // La page actuelle est la n°1
+    $_SESSION['page'] = $pageActuelle;
 }
-//echo '$pageActuelle :'.$pageActuelle;
+/*echo '$pageActuelle :'.$pageActuelle;*/
 
 
 $premiereEntree = ($pageActuelle-1)*$dataParPage; // On calcul la première entrée à lire
@@ -172,19 +206,32 @@ echo '</table>';
 /* affiche de la pagination */
 echo '</p>';
 //echo '<p align="center">Page : '; //Pour l'affichage, on centre la liste des pages
-echo '<ul class="pagination">
+/*echo '<ul class="pagination">
         <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>';
 
 for($i = 1; $i <= $nombreDePages; $i++) { //On fait notre boucle
     if ($i == $pageActuelle) {
-        echo '<li class="active"><a href="code_user_requete.php?page='.$i.'">'.$i.'</a></li>';
+        echo '<li class="active"><a href="code_user_requete.php?page=".$i.</a></li>';
     } else {
         echo '<li class="waves-effect"><a href="code_user_requete.php?page='.$i.'">'.$i.'</a></li>';
             }
 } 
 echo '<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>';
-echo '</ul>';
-
+echo '</ul>';*/
+echo '<p align="center">Page : '; //Pour l'affichage, on centre la liste des pages
+for($i=1; $i<=$nombreDePages; $i++) //On fait notre boucle
+{
+    //On va faire notre condition
+    if($i==$pageActuelle) //Si il s'agit de la page actuelle...
+    {
+        echo ' [ '.$i.' ] ';
+    }
+    else //Sinon...
+    {
+        echo '<a href="page_resultat_utilisateur.php?page='.$i.'">'.$i.'</a>';
+    }
+}
+echo '</p>';
 
 $reponsetableau->closeCursor();
 ?>

@@ -49,7 +49,7 @@ require('../config.inc.php');
                 <div class="col s6">
                     <i class="material-icons prefix">account_circle</i>
                     <label class="active" id="label_form" for="nom_user">Nom de l'utilisateur</label>
-                    <input id="nom_user" type="text" name="nom_user" class="validate"
+                    <input id="nom_user" type="text" name="nom_user" class="validate" required
                            value="<?php
                            if (!empty($_SESSION['data_to_modify'])) {
                                echo $_SESSION['data_to_modify'][0];
@@ -57,6 +57,25 @@ require('../config.inc.php');
                                echo '';
                            }
                            ?>" />
+
+                </div>
+                <div class="col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <label class="active" id="label_form" for="nom_user">Nom de l'utilisateur</label>
+                    <input id="nom_user" type="text" name="nom_user" class="validate" required
+                           value="<?php
+                           if (!empty($_SESSION['data_to_modify'])) {
+                               echo $_SESSION['data_to_modify'][0];
+                           } else {
+                               echo '';
+                           }
+                           ?>" />
+
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail">Identifiant</label>
+                    <input type="text" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp"
+                           placeholder="Saisissez votre identifiant" size="50" required>
 
                 </div>
             </div>

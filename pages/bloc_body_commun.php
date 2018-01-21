@@ -10,9 +10,8 @@
 
 <?php 
 
-// appel config.inc.php
+// appel config.inc.php transfert le 21/01 à page2.php
 require('../config.inc.php');
-
 
 // si le login et password exist
 if ((isset($_SESSION['email']))&(isset($_SESSION['password']))) {
@@ -37,7 +36,6 @@ if ((isset($_SESSION['email']))&(isset($_SESSION['password']))) {
 
 	$global = $reponse->fetchAll(PDO::FETCH_ASSOC);
 	$nbarray = count($global);
-
 		foreach ($global as $key => $value) {
 			if (array_search($email_averifier, $value))
 			{
@@ -45,7 +43,10 @@ if ((isset($_SESSION['email']))&(isset($_SESSION['password']))) {
 				{
 					$qualification = $value['QUALIFICATION'];
 					$value_qualification = $value['QUALIFICATION'];
-				}
+				} else { // add this execption if password is not correct
+                    header("Location: ../index.php");
+                    exit;
+                }
 			}
 		}
 }
@@ -96,18 +97,21 @@ else {
 switch ($qualification) {
 	case '2':
 		$_SESSION['qualification'] = $qualification;
+
 		//var_dump($_SESSION['qualification']);
 		//echo $_SESSION['qualification'];
 		include('page_gestionnaire_abonnes.php');
 		break;
 	case '3':
 		$_SESSION['qualification'] = $qualification;
+
 		//var_dump($_SESSION['qualification']);
 		//echo $_SESSION['qualification'];
 		include('page_adminold.php');
 		break;
 	case '1':
 		$_SESSION['qualification'] = $qualification;
+
 		//var_dump($_SESSION['qualification']);
 		//echo $_SESSION['qualification'];
 		include('bloc_body_userrequete.php');

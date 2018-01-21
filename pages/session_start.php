@@ -1,29 +1,33 @@
 <?php
 session_start(); // On démarre la session AVANT toute chose
 
-// On écrit un cookie
-// true pour valider httpOnly
-
-/*$value_email = $_COOKIE['email'] = '';
-$value_email_cookie = $_COOKIE['email'] ='';
-$value_password = $_COOKIE['password'] ='';
-$value_password_cookie = $_COOKIE['password']= '';
-$value_qualification = $_COOKIE['qualification'] = '';
-
-setcookie('email', $value_email, time() + 3600, null, null, false, true);
-setcookie('email_cookie', $value_email_cookie, time() + 3600, null, null, false, true);
-setcookie('password', $value_password, time() + 3600, null, null, false, true);
-setcookie('password_cookie', $value_password_cookie, time() + 3600, null, null, false, true);  
-setcookie('qualification', $value_qualification, time() + 3600, null, null, false, true);*/
-
 $_SESSION['email'] = '';
 $_SESSION['password'] ='';
 $_SESSION['qualification'] = '';
 $_SESSION['data_to_modify'] = [];
+$_SESSION['page'] = 1;
+$_SESSION['requete'] = '';
 
-/*setcookie('email', $value_email, time() + 3600, null, null, false, true);
-setcookie('email_cookie', $value_email_cookie, time() + 3600, null, null, false, true);
-setcookie('password', $value_password, time() + 3600, null, null, false, true);
-setcookie('password_cookie', $value_password_cookie, time() + 3600, null, null, false, true);  
-setcookie('qualification', $value_qualification, time() + 3600, null, null, false, true); */
+/*echo '$_SESSION["page"]'.$_SESSION['page'];
+echo '---------';
+echo '<br/>';
+echo '$_SESSION[\'email\']'.$_SESSION['email'];
+echo '---------';
+echo '<br/>';
+echo '$_SESSION[\'password\']'.$_SESSION['password'];
+echo '---------';
+echo '<br/>';
+echo '$_SESSION[\'qualification\']'.$_SESSION['qualification'];
+echo '---------';
+echo '<br/>';
+echo '$_SESSION["data_to_modify"]';
+print_r($_SESSION['data_to_modify']);
+echo '---------';
+echo '<br/>';
+echo '$_POST[\'requete\']'.$_POST['requete'];
+echo '---------';
+echo '<br/>';
+echo '$_SESSION["requete"]'.$_SESSION['requete'];
+echo '---------';
+echo '<br/>';*/
 ?>

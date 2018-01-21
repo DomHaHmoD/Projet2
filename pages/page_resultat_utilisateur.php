@@ -39,7 +39,7 @@ require('../config.inc.php');
         <div class="row">
             <div class="col s9">
                 <fieldset id="bloc_config">
-                    <legend id="legend_other_page"><h4>STAPA Utilisateur</h4></legend>
+                    <legend id="legend_other_page"><h4>STAPA | Utilisateur</h4></legend>
                         <div  id="user_resultat">
 
                             <!-- le tableau de résultat sera ici -->

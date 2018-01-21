@@ -11,10 +11,31 @@
 <?php 
 
 session_start();
-
+/*require('../config.inc.php'); //depuis le 21/01
 require('cookie_modify.php');
 
-//require('cookie_modify.php');
+echo '$_SESSION["page"]'.$_SESSION['page'];
+echo '---------';
+echo '<br/>';
+echo '$_SESSION[\'email\']'.$_SESSION['email'];
+echo '---------';
+echo '<br/>';
+echo '$_SESSION[\'password\']'.$_SESSION['password'];
+echo '---------';
+echo '<br/>';
+echo '$_SESSION[\'qualification\']'.$_SESSION['qualification'];
+echo '---------';
+echo '<br/>';
+echo '$_SESSION["data_to_modify"]';
+print_r($_SESSION['data_to_modify']);
+echo '---------';
+echo '<br/>';
+echo '$_POST[\'requete\']'.$_POST['requete'];
+echo '---------';
+echo '<br/>';
+echo '$_SESSION["requete"]'.$_SESSION['requete'];
+echo '---------';
+echo '<br/>';*/
 
 ?>
 
