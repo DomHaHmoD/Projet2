@@ -184,7 +184,7 @@ foreach ($requete[0] as $key => $value) {
 $line = $reponsetableau->fetchAll(PDO::FETCH_ASSOC);
 
 /* affichage du head du tableau */
-echo '<table class="striped">
+echo '<table class="striped responsive-table">
 	    		<thead>';
 foreach ($line[0] as $key => $value) {
     echo '<th>' . $key . '</th>';
@@ -206,19 +206,19 @@ echo '</table>';
 /* affiche de la pagination */
 echo '</p>';
 //echo '<p align="center">Page : '; //Pour l'affichage, on centre la liste des pages
-/*echo '<ul class="pagination">
+echo '<ul class="pagination">
         <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>';
 
 for($i = 1; $i <= $nombreDePages; $i++) { //On fait notre boucle
     if ($i == $pageActuelle) {
-        echo '<li class="active"><a href="code_user_requete.php?page=".$i.</a></li>';
+        echo '<li class="active"><a href="code_user_requete.php?page=".$i.</a>'.$i.'</li>';
     } else {
         echo '<li class="waves-effect"><a href="code_user_requete.php?page='.$i.'">'.$i.'</a></li>';
             }
 } 
 echo '<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>';
-echo '</ul>';*/
-echo '<p align="center">Page : '; //Pour l'affichage, on centre la liste des pages
+echo '</ul>';
+/*echo '<p align="center">Page : '; //Pour l'affichage, on centre la liste des pages
 for($i=1; $i<=$nombreDePages; $i++) //On fait notre boucle
 {
     //On va faire notre condition
@@ -231,7 +231,7 @@ for($i=1; $i<=$nombreDePages; $i++) //On fait notre boucle
         echo '<a href="page_resultat_utilisateur.php?page='.$i.'">'.$i.'</a>';
     }
 }
-echo '</p>';
+echo '</p>';*/
 
 $reponsetableau->closeCursor();
 ?>
