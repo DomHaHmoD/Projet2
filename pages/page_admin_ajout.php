@@ -49,25 +49,25 @@ require('bloc_titre_other.php');
 
                 <div class="row">
                     <div class="col s6">
-                        <input type="text" name="nom" size="20" value="nom" maxlength="35" class="validate">
+                        <input type="text" name="nom" placeholder="nom" size="20" value="" maxlength="35" class="validate">
                     </div>
                     <div class="col s6">
-                        <input class="validate" type="text" name="prenom" size="20" value="prenom" maxlength="35">
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col s6">
-                        <input type="text" name="login" size="20" value="login" maxlength="70" class="validate">
-                    </div>
-                    <div class="col s6">
-                        <input class="validate" type="text" name="password" size="20" value="password" maxlength="11">
+                        <input class="validate" type="text" name="prenom"  placeholder="prénom" size="20" value="" maxlength="35">
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="col s6">
-                        <input type="text" name="privilege" size="20" value="privilege" maxlength="70" class="validate">
+                        <input type="text" name="login"  placeholder="identifiant" size="20" value="" maxlength="70" class="validate">
+                    </div>
+                    <div class="col s6">
+                        <input class="validate" type="text"  placeholder="mot de passe" name="password" size="20" value="" maxlength="11">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col s6">
+                        <input type="text" name="privilege"  placeholder="privilège" size="20" value="" maxlength="70" class="validate">
                     </div>
                 </div>
 			    <br>
