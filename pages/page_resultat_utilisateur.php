@@ -48,7 +48,9 @@ require('../config.inc.php');
                             ?>
                         </div>
                     <p> <!-- button user menu back-->
-                        <button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page requête</button>
+                        <button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">
+                        <i class="material-icons left">keyboard_arrow_left</i>
+                        Revenir à la page requête</button>
                     </p>
                 </fieldset>
             </div>

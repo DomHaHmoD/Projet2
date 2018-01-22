@@ -41,7 +41,7 @@ echo '<br />';*/
     <div class="row" id="bloc_body_global">
         <div class="col s9">
             <fieldset id="bloc_requete">
-                <legend id="legend_other_page"><h4>STAPA administrateur</h4></legend>
+                <legend id="legend_other_page"><h4>STAPA | Administrateur</h4></legend>
 
                 <!-- le tableau de résultat sera ici -->
                 <?php
@@ -49,7 +49,9 @@ echo '<br />';*/
                 ?>
                 
                 <p> <!-- il faudra revenir au user menu -->
-                    <button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page requête</button>
+                    <button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">
+                    <i class="material-icons left">keyboard_arrow_left</i>
+                    Revenir à la page requête</button>
                 </p>
             </fieldset>
             

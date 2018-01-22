@@ -39,7 +39,7 @@ require('bloc_titre_other.php');
 
     <!-- bloc requete -->
 	<fieldset id="bloc_requete">
-		<legend id="legend_other_page"><h4>STAPA Administrateur</h4></legend>
+		<legend id="legend_other_page"><h4>STAPA | Administrateur</h4></legend>
 
 		<label for="action_type"><h5>Merci de saisir les informations de l'utilisateur/gestionnaire</h5></label>
 		

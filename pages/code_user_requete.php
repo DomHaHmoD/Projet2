@@ -57,7 +57,6 @@ if (empty($_POST['requete_input'])) {
     $tablereq = $tablereq->fetchAll(PDO::FETCH_ASSOC);
 }
 
-
 /*echo '$nbreq :'.$nbreq;
 echo '$req : ';
 echo '<pre>';
@@ -124,6 +123,7 @@ if (empty($_POST['requete_input'])) {
         $donnees_total = $donnees_total.' LIMIT '.$premiereEntree.', '.$dataParPage;
         $donnees_total = array('0' => array('requetesql' => $donnees_total));
     $requete = $donnees_total;
+    print_r($requete);
 } else {
     $requete = $req->fetchAll(PDO::FETCH_ASSOC);
 

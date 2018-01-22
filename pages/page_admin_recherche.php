@@ -39,7 +39,7 @@ session_start();
 
     <!-- bloc requete -->
 	<fieldset id="bloc_requete">
-		<legend id="legend_other_page"><h4>STAPA Administrateur</h4></legend>
+		<legend id="legend_other_page"><h4>STAPA | Administrateur</h4></legend>
 
 		<label for="action_type"><h5>Merci de saisir les informations de l'utilisateur/gestionnaire</h5></label>
 		
@@ -81,7 +81,9 @@ session_start();
 				<div class="row">
 					<div class="col s6">
 				<!-- il faudra revenir au user menu --> 
-						<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page précédente</button>
+						<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">
+						<i class="material-icons left">keyboard_arrow_left</i>
+						Revenir à la page précédente</button>
 					</div>
 				</div>
 			</p>
