@@ -136,6 +136,6 @@ session_start();
 			</p>
         </form>
 	</fieldset>
-
+	<?php include("bloc_footer.php"); ?>
 </body>
 </html>
