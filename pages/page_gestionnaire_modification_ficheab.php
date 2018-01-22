@@ -100,7 +100,7 @@ session_start();
 				    <div class="row">
 				    	<div class="input-field col s12">
 				        	<i class="material-icons prefix">email</i>
-				          	<input id="email" type="text" name="email" placeholder="" class="validate"
+				          	<input id="email" type="text" name="email" placeholder="Email" class="validate"
                                    value="<?php
                                    if (!empty($_SESSION['data_to_modify'])) {
                                        echo $_SESSION['data_to_modify'][3];
@@ -108,20 +108,20 @@ session_start();
                                        echo '';
                                    }
                                    ?>">
-				          	<label for="email">Courrier éléctronique</label>
+				          	<label for="email"></label>
 				        </div>
 				     </div>
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">id</i>
-                            <input id="id_personne" type="text" name="id" placeholder="" class="validate" value="<?php
+                            <input id="id_personne" type="text" name="id" placeholder="Id" class="validate" value="<?php
                             if (!empty($_SESSION['data_to_modify'])) {
                                 echo $_SESSION['data_to_modify'][4];
                             } else {
                                 echo '';
                             }
                             ?>">
-                            <label for="id">Id</label>
+                            <label for="id"></label>
                         </div>
                     </div>
 			    </div>
