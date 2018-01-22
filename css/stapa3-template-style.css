@@ -76,7 +76,7 @@ form .form-group input[type=text].invalid {
 	position: absolute;
 	float: left;
 	margin-left: 50px;
-	margin_bottom:25px;
+	margin-bottom:25px;
 	width: 850px;
 	/*background-color: #5feecf;*/
 }

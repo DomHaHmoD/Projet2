@@ -24,7 +24,7 @@ echo '$_SESSION["data_to_modify"]';
 print_r($_SESSION['data_to_modify']);
 echo '---------';
 echo '<br/>';
-echo '$_POST[\'requete\']'.$_POST['requete'];
+echo '$_POST[\'requete\']'.$_POST['requete'];+
 echo '---------';
 echo '<br/>';
 echo '$_SESSION["requete"]'.$_SESSION['requete'];

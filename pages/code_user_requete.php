@@ -1,5 +1,6 @@
 <?php
-/*echo '$_SESSION["page"]'.$_SESSION['page'];
+//require('session_start.php');
+echo '$_SESSION["page"]'.$_SESSION['page'];
 echo '---------';
 echo '<br/>';
 echo '$_SESSION[\'email\']'.$_SESSION['email'];
@@ -20,7 +21,9 @@ echo '---------';
 echo '<br/>';
 echo '$_SESSION["requete"]'.$_SESSION['requete'];
 echo '---------';
-echo '<br/>';*/
+echo '<br/>';
+echo 'DB_HOST :'.DB_HOST;
+echo 'DB_NAME :'.DB_NAME;
 
 
 /* ouverture de la bd */
