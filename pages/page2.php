@@ -14,7 +14,7 @@ session_start();
 /*require('../config.inc.php'); //depuis le 21/01
 require('cookie_modify.php');
 
-echo '$_SESSION["page"]'.$_SESSION['page'];
+/*echo '$_SESSION["page"]'.$_SESSION['page'];
 echo '---------';
 echo '<br/>';
 echo '$_SESSION[\'email\']'.$_SESSION['email'];

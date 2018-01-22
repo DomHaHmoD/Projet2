@@ -151,16 +151,19 @@ require('../config.inc.php');
                     </button>
                 </div>
             </div>
-
+            <div class="row">
+                <div class="col s6">
+             <!-- il faudra revenir au user menu --> 
+			        <button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">
+                    <i class="material-icons left">keyboard_arrow_left</i>
+                    Revenir à la page précédente</button>
+                </div>
+            </div>
 
 			
 		</form>	
-        <p> <!-- il faudra revenir au user menu --> 
-			<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">
-                <i class="material-icons left">keyboard_arrow_left</i>
-                Revenir à la page précédente</button>
-        </p>
-        <a class="btn" onclick="Materialize.toast('I am a toast', 4000)">Toast!</a>
+        
+        
 	</fieldset>
 
 <div class="col s3"> <!-- zone d'iformations de droite -->
@@ -169,11 +172,11 @@ require('../config.inc.php');
         <form>
             <p>pour les privilèges, utiliser les codes:
                 <br />
-                1- adminsitrateur
+                1- utilisateur
                 <br />
                 2- gestionnaire
                 <br />
-                3-utilisateur
+                3- adminsitrateur
                 <br />
                 <br />
                 Vous aurez un bouton "revenir" aux requêtes,
