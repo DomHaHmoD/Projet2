@@ -31,9 +31,9 @@
                     </div>
 
                     <!--<button type="submit" class="btn btn-primary" ONCLICK="'window.location.href='pages/page2.php'">Valider</button>-->
-                    <button type="submit" class="btn btn-primary blue darken-2" ONCLICK="'window.location.href='pages/page2.php'">Valider</button>
+                    <button type="submit" class="btn btn-primary" ONCLICK="'window.location.href='pages/page2.php'">Valider</button>
                     <!--<button type="reset" class="btn btn-primary">Effacer</button>-->
-                    <button type="reset" class="btn btn-primary blue darken-2">Effacer</button>
+                    <button type="reset" class="btn btn-primary">Effacer</button>
                 </form>
         </fieldset>
     </div>
