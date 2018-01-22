@@ -90,7 +90,7 @@ if(empty($nom) OR empty($prenom) OR empty($date) OR empty($email))
 
 
     $reponse = $bdd->prepare("
-        UPDATE `personnes` SET `nom`='$nom',`prenom`='prenom',`naissance`='$date',`email`='$email' WHERE `id_personne` = $id");
+        UPDATE `personnes` SET `nom`='$nom',`prenom`='$prenom',`naissance`='$date',`email`='$email' WHERE `id_personne` = $id");
 
 
     $reponse->execute();
