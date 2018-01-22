@@ -1,6 +1,6 @@
 <?php
 //require('session_start.php');
-echo '$_SESSION["page"]'.$_SESSION['page'];
+/*echo '$_SESSION["page"]'.$_SESSION['page'];
 echo '---------';
 echo '<br/>';
 echo '$_SESSION[\'email\']'.$_SESSION['email'];
@@ -22,9 +22,10 @@ echo '<br/>';
 echo '$_SESSION["requete"]'.$_SESSION['requete'];
 echo '---------';
 echo '<br/>';
+
 echo 'DB_HOST :'.DB_HOST;
 echo 'DB_NAME :'.DB_NAME;
-
+*/
 
 /* ouverture de la bd */
 try {
@@ -89,12 +90,12 @@ $donnees_total = $retour_total->fetchAll(PDO::FETCH_ASSOC);
 $total = $donnees_total[0]['total']; 
 //Nous allons maintenant compter le nombre de pages.
 $nombreDePages = ceil($total/$dataParPage);
-//echo '$nombreDePages :'.$nombreDePages;
+/*echo '$nombreDePages :'.$nombreDePages;*/
 
 // vérif de la page
-if(isset($_SESSION['page'])) // Si la variable $_GET['page'] existe...
+if(isset($_GET['page'])) // Si la variable $_GET['page'] existe...
 {
-     $pageActuelle = $_SESSION['page'];
+     $pageActuelle = $_GET['page'];
 
      if($pageActuelle > $nombreDePages) // Si la valeur de $pageActuelle (le numéro de la page) est plus grande que $nombreDePages...
      {
@@ -206,6 +207,8 @@ echo '</tbody>';
 /*echo '<div></div>';*/
 echo '</table>';
 
+$_SESSION['requete'] = $_POST['requete'];
+
 /* affiche de la pagination */
 echo '</p>';
 //echo '<p align="center">Page : '; //Pour l'affichage, on centre la liste des pages
@@ -214,9 +217,9 @@ echo '<ul class="pagination">
 
 for($i = 1; $i <= $nombreDePages; $i++) { //On fait notre boucle
     if ($i == $pageActuelle) {
-        echo '<li class="active"><a href="code_user_requete.php?page=".$i.</a>'.$i.'</li>';
+        echo '<li class="active"><a href="page_resultat_utilisateur.php?page=".$i.</a>'.$i.'</li>';
     } else {
-        echo '<li class="waves-effect"><a href="code_user_requete.php?page='.$i.'">'.$i.'</a></li>';
+        echo '<li class="waves-effect"><a href="page_resultat_utilisateur.php?page='.$i.'">'.$i.'</a></li>';
             }
 } 
 echo '<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>';
