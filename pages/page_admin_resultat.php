@@ -3,8 +3,8 @@
 session_start();
 require('../config.inc.php');
 
-echo $_SESSION['qualification'];
-echo '<br />';
+/*echo $_SESSION['qualification'];
+echo '<br />';*/
 
 ?>
 
