@@ -76,7 +76,7 @@ form .form-group input[type=text].invalid {
 	position: absolute;
 	float: left;
 	margin-left: 50px;
-	margin_bottom:25px;
+	margin-bottom:25px;
 	width: 850px;
 	/*background-color: #5feecf;*/
 }
@@ -126,6 +126,19 @@ form .form-group input[type=text].invalid {
 
 }
 
+#bloc_infos4 {
+	position: absolute;
+	float: left;
+	left: 950px;
+	/*padding-left: 25px;*/
+	/*padding-bottom: 64px;*/
+	margin-left: -60px;
+	margin-top: -125px;
+	width: 250px;
+	/*background-color: #ffe34f;*/
+	
+}
+
 
 #btn_radio_style {
 	text-transform: unset;
@@ -142,6 +155,7 @@ form .form-group input[type=text].invalid {
 	bottom: 0;
 	height: 30px;
 	width: 100%;
+	
 }
 
 

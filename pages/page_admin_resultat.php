@@ -3,8 +3,8 @@
 session_start();
 require('../config.inc.php');
 
-echo $_SESSION['qualification'];
-echo '<br />';
+//echo $_SESSION['qualification'];
+//echo '<br />';
 
 ?>
 
@@ -16,7 +16,7 @@ echo '<br />';
 	<!-- meta -->
 	<meta charset="utf-8">
 	<meta name="description=" content="appli STAPA">
-	<meta name="author" content="Prénom HA-THI">
+	<meta name="author" content="Benjamin Barillot">
 	
 	<meta name="category" content="template">
 	<meta name="copyright" content="STAPA Bordeaux">
@@ -37,8 +37,8 @@ echo '<br />';
   	<?php
   	require('bloc_titre_other.php');
   	?>
-
-    <div id="bloc_body_global">
+<?php include("bloc_footer.php"); ?>
+    <div class="row" id="bloc_body_global">
         <div class="col s9">
             <fieldset id="bloc_requete">
                 <legend id="legend_other_page"><h4>STAPA administrateur</h4></legend>
@@ -47,27 +47,26 @@ echo '<br />';
                 <?php
                 require('code_admin.php');
                 ?>
-
+                
                 <p> <!-- il faudra revenir au user menu -->
                     <button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page requête</button>
                 </p>
-
             </fieldset>
+            
         </div>
-
         <div class="col s3"> <!-- zone d'iformations de droite -->
-            <fieldset id="bloc_infos">
+            <fieldset id="bloc_infos4">
                 <legend><h5>Informations</h5></legend>
-                <form>
-                    <p>cliquez sur la requête que vous souhaitez
-                        visualisez.
+                
+                <p>cliquez sur la requête que vous souhaitez
+                    visualisez.
 
-                        Vous aurez un bouton "revenir" aux requêtes,
-                        pour revenir sur cette page.
-                    </p>
-                    <form>
+                    Vous aurez un bouton "revenir" aux requêtes,
+                    pour revenir sur cette page.
+                </p>
             </fieldset>
         </div>
-    </div>
+    </div>  
+
 </body>
 </html>

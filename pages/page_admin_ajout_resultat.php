@@ -16,7 +16,7 @@ require('../config.inc.php');
 	<!-- meta -->
 	<meta charset="utf-8">
 	<meta name="description=" content="appli STAPA">
-	<meta name="author" content="Prénom HA-THI">
+	<meta name="author" content="Benjamin Barillot">
 	
 	<meta name="category" content="template">
 	<meta name="copyright" content="STAPA Bordeaux">

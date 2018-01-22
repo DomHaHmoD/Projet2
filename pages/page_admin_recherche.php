@@ -78,13 +78,18 @@ session_start();
                     </div>
                     
                 </div>
+				<div class="row">
+					<div class="col s6">
+				<!-- il faudra revenir au user menu --> 
+						<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page précédente</button>
+					</div>
+				</div>
 			</p>
 			
 		</form>	
-        <p> <!-- il faudra revenir au user menu --> 
-			<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page précédente</button>
-		</p>
+        
 	</fieldset>
-
+<!-- bloc footer -->
+<?php include("bloc_footer.php"); ?>
 </body>
 </html>

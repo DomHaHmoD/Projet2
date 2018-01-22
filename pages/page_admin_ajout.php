@@ -18,7 +18,7 @@ require('../config.inc.php');
 	<!-- meta -->
 	<meta charset="utf-8">
 	<meta name="description=" content="appli STAPA">
-	<meta name="author" content="Prénom HA-THI">
+	<meta name="author" content="Benjamin Barillot">
 	
 	<meta name="category" content="template">
 	<meta name="copyright" content="STAPA Bordeaux">
@@ -85,6 +85,6 @@ require('bloc_titre_other.php');
 			<button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page précédente</button>
 		</p>	
 	</fieldset>
-
+    <?php include("bloc_footer.php"); ?>
 </body>
 </html>
