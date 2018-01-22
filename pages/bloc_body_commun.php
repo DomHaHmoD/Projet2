@@ -44,8 +44,13 @@ if ((isset($_SESSION['email']))&(isset($_SESSION['password']))) {
 					$qualification = $value['QUALIFICATION'];
 					$value_qualification = $value['QUALIFICATION'];
 				} else { // add this execption if password is not correct
-                    header("Location: ../index.php");
-                    alert('mot de passe et/ou identifiant ko');
+                    $_SESSION['email'] = '';
+                    $_SESSION['password'] = '';
+                    echo"<script>alert('mot de passe et/ou identifiant ko');</script>";
+                    require('session_destroy.php');
+                    echo"<script>document.location.replace('../index.php')</script>";
+                    //require('../index.php');
+                    //header("Location: ../index.php");
                     exit;
                 }
 			}
