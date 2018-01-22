@@ -1,3 +1,4 @@
+
 <?php 
 // On commence par récupérer les champs 
 if(isset($_POST['nom']))      $nom=$_POST['nom'];
@@ -53,22 +54,24 @@ else
                                                      id_utilisateur = '$privilege'
                                                      WHERE `utilisateur`.`id_utilisateur` = '$id';")
                          OR die ();
-    //echo 'Vos infos on été ajoutées.';
-   echo '
-   <script>
-        $("#modal1").modal("open");
-   </script>';
+                         echo '
+                         <script>
+                                alert ("Vos informations ont bien été modifiées");
+                                 document.location.replace("page2.php" );
+                         </script>';
+   
+   
     
         }else if(isset($_POST['supprimer'])){
         
         $reponse = $bdd->prepare("DELETE FROM utilisateur WHERE id_utilisateur='$id'")
                          OR die ();
-        echo '
-   <script>
-          alert ("Vos informations ont bien été supprimées");
-           document.location.replace("page2.php");
-   </script>';
-        }
+                         echo '
+                         <script>
+                                alert ("Vos informations ont bien été supprimiées");
+                                 document.location.replace("page2.php" );
+                         </script>';
+}
     }
      
     // on insère les informations du formulaire dans la table 

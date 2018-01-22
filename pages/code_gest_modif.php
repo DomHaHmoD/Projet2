@@ -31,7 +31,7 @@ session_start();
 
 <!-- bloc titre commun à toutes les pages -->
 <?php include("bloc_titre_other.php"); ?>
-
+<?php include("bloc_footer.php"); ?>
 <!-- bloc de requete -->
 <fieldset id="bloc_requete">
     <legend id="legend_other_page"><h4>STAPA | Gestionnaire</h4></legend>
@@ -94,11 +94,16 @@ if(empty($nom) OR empty($prenom) OR empty($date) OR empty($email))
 
 
     $reponse->execute();
-    echo 'Vos informations on été ajoutées.<br />';
+    echo '
+   <script>
+          alert ("Vos informations ont bien été modifiées");
+           document.location.replace("page2.php" );
+   </script>';
 }
 
 ?>
 <p> <!-- il faudra revenir au user menu -->
     <button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">Revenir à la page Recherche/Ajouter</button>
 </p>
+
 

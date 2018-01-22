@@ -38,7 +38,7 @@ session_start();
 
 	<!-- bloc titre commun à toutes les pages -->
 	<?php include("bloc_titre_other.php"); ?>
-
+	<?php include("bloc_footer.php"); ?>
 	<!-- bloc de requete -->
 	<fieldset id="bloc_requete">
 		<legend id="legend_other_page"><h4>STAPA | Gestionnaire</h4></legend>
