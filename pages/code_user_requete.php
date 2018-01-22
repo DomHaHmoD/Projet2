@@ -87,10 +87,11 @@ $retour_total = $bdd->query("SELECT COUNT(*) AS total FROM " . $tablereq[0]['tab
 //On range retour sous la forme d'un tableau. 
 $donnees_total = $retour_total->fetchAll(PDO::FETCH_ASSOC);
 //On récupère le total pour le placer dans la variable $total.
-$total = $donnees_total[0]['total']; 
+$total = $donnees_total[0]['total'];
+echo $total;
 //Nous allons maintenant compter le nombre de pages.
 $nombreDePages = ceil($total/$dataParPage);
-/*echo '$nombreDePages :'.$nombreDePages;*/
+echo '$nombreDePages :'.$nombreDePages;
 
 // vérif de la page
 if(isset($_GET['page'])) // Si la variable $_GET['page'] existe...
@@ -211,33 +212,28 @@ $_SESSION['requete'] = $_POST['requete'];
 
 /* affiche de la pagination */
 echo '</p>';
-//echo '<p align="center">Page : '; //Pour l'affichage, on centre la liste des pages
-echo '<ul class="pagination">
+
+// si une seule page à afficher pas de pagination
+echo $nombreDePages;
+if ($nombreDePages <> 1) {
+    //echo '<p align="center">Page : '; //Pour l'affichage, on centre la liste des pages
+    echo '<ul class="pagination">
         <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>';
 
-for($i = 1; $i <= $nombreDePages; $i++) { //On fait notre boucle
-    if ($i == $pageActuelle) {
-        echo '<li class="active"><a href="page_resultat_utilisateur.php?page=".$i.</a>'.$i.'</li>';
-    } else {
-        echo '<li class="waves-effect"><a href="page_resultat_utilisateur.php?page='.$i.'">'.$i.'</a></li>';
-            }
-} 
-echo '<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>';
-echo '</ul>';
-/*echo '<p align="center">Page : '; //Pour l'affichage, on centre la liste des pages
-for($i=1; $i<=$nombreDePages; $i++) //On fait notre boucle
-{
-    //On va faire notre condition
-    if($i==$pageActuelle) //Si il s'agit de la page actuelle...
-    {
-        echo ' [ '.$i.' ] ';
+    for($i = 1; $i <= $nombreDePages; $i++) { //On fait notre boucle
+        if ($i == $pageActuelle) {
+            echo '<li class="active"><a href="page_resultat_utilisateur.php?page=".$i.</a>'.$i.'</li>';
+        } else {
+            echo '<li class="waves-effect"><a href="page_resultat_utilisateur.php?page='.$i.'">'.$i.'</a></li>';
+        }
     }
-    else //Sinon...
-    {
-        echo '<a href="page_resultat_utilisateur.php?page='.$i.'">'.$i.'</a>';
-    }
+    echo '<li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>';
+    echo '</ul>';
+}else {
+
+
+    echo '<li class="active"><a href="page_resultat_utilisateur.php?page=".$i.</a>'.$i.'</li>';
 }
-echo '</p>';*/
 
 $reponsetableau->closeCursor();
 ?>

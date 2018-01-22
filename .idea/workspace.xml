@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2391122b-3c33-48cb-b82f-720361275d59" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pages/bloc_body_commun.php" afterPath="$PROJECT_DIR$/pages/bloc_body_commun.php" />
+      <change beforePath="$PROJECT_DIR$/pages/code_user_requete.php" afterPath="$PROJECT_DIR$/pages/code_user_requete.php" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,31 +14,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="bloc_body_index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/bloc_body_index.php">
+      <file leaf-file-name="page_resultat_utilisateur.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/page_resultat_utilisateur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="33" column="109" lean-forward="false" selection-start-line="33" selection-start-column="109" selection-end-line="33" selection-end-column="109" />
+            <state relative-caret-position="233">
+              <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bloc_body_commun.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/bloc_body_commun.php">
+      <file leaf-file-name="code_user_requete.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/code_user_requete.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="212">
+              <caret line="105" column="1" lean-forward="true" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
+              <folding>
+                <marker date="1516635667544" expanded="true" signature="1202:1248" ph="SELECT reque... requete" />
+                <marker date="1516635667544" expanded="true" signature="1294:1333" ph="SELECT nom F... requete" />
+                <marker date="1516635667544" expanded="true" signature="1381:1430" ph="SELECT table... requete" />
+                <marker date="1516635667544" expanded="true" signature="1685:1731" ph="SELECT reque... requete" />
+                <marker date="1516635667544" expanded="true" signature="1777:1816" ph="SELECT nom F... requete" />
+                <marker date="1516635667544" expanded="true" signature="1864:1913" ph="SELECT table... requete" />
+                <marker date="1516635667544" expanded="true" signature="2531:2560" ph="SELECT COUNT... " />
+                <marker date="1516635667544" expanded="true" signature="2531:2561" ph="SELECT COUNT... ${personnes}" />
+                <marker date="1516635667544" expanded="true" signature="2531:2564" ph="SELECT COUNT... personnes" />
+                <marker date="1516635667544" expanded="true" signature="2531:2596" ph="SELECT COUNT... ${$tablereq}" />
+                <marker date="1516635667544" expanded="true" signature="2531:2599" ph="SELECT COUNT... ${$tablereq}" />
+                <marker date="1516635667544" expanded="true" signature="2531:2601" ph="SELECT COUNT... ${personnes}" />
+                <marker date="1516635667544" expanded="true" signature="2531:2636" ph="SELECT COUNT... ${$tablereq}" />
+                <marker date="1516635667544" expanded="true" signature="5504:5542" ph="..." />
+                <marker date="1516635667544" expanded="true" signature="6197:6212" ph="..." />
+                <marker date="1516635667544" expanded="true" signature="6212:6304" ph="..." />
+                <marker date="1516635667544" expanded="true" signature="6351:6534" ph="..." />
+                <marker date="1516635667544" expanded="true" signature="6407:6515" ph="..." />
+                <marker date="1516635667544" expanded="true" signature="6887:6981" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page2.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/page2.php">
+      <file leaf-file-name="bloc_body_userrequete.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/bloc_body_userrequete.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="22" column="25" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="-581">
+              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -95,11 +114,11 @@
         <option value="$PROJECT_DIR$/pages/bloc_titre_index.php" />
         <option value="$PROJECT_DIR$/pages/page_admin_resultat.php" />
         <option value="$PROJECT_DIR$/pages/session_start.php" />
-        <option value="$PROJECT_DIR$/pages/code_user_requete.php" />
         <option value="$PROJECT_DIR$/css/stapa3-template-style.css" />
         <option value="$PROJECT_DIR$/pages/code_login.php" />
         <option value="$PROJECT_DIR$/pages/bloc_body_commun.php" />
         <option value="$PROJECT_DIR$/pages/bloc_body_index.php" />
+        <option value="$PROJECT_DIR$/pages/code_user_requete.php" />
       </list>
     </option>
   </component>
@@ -110,7 +129,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="276" />
     <option name="y" value="19" />
     <option name="width" value="1638" />
@@ -293,15 +312,16 @@
       <workItem from="1516294220226" duration="802000" />
       <workItem from="1516350158077" duration="24308000" />
       <workItem from="1516437413041" duration="47285000" />
-      <workItem from="1516608356546" duration="19104000" />
+      <workItem from="1516608356546" duration="23117000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124773000" />
+    <option name="totallyTimeSpent" value="128786000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="276" y="19" width="1638" height="990" extended-state="0" />
+    <frame x="276" y="19" width="1638" height="990" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -315,7 +335,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32955974" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29577464" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29577464" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -482,14 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/page_resultat_utilisateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/bloc_titre_other.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="821">
@@ -630,38 +642,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/code_user_requete.php">
+    <entry file="file://$PROJECT_DIR$/pages/code_login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="110" column="41" lean-forward="false" selection-start-line="110" selection-start-column="41" selection-end-line="110" selection-end-column="41" />
-          <folding>
-            <marker date="1516627171946" expanded="true" signature="1202:1248" ph="SELECT reque... requete" />
-            <marker date="1516627171946" expanded="true" signature="1294:1333" ph="SELECT nom F... requete" />
-            <marker date="1516627171946" expanded="true" signature="1381:1430" ph="SELECT table... requete" />
-            <marker date="1516627171946" expanded="true" signature="1685:1731" ph="SELECT reque... requete" />
-            <marker date="1516627171946" expanded="true" signature="1777:1816" ph="SELECT nom F... requete" />
-            <marker date="1516627171946" expanded="true" signature="1864:1913" ph="SELECT table... requete" />
-            <marker date="1516627171946" expanded="true" signature="2531:2560" ph="SELECT COUNT... " />
-            <marker date="1516627171946" expanded="true" signature="2531:2561" ph="SELECT COUNT... ${personnes}" />
-            <marker date="1516627171946" expanded="true" signature="2531:2564" ph="SELECT COUNT... personnes" />
-            <marker date="1516627171946" expanded="true" signature="2531:2596" ph="SELECT COUNT... ${$tablereq}" />
-            <marker date="1516627171946" expanded="true" signature="2531:2599" ph="SELECT COUNT... ${$tablereq}" />
-            <marker date="1516627171946" expanded="true" signature="2531:2601" ph="SELECT COUNT... ${personnes}" />
-            <marker date="1516627171946" expanded="true" signature="2531:2636" ph="SELECT COUNT... ${$tablereq}" />
-            <marker date="1516627171946" expanded="true" signature="5496:5534" ph="..." />
-            <marker date="1516627171946" expanded="true" signature="6189:6204" ph="..." />
-            <marker date="1516627171946" expanded="true" signature="6204:6296" ph="..." />
-            <marker date="1516627171946" expanded="true" signature="6343:6526" ph="..." />
-            <marker date="1516627171946" expanded="true" signature="6399:6507" ph="..." />
-            <marker date="1516627171946" expanded="true" signature="6772:6866" ph="..." />
-          </folding>
+        <state relative-caret-position="467">
+          <caret line="61" column="79" lean-forward="false" selection-start-line="61" selection-start-column="79" selection-end-line="61" selection-end-column="79" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/bloc_body_userrequete.php">
+    <entry file="file://$PROJECT_DIR$/pages/bloc_body_commun.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="83" column="25" lean-forward="true" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
+        <state relative-caret-position="443">
+          <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -674,27 +666,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/code_login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="61" column="79" lean-forward="false" selection-start-line="61" selection-start-column="79" selection-end-line="61" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/bloc_body_index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="33" column="109" lean-forward="false" selection-start-line="33" selection-start-column="109" selection-end-line="33" selection-end-column="109" />
+        <state relative-caret-position="756">
+          <caret line="36" column="19" lean-forward="false" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/bloc_body_commun.php">
+    <entry file="file://$PROJECT_DIR$/pages/page_resultat_utilisateur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+        <state relative-caret-position="233">
+          <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/bloc_body_userrequete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-581">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/code_user_requete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="105" column="1" lean-forward="true" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
+          <folding>
+            <marker date="1516635667544" expanded="true" signature="1202:1248" ph="SELECT reque... requete" />
+            <marker date="1516635667544" expanded="true" signature="1294:1333" ph="SELECT nom F... requete" />
+            <marker date="1516635667544" expanded="true" signature="1381:1430" ph="SELECT table... requete" />
+            <marker date="1516635667544" expanded="true" signature="1685:1731" ph="SELECT reque... requete" />
+            <marker date="1516635667544" expanded="true" signature="1777:1816" ph="SELECT nom F... requete" />
+            <marker date="1516635667544" expanded="true" signature="1864:1913" ph="SELECT table... requete" />
+            <marker date="1516635667544" expanded="true" signature="2531:2560" ph="SELECT COUNT... " />
+            <marker date="1516635667544" expanded="true" signature="2531:2561" ph="SELECT COUNT... ${personnes}" />
+            <marker date="1516635667544" expanded="true" signature="2531:2564" ph="SELECT COUNT... personnes" />
+            <marker date="1516635667544" expanded="true" signature="2531:2596" ph="SELECT COUNT... ${$tablereq}" />
+            <marker date="1516635667544" expanded="true" signature="2531:2599" ph="SELECT COUNT... ${$tablereq}" />
+            <marker date="1516635667544" expanded="true" signature="2531:2601" ph="SELECT COUNT... ${personnes}" />
+            <marker date="1516635667544" expanded="true" signature="2531:2636" ph="SELECT COUNT... ${$tablereq}" />
+            <marker date="1516635667544" expanded="true" signature="5504:5542" ph="..." />
+            <marker date="1516635667544" expanded="true" signature="6197:6212" ph="..." />
+            <marker date="1516635667544" expanded="true" signature="6212:6304" ph="..." />
+            <marker date="1516635667544" expanded="true" signature="6351:6534" ph="..." />
+            <marker date="1516635667544" expanded="true" signature="6407:6515" ph="..." />
+            <marker date="1516635667544" expanded="true" signature="6887:6981" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
