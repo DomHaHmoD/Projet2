@@ -139,6 +139,18 @@ body {
 	
 }
 
+#bloc_infos5 { /*gestionnaire */
+	position: absolute;
+	float: left;
+	left: 950px;
+	/*padding-left: 25px;*/
+	/*padding-bottom: 64px;*/
+	margin-left: 25px;
+	margin-top: 25px;
+	width: 250px;
+	/*background-color: #ffe34f;*/
+}
+
 
 #btn_radio_style {
 	text-transform: unset;

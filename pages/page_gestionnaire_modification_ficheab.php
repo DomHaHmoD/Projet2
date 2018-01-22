@@ -98,7 +98,7 @@ session_start();
 			          	<label for="naissance"></label>
 			        </div>
 				    <div class="row">
-				    	<div class="input-field col s12">
+				    	<div class="input-field col s6">
 				        	<i class="material-icons prefix">email</i>
 				          	<input id="email" type="text" name="email" placeholder="Email" class="validate"
                                    value="<?php
@@ -112,7 +112,7 @@ session_start();
 				        </div>
 				     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s6">
                             <i class="material-icons prefix">id</i>
                             <input id="id_personne" type="text" name="id" placeholder="Id" class="validate" value="<?php
                             if (!empty($_SESSION['data_to_modify'])) {
@@ -127,13 +127,23 @@ session_start();
 			    </div>
 			  </div>
 			</p>
-			
-			<p>
-				<button class="btn waves-effect waves-light" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/code_gest_modif.php'"
-                    type="submit" name="enregistrer">Enregistrer
-
-  				</button>
-			</p>
+			<div class="row"> 
+				<div class="col s6">
+					<p>
+						<button class="btn waves-effect waves-light" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/code_gest_modif.php'"
+							type="submit" name="enregistrer">Enregistrer
+						</button>
+					</p>
+				</div>
+			</div>	
+			  <div class="row">
+                <div class="col s6">
+             <!-- il faudra revenir au user menu --> 
+			        <button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">
+                    <i class="material-icons left">keyboard_arrow_left</i>
+                    Revenir à la page d'accueil</button>
+                </div>
+            </div>
         </form>
 	</fieldset>
 	<?php include("bloc_footer.php"); ?>

@@ -138,18 +138,19 @@ require('../config.inc.php');
 
 			
 			<div class="row">
-                <div class="col s6">
+                <div class="col s3">
                 <button class="btn waves-effect waves-light tooltipped modal-trigger" type="submit" onclick="window.location.href='http:/localhost/stapa3php/pages/page_admin_modif.php'"  href="#modal1" target="_self"
                         data-target="modal1" name="enregistrer" data-position="top" data-delay="50" data-tooltip="valider votre modif">
-                    Enregistrer les modifications
+                    Enregistrer
                 </button>
                 </div>
-                <div class="col s6">
+                <div class="col s3">
                     <button class="btn waves-effect waves-light tooltipped" type="submit" onclick="window.location.href='http:/localhost/stapa3php/pages/page2.php'" href="#modal1" target="_parent"
                             name="supprimer" data-position="top" data-delay="50" data-tooltip="valider la suppression">
-                        Supprimer l'utilisateur
+                        Supprimer
                     </button>
                 </div>
+                
             </div>
             <div class="row">
                 <div class="col s6">
