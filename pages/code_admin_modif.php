@@ -52,7 +52,7 @@ else
                                                      password_utilisateur = '$password',
                                                      id_utilisateur = '$privilege'
                                                      WHERE `utilisateur`.`id_utilisateur` = '$id';")
-                         OR die (mysql_error());
+                         OR die ();
     //echo 'Vos infos on été ajoutées.';
    echo '
    <script>
@@ -62,7 +62,7 @@ else
         }else if(isset($_POST['supprimer'])){
         
         $reponse = $bdd->prepare("DELETE FROM utilisateur WHERE id_utilisateur='$id'")
-                         OR die (mysql_error());
+                         OR die ();
         echo '
    <script>
           alert ("Vos informations ont bien été supprimées");

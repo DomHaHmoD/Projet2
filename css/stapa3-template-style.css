@@ -4,6 +4,34 @@ body {
 	/*background-image: url('images/monimage4.png');*/
 }
 
+/* label color on the input field*/
+form .form-group label {
+	color: #1976d2;
+}
+
+/* label focus color */
+form .form-group input[type=text]:focus + label {
+	color: #d50000;
+}
+
+/* label underline focus color */
+form .form-group input[type=text]:focus {
+	border-bottom: 1px solid #1976d2;
+	box-shadow: 0 1px 0 0 #1976d2;
+}
+
+/* valid color */
+form .form-group input[type=text].valid {
+	border-bottom: 1px solid #1976d2;
+	box-shadow: 0 1px 0 0 #1976d2;
+}
+
+/* invalid color */
+form .form-group input[type=text].invalid {
+	border-bottom: 1px solid #1976d2;
+	box-shadow: 0 1px 0 0 #1976d2;
+}
+
 /* ----------- debut bloc titre - commun à toutes les pages ----------- */
 #row_bloc_titre {
 	/*background-color: blue;*/

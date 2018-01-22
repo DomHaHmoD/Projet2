@@ -44,21 +44,38 @@ require('bloc_titre_other.php');
 		<label for="action_type"><h5>Merci de saisir les informations de l'utilisateur/gestionnaire</h5></label>
 		
 		<!-- le .php est le lien avec le fichier php -->
-		
-        
-			
             
             <form method="POST" action="code_admin_test.php">
-            <center>
-            <input type="text" name="nom" size="20" value="nom" maxlength="35" class="validate"> <input class="validate" type="text" name="prenom" size="20" value="prenom" maxlength="35"><br>
-            <input type="text" name="login" size="20" value="login" maxlength="70" class="validate"> <input class="validate" type="text" name="password" size="20" value="password" maxlength="11"><br>
-            <input type="text" name="privilege" size="20" value="privilege" maxlength="70" class="validate">
-			<br>
-            <button class="btn waves-effect waves-light tooltipped" type="submit"  onclick="window.location.href='http:/localhost/stapa3php/pages/page2.php'" target="_parent"
+
+                <div class="row">
+                    <div class="col s6">
+                        <input type="text" name="nom" size="20" value="nom" maxlength="35" class="validate">
+                    </div>
+                    <div class="col s6">
+                        <input class="validate" type="text" name="prenom" size="20" value="prenom" maxlength="35">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col s6">
+                        <input type="text" name="login" size="20" value="login" maxlength="70" class="validate">
+                    </div>
+                    <div class="col s6">
+                        <input class="validate" type="text" name="password" size="20" value="password" maxlength="11">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col s6">
+                        <input type="text" name="privilege" size="20" value="privilege" maxlength="70" class="validate">
+                    </div>
+                </div>
+			    <br>
+                <button class="btn waves-effect waves-light tooltipped" type="submit"  onclick="window.location.href='http:/localhost/stapa3php/pages/page2.php'" target="_parent"
                                 name="ajouter" data-position="top" data-delay="50" data-tooltip="valider votre ajout">
                                 Ajouter
-            </button>
-            </center>
+                </button>
+
             </form>
             </html>
 			    <!--</form>-->

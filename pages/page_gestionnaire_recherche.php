@@ -18,7 +18,8 @@
 
                         <div class="row">
 				        	<div class="input-field col s6">
-				        		<i class="material-icons prefix">Date de naissance</i>
+				        		<!--<i class="material-icons prefix">Date de naissance</i>-->
+                                <i class="material-icons prefix">date_range</i>
 				          		<input id="naissance" type="date" placeholder="Date de naissance" class="validate">
 				          		<label for="naissance"></label>
 				          	</div>	
