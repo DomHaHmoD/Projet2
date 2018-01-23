@@ -101,9 +101,13 @@
             <!--<p><br></p>-->
 		    <legend><h5>Informations</h5></legend>
 			    <form>
-				    <p>cliquez sur la requête que vous souhaitez
+				    <p>Cliquez sur la requête que vous souhaitez
 				    visualisez.
-
+				    <br/>
+				    <br/>
+				    Si vous cliquez sur la requete 7, il faut imérativement saisir le nom d'une personne.
+				    <br/>
+				    <br/>
 				    Vous aurez un bouton "revenir" aux requêtes,
 				    pour revenir sur cette page.
 				    </p>
