@@ -10,7 +10,7 @@ Notre client, une société de transport, veut un produit lui permettant de surv
 
 PHP
 
-# Aprom
+# L'équipe Aprom
 Notre équipe est constituée de 4 stagiaires, .
 
 # Methodologie
@@ -21,8 +21,8 @@ Nous utiliserons Trello.
 
 # Le projet
 Le choix du langage est imposé par la formation et nous travaillerons en PHP 7.1.9. .
-
-l'architecture logicielle est orchestré par index.php cette fonction permet
+Nous utilisons pour le design, le framework Materialize.
+l'architecture logicielle est orchestré par index.php.
 
 
 
