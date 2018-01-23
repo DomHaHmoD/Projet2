@@ -32,7 +32,7 @@ pour utiliser l'application, il faut:
 PHP 7.1.9
 
 
-Pour l'éxécutermanuellement : $ python3 main.py
+Pour l'éxécutermanuellement : localhost/stapa3php/projet2/index.php
 
 # Remerciements
 recemerciements à nos intervenants pour leur aide.
