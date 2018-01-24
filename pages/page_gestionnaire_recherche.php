@@ -12,7 +12,7 @@
 						<div class="row">
 							<div class="input-field col s6">
 								<i class="material-icons prefix">account_circle</i>
-								<input id="nom" type="text" placeholder="Nom de l'abonné" class="validate" name="nom">
+								<input id="nom" type="text" placeholder="Nom de l'abonné" class="validate" name="nom" required>
 								<label for="nom" ></label>
 							</div>
 
