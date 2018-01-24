@@ -64,8 +64,9 @@
 				    <br/>
 				    <!--<div>-->
                     <div class="row col s9">
-				      		<input class="with-gap" name="requete" type="radio" id="7" value="7" />
-				      		<label for="7"><a id="btn_radio_style" class="btn-flat"
+				      		<input class="with-gap" name="requete" type="radio" id="7" value="7"/>
+				      		<label for="7"><a id="btn_radio_style" class="btn-flat tooltipped"
+                            data-position="bottom" data-delay="50" data-tooltip="il est impératif de saisir le nom du mineur pour cette requete"
                             onclick=""
                                 >Les informations du représentant légal d’un usager</a></label>
                     </div>
