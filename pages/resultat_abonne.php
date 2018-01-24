@@ -70,10 +70,10 @@ session_start();
                                                 personnes.email AS 'EMAIL',
                                                 personnes.id_personne AS 'ID'
                                                 FROM personnes WHERE personnes.nom = ".$recupnom.";");
-        echo '<pre>';
+        /*echo '<pre>';
         print_r($req);
         echo '</pre>';
-        echo '<br/>';
+        echo '<br/>';*/
     } else {
         echo 'pas de nom récupéré';
     }
