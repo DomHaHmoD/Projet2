@@ -12,23 +12,24 @@
 						<div class="row">
 							<div class="input-field col s6">
 								<i class="material-icons prefix">account_circle</i>
-								<input id="nom" type="text" placeholder="Nom de l'abonné" class="validate" name="nom">
 								<label for="nom" ></label>
+								<input id="nom" type="text" placeholder="Nom de l'abonné" class="form-control validate" name="nom">
 							</div>
 
 							<div class="row">
 								<div class="input-field col s6">
 									<!--<i class="material-icons prefix">Date de naissance</i>-->
 									<i class="material-icons prefix">date_range</i>
-									<input id="naissance" type="date" placeholder="Date de naissance" class="validate">
+									<input id="naissance" type="date" placeholder="Date de naissance" name="naissance" class="validate">
 									<label for="naissance"></label>
 								</div>	
 							</div>
 						</div>    
 					</div>
-
+			
 				<button class="btn waves-effect waves-light" type="submit" name="rechercher" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_gestionnaire_affichage_resultat.php'">Valider
 				</button>
+			</form>
 		</fieldset>
 		<div class="col s3" > <!-- zone d'informations de droite -->
 			<fieldset id="bloc_infos5">
@@ -40,8 +41,8 @@
 		</div>	
             
 			
-		</form>
-        </fieldset>
+		
+        
     </div>
 
 	
