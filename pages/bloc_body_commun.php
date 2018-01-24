@@ -62,6 +62,11 @@ if ((isset($_SESSION['email']))&(isset($_SESSION['password']))) {
                     echo"<script>document.location.replace('../index.php')</script>";
                     exit;
                 }
+			} else {
+				echo"<script>alert('mot de passe et/ou identifiant ko');</script>";
+                require('session_destroy.php');
+               	echo"<script>document.location.replace('../index.php')</script>";
+                exit;
 			}
 		}
 }

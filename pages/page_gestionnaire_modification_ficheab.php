@@ -86,7 +86,7 @@ session_start();
 				        </div>
 				    </div>
 			       	<div class="input-field col s6">
-			          	<i class="material-icons prefix">Date de naissance</i>
+			          	<i class="material-icons prefix">date_range</i>
 			          	<input id="naissance" type="text" name="date" placeholder="" class="validate"
                                value="<?php
                             if (!empty($_SESSION['data_to_modify'])) {
