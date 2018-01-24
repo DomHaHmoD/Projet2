@@ -12,6 +12,7 @@ Il souhaite une application web avec 3 roles importants d'utilisateurs.
 Pour cela, nous travallons avec une base de donnée qui nous a été fournie.
 
 # Les pré-requis:
+WAMP64
 PHP
 MySQL
 
