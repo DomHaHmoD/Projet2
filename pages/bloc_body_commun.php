@@ -46,28 +46,17 @@ if ((isset($_SESSION['email']))&(isset($_SESSION['password']))) {
 				} else { // add this execption if password is not correct
                     $_SESSION['email'] = '';
                     $_SESSION['password'] = '';
-                    echo"<script>alert('mot de passe et/ou identifiant ko');</script>";
-                    /*require('session_destroy.php';
-                    echo"<script>document.location.replace('../index.php')</script>";*/
-                    /*echo'<div id="modal1" class="modal">
-                                <div class="modal-content">
-                                    <h4>Modal Header</h4>
-                                    <p>A bunch of text</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-                                </div>
-                            </div>';*/
-                    require('session_destroy.php');
+                    echo"<script>alert('mot de passe incorrect');</script>";
+                    //require('session_destroy.php');
                     echo"<script>document.location.replace('../index.php')</script>";
                     exit;
                 }
-			}
+			} 
 		}
 }
 else {
 	/* si le login et password existe pas */
-
+	echo"<script>alert('mot de passe et/ou identifiant incorrect');</script>";
 	echo 'Mauvais email ou password ';
 
 	$email_averifier = $_SESSION['email'];
