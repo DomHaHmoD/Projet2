@@ -52,12 +52,12 @@ session_start();
 			    	    <div class="row">
 				     	    <div class="input-field col s6">
 					            <i class="material-icons prefix">account_circle</i>
-					            <input id="nom_user" type="text" name="nom_user" class="validate"
+					            <input id="nom_user" type="text" name="nom_user" class="validate" required
                                    value="<?php
                                    if (!empty($_SESSION['data_to_modify'])) {
                                        echo $_SESSION['data_to_modify'][0];
                                    } else {
-                                       echo '';
+                                    
                                    }
                                    ?>">
 					            <label class="active" id="label_form" for="nom_user">Nom de l'utilisateur/gestionnaire</label>

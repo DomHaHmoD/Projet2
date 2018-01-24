@@ -70,12 +70,23 @@ session_start();
                                                 personnes.email AS 'EMAIL',
                                                 personnes.id_personne AS 'ID'
                                                 FROM personnes WHERE personnes.nom = ".$recupnom.";");
-        /*echo '<pre>';
-        print_r($req);
-        echo '</pre>';
-        echo '<br/>';*/
     } else {
-        echo 'pas de nom récupéré';
+        
+        echo"<script>alert('Merci de saisir le nom ou la date de naissance');</script>";
+        /*require('session_destroy.php';
+        echo"<script>document.location.replace('../index.php')</script>";*/
+        /*echo'<div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4>Modal Header</h4>
+                        <p>A bunch of text</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                    </div>
+                </div>';*/
+        /*require('session_destroy.php');*/
+        echo"<script>document.location.replace('page2.php')</script>";
+        exit;
     }
     //die();
 
