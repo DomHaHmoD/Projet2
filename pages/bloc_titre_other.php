@@ -22,7 +22,7 @@ require('cookie_modify.php'); // obligatoire
       			
 	      		<ul id="nav-mobile" class="left show-on-large">
 	        		<li>
-						<a href="http://localhost/stapa3/projet2/pages/page_adminold.php">
+						<a href="http://localhost/stapa3php/projet2/pages/page2.php">
 							<?php 
 							if ($_SESSION['qualification'] === "3") {
 								echo 'Administrateur';
@@ -32,7 +32,7 @@ require('cookie_modify.php'); // obligatoire
 						</a>
 					</li>
 	        		<li>
-	        			<a href="http://localhost/stapa3/projet2/pages/page_gestionnaire_abonnes.php">
+	        			<a href="http://localhost/stapa3php/projet2/pages/page2.php">
 	        				<?php 
 							if ($_SESSION['qualification'] === "2") {
 								echo 'Gestionnaire';
@@ -42,7 +42,7 @@ require('cookie_modify.php'); // obligatoire
 						</a>
 					</li>
 	        		<li>
-	        			<a href="http://localhost/stapa3/projet2/pages/bloc_body_userrequete.php">		<?php
+	        			<a href="http://localhost/stapa3php/projet2/pages/page2.php">		<?php
 							if ($_SESSION['qualification'] === "1") {
 								echo 'Utilisateur';
 							} else {echo '';} 
@@ -51,10 +51,10 @@ require('cookie_modify.php'); // obligatoire
 						</a>
 	        		</li>
 	      		</ul>
-	      		<a href="#" class="brand-logo center">STAPA3 Bus</a>
+	      		<a href="http://localhost/stapa3php/projet2/pages/page2.php" class="brand-logo center">STAPA3 Bus</a>
 	      		<ul id="nav-mobile" class="right show-on-large">
 	      			<li><a><?php echo htmlspecialchars($_SESSION['email']); ?></a></li>
-	        		<li><a class="btn-right tooltipped" data-position="bottom" data-delay="50" data-tooltip="sortir de l'appli"
+	        		<li><a class="btn-right tooltipped" data-position="bottom" data-delay="50" data-tooltip="Deconnexion"
                            onclick="session_destroy.php"
                            href="../index.php"><i
                                     class="material-icons btn-right">exit_to_app</i></a></li>

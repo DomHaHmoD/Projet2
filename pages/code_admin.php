@@ -14,13 +14,14 @@
 		}
 
 		
-		// table requete, search one of the 8 requets
+		
 		if (isset($_POST['nom_user'])) {
 			/*echo 'voila le nom récupéré =';
 			echo $recupnom = $_POST['nom_user'];
 			echo '<br/>';*/
 			$recupnom = $_POST['nom_user'];
-			$recupnom = '"'.$recupnom.'"';
+        	$recupnom = '"'.$recupnom.'"';
+			
 			$req = $bdd->query("SELECT utilisateur.nom_utilisateur AS 'NOM AGENT', 
                                                 utilisateur.prenom_utilisateur AS 'PRENOM', 
                                                 utilisateur.login AS 'LOGIN',
@@ -32,8 +33,23 @@
 			print_r($req);
 			echo '</pre>';
 			echo '<br/>';*/
-			} else {
-				echo 'pas de nom récupéré';
+		} else {
+			
+			echo"<script>alert('Merci de saisir le nom ou la date de naissance');</script>";
+        /*require('session_destroy.php';
+        echo"<script>document.location.replace('../index.php')</script>";*/
+        /*echo'<div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <h4>Modal Header</h4>
+                        <p>A bunch of text</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                    </div>
+                </div>';*/
+        /*require('session_destroy.php');*/
+        	echo"<script>document.location.replace('page_admin_recherche.php')</script>";
+        exit;
 			}
 			//die();
 			
@@ -111,7 +127,7 @@
 			echo'</tbody>';
         echo '</form>';
         /*var_dump($array_data);*/
-
+				
 			$req->closeCursor();
 
 		?>
