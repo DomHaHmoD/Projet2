@@ -37,7 +37,8 @@ if ((isset($_COOKIE['email']))&(isset($_COOKIE['password']))) {
 	<!-- add bibliotheque Materialize -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 </head>
 
 <!-- page index login -->
@@ -48,6 +49,12 @@ if ((isset($_COOKIE['email']))&(isset($_COOKIE['password']))) {
     <!-- bloc body login -->
 	<?php include("pages/bloc_body_index.php"); ?>
 
+    <script>
+        $(document).ready(function(){
+            // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal(open);
+        });
+    </script>
 
 </body>
 </html>
