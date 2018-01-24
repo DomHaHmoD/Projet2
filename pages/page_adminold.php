@@ -46,7 +46,7 @@ echo '<br />';*/
                     <div>
                         <button class="btn waves-effect waves-light tooltipped" type="submit"
                                 ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_recherche.php'"
-                                        name="rechercher" data-position="top" data-delay="50" data-tooltip="valider votre recherche">
+                                name="rechercher" data-position="right" data-delay="50" data-tooltip="rechercher un utilisateur">
                                         Rechercher  un utilisateur
                         </button>
                     </div>
@@ -76,5 +76,8 @@ echo '<br />';*/
             </fieldset>
         </div>
     </div>
+
+
+
 </body>
 </html>

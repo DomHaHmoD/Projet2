@@ -54,10 +54,12 @@ require('cookie_modify.php'); // obligatoire
 	      		<a href="#" class="brand-logo center">STAPA3 Bus</a>
 	      		<ul id="nav-mobile" class="right show-on-large">
 	      			<li><a><?php echo htmlspecialchars($_SESSION['email']); ?></a></li>
-	        		<li><a class="btn-right tooltipped" data-position="top" data-delay="50" data-tooltip="sortir de l'appli"
+	        		<li><a class="btn-right tooltipped" data-position="bottom" data-delay="50" data-tooltip="sortir de l'appli"
                            onclick="session_destroy.php"
                            href="../index.php"><i
-                                    class="material-icons btn-right">exit_to_app</i>Déconnexion</a></li>
+                                    class="material-icons btn-right">exit_to_app</i></a></li>
+                    <li></li>
+                    <li></li>
 	      		</ul>
 
       		</div>
