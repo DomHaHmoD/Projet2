@@ -87,7 +87,7 @@ session_start();
 
     // test si la réponse est vide > l'utilisateur n'existe pas
     if (empty($requete)) {
-        echo"<script>alert('aucun abonné existe');</script>";
+        echo"<script>alert('aucun abonné existe avec ce nom');</script>";
         echo"<script>document.location.replace('page2.php')</script>";
     }
 

@@ -68,6 +68,12 @@
 		$requete = $req->fetchAll(PDO::FETCH_ASSOC);
 		//$nom_requete = $nomreq->fetchAll(PDO::FETCH_ASSOC);
 
+		// test si la réponse est vide > l'utilisateur n'existe pas
+    if (empty($requete)) {
+        echo"<script>alert('aucun utilisateur existe avec ce nom');</script>";
+        echo"<script>document.location.replace('page_admin_recherche.php')</script>";
+    }
+
 		//print_r($requete);
 		//echo $nom_requete
 		//die();
