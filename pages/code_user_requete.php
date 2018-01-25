@@ -207,11 +207,11 @@ echo '</table>';
 $_SESSION['requete'] = $_POST['requete'];
 
 /* -------- AFFICHAGE DE LA PAGINATION --------------------- */
-echo '</p>';
+//echo '</p>';
 
 // si une seule page à afficher pas de pagination
 //echo $nombreDePages;
-if ($nombreDePages <> 1) {
+if ($nombreDePages <> 0 and $nombreDePages > 1) {
     echo '<ul class="pagination">
         <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>';
 

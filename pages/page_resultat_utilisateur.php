@@ -54,16 +54,16 @@ require('../config.inc.php');
                     </p>
                 </fieldset>
             </div>
-             <div class="col s3">
-                <fieldset id="bloc_infos3"><!-- zone d'iformations de droite -->
-                    <legend><h5>Informations</h5></legend>
+            <!-- <div class="col s3">-->
+                <!--<fieldset id="bloc_infos3">--><!-- zone d'iformations de droite -->
+                    <!--<legend><h5>Informations</h5></legend>
                     <form>
                         <p>Pour revenir à la page des requêtes,
                                 cliquez sur le bouton.
                         </p>
                     <form>
                 </fieldset>
-             </div>
+             </div>-->
         </div>
     </div>
 

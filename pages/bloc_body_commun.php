@@ -42,11 +42,30 @@ if ((isset($_SESSION['email']))&(isset($_SESSION['password']))) {
                     $_SESSION['email'] = '';
                     $_SESSION['password'] = '';
                     echo"<script>alert('mot de passe incorrect');</script>";
-                    //require('session_destroy.php');
+                    require('session_destroy.php');
                     echo"<script>document.location.replace('../index.php')</script>";
                     exit;
                 }
 			} 
+
+			/*print_r($global);
+			print_r($nbarray);
+			
+			if (array_search($email_averifier, $value) and array_search($password_averifier, $value))
+			{
+					echo 'je passe ds email trouvé et pass touvé';
+					$qualification = $value['QUALIFICATION'];
+					$value_qualification = $value['QUALIFICATION'];
+
+				} else { // add this execption if password is not correct
+                    $_SESSION['email'] = '';
+                    $_SESSION['password'] = '';
+                    echo"<script>alert('mot de passe incorrect');</script>";
+                    //require('session_destroy.php');
+                    echo"<script>document.location.replace('../index.php')</script>";
+                    exit;
+                }*/
+			//} 
 		}
 }
 else {

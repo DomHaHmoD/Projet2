@@ -18,15 +18,14 @@
                 <form id="form_login" action="pages/page2.php" method="post">
                     <div class="form-group">
                     <!--<div class="input-field">-->
-                        <label for="InputEmail">Identifiant</label>
-                        <input type="text" name="email" id="InputEmail"  class="form-control validate"
-                                 size="50" required>
+                        <label for="InputEmail" data-error="wrong">Identifiant</label>
+                        <input type="text" name="email" id="InputEmail"  class="form-control validate" size="50" value="" required>
                         <!--<small id="email" class="form-text text-muted">Ne donner jamais votre mot de passe</small>-->
                     </div>
                     <div class="form-group">
                     <!--<div class="input-field">-->
                         <label for="InputPassword">Mot de passe</label>
-                        <input type="password" name="password" class="form-control validate" id="InputPassword"
+                        <input type="password" name="password" value="" class="form-control validate" id="InputPassword"
                                 required>
                     </div>
 
