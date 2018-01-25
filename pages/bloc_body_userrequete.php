@@ -106,11 +106,10 @@
 				    visualisez.
 				    <br/>
 				    <br/>
-				    Si vous cliquez sur la requete 7, il faut imérativement saisir le nom d'une personne.
+				    Si vous cliquez sur la requete 7, il faut impérativement saisir le nom d'une personne.
 				    <br/>
 				    <br/>
-				    Vous aurez un bouton "revenir" aux requêtes,
-				    pour revenir sur cette page.
+				    A tout moment, vous pourrez revenir en arrière grâce à des boutons "revenir à la page précédente".
 				    </p>
 			    <form>
 		</fieldset>

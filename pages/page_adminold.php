@@ -53,8 +53,8 @@ echo '<br />';*/
                     <br/>
                     <br/>
                     <div>
-                        <button class="btn waves-effect waves-light" type="submit" name="ajouter un utilisateur"
-                                ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_ajout.php'">
+                        <button class="btn waves-effect waves-light tooltipped" type="submit" name="ajouter un utilisateur" 
+                                ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page_admin_ajout.php'" data-position="right" data-delay="50" data-tooltip="ajouter un utilisateur">
                                 Ajouter  un utilisateur
                         </button>
                     </div>
@@ -66,11 +66,10 @@ echo '<br />';*/
             <fieldset id="bloc_infos">
                 <legend><h5>Informations</h5></legend>
                 <form>
-                    <p>cliquez sur la requête que vous souhaitez
-                        visualisez.
-
-                        Vous aurez un bouton "revenir" aux requêtes,
-                        pour revenir sur cette page.
+                    <p>Cliquez sur l'option que vous souhaitez.
+                        <br/>
+                        <br/>
+                        A tout moment, vous pourrez revenir en arrière grâce à des boutons "revenir à la page précédente".
                     </p>
                     <form>
             </fieldset>

@@ -19,7 +19,9 @@ else      $privilege="";
 // On vérifie si les champs sont vides 
 if(empty($nom) OR empty($prenom) OR empty($login) OR empty($password) OR empty($privilege))
     { 
-    echo '<font color="red">Attention, seul le champs <b>password</b> peut rester vide !</font>'; 
+    //echo '<font color="red">Attention, seul le champs <b>password</b> peut rester vide !</font>';
+    echo '<script>alert("Merci de renseigner les champs d\'information de l\'utilisateur");</script>';
+    echo '<script>document.location.replace("page_admin_ajout.php")</script>';
     } 
 
 // Aucun champ n'est vide, on peut enregistrer dans la table 

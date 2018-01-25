@@ -68,7 +68,7 @@ else
                          OR die ();
                          echo '
                          <script>
-                                alert ("Vos informations ont bien été supprimiées");
+                                alert ("Vos informations ont bien été supprimées");
                                  document.location.replace("page2.php" );
                          </script>';
 }
