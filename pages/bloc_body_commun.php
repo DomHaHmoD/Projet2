@@ -34,72 +34,77 @@ if ((isset($_SESSION['email']))&(isset($_SESSION['password']))) {
 		;");
 	$global = $reponse->fetchAll(PDO::FETCH_ASSOC);
 	$nbarray = count($global);
-	//print_r($global);
+	/*var_dump($global);
+	echo '-----';
+	echo '<br/>';*/
 	//echo $nbarray;
+
 	foreach ($global as $key => $value) {
-		print_r($value);
-		echo '----';
-				if ($email_averifier == $value['LOGIN'])
+		/*$array_true = array_search($email_averifier, $value);
+		echo 'var_dump($value)';
+		var_dump($value);
+		echo '-----';
+		echo 'var_dump($array_true)';
+		var_dump($array_true);
+		echo '-----';
+		echo '<br/>';
+		echo 'var_dump($email_averifier)';
+		var_dump($email_averifier);
+		echo '-----';
+		echo '<br/>';*/
+
+		if (array_search($email_averifier, $value) != 'LOGIN')
+			{
+				//echo"<script>alert('mail incorrect');</script>";
+				//require('session_destroy.php');
+				//echo"<script>document.location.replace('../index.php')</script>";
+
+				
+			} else 
+			{
+				if ($password_averifier != $value['PASSWORD']) 
 					{
-						echo 'mail ok';
-						echo '----';
-						if ($password_averifier == $value['PASSWORD'])
-							{
-							echo "pass ok";
-							echo '----';
-							$qualification = $value['QUALIFICATION'];
-							$value_qualification = $value['QUALIFICATION'];
-							} 
-						else 
-							{
-							/*echo"<script>alert('mot de passe incorrect');</script>";
-				            require('session_destroy.php');
-				            echo"<script>document.location.replace('../index.php')</script>";*/
-							echo 'pss ko';
-							echo '----';
+						//echo 'pass ko';
+						//break;
+					} else 
+						{
+							$recuptoto = $value;
+							//$qualification = $value['QUALIFICATION'];
+							//$value_qualification = $value['QUALIFICATION'];
+							break;
 						}
-					} 
-				else 
-					{
-					/*echo"<script>alert('mail incorrect');</script>";
-					require('session_destroy.php');
-					echo"<script>document.location.replace('../index.php')</script>"*/					
-					echo 'mail ko';
-					echo '----';	
-					}		
-	     }             
+			}
+	}
+ 		
+	//print_r($recuptoto);
+	
+	
+	if (isset($recuptoto)) {
+		if ($password_averifier == $recuptoto['PASSWORD']) {
+			//echo 'mail et mdp ok';
+			$qualification = $value['QUALIFICATION'];
+			$value_qualification = $value['QUALIFICATION'];
+		} else {
+			//echo 'mail ou pss ko';
+			echo"<script>alert('identifiant ou mot de passe incorrect');</script>";
+			require('session_destroy.php');
+			echo"<script>document.location.replace('../index.php')</script>";
+			//exit;
+		}
 			
+	} else {
+		//echo 'mail ou pss ko';
+		echo"<script>alert('identifiant ou mot de passe incorrect');</script>";
+		require('session_destroy.php');
+		echo"<script>document.location.replace('../index.php')</script>";
+		//exit;
+	}
+
+	
 }
 
 	// connexion bd
-	try
-		{
-			$bdd = new PDO('mysql:host=' .DB_HOST. ';dbname=' .DB_NAME. ';charset=utf8', DB_USER, DB_PASS);
-		}
-		catch (Exception $e)
-		{
-		        die('Erreur : ' . $e->getMessage());
-		}
-	// query sql pour la tables des utilisateurs
-	$reponse = $bdd->query("/*chercher les utilisateurs*/ SELECT   utilisateur.login      AS 'LOGIN' ,utilisateur.password_utilisateur      AS 'PASSWORD',utilisateur.id_type_utilisateur	AS 'QUALIFICATION'
- 
-			/*venant de la table type_utilisateur: */ FROM  utilisateur      /*jointe avec les tables suivantes*/  INNER JOIN type_utilisateur ON utilisateur.id_type_utilisateur = type_utilisateur.id_type_utilisateur
-		;");
-	$global = $reponse->fetchAll(PDO::FETCH_ASSOC);
-	$nbarray = count($global);
-		foreach ($global as $key => $value) {
-			if (array_search($email_averifier, $value))
-			{
-				if (array_search($password_averifier, $value))
-				{
-					$_SESSION['qualification'] = $value['QUALIFICATION'];
-					/*echo '$value["QUALIFICATION"] = '.$value['QUALIFICATION'];
-					echo '<br />';
-					echo '$_SESSION["QUALIFICATION"] = '.$_SESSION['QUALIFICATION'];
-					echo '<br />';*/
-				}
-			}
-		}
+	
 
 // en fonction de la qualification > différent menu
 //echo $qualification;
