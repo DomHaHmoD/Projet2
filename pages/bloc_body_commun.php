@@ -17,7 +17,6 @@ if ((isset($_SESSION['email']))&(isset($_SESSION['password']))) {
 	$password_averifier = $_SESSION['password'];
 	//echo $email_averifier;
 	//echo $password_averifier;
-
 	// connexion bd
 	try
 		{
@@ -38,7 +37,6 @@ if ((isset($_SESSION['email']))&(isset($_SESSION['password']))) {
 	echo '-----';
 	echo '<br/>';*/
 	//echo $nbarray;
-
 	foreach ($global as $key => $value) {
 		/*$array_true = array_search($email_averifier, $value);
 		echo 'var_dump($value)';
@@ -52,13 +50,11 @@ if ((isset($_SESSION['email']))&(isset($_SESSION['password']))) {
 		var_dump($email_averifier);
 		echo '-----';
 		echo '<br/>';*/
-
 		if (array_search($email_averifier, $value) != 'LOGIN')
 			{
 				//echo"<script>alert('mail incorrect');</script>";
 				//require('session_destroy.php');
 				//echo"<script>document.location.replace('../index.php')</script>";
-
 				
 			} else 
 			{
@@ -99,13 +95,10 @@ if ((isset($_SESSION['email']))&(isset($_SESSION['password']))) {
 		echo"<script>document.location.replace('../index.php')</script>";
 		//exit;
 	}
-
 	
 }
-
 	// connexion bd
 	
-
 // en fonction de la qualification > différent menu
 //echo $qualification;
 switch ($qualification) {
@@ -131,7 +124,4 @@ switch ($qualification) {
 		echo 'attention';
 		break;
 	}
-
-
 ?>
-
