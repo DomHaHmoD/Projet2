@@ -32,8 +32,11 @@ l'architecture logicielle est orchestré par index.php.
 
 # Utilisation
 pour utiliser l'application, il faut:
+- un serveur Web, nous avons utilisé WAMPA64
+- une base de donnée, nous avons utilisé MySQL
+- PHP 7.1.9
 
-PHP 7.1.9
+il faudra créer un fichier config.inc.php, dans lequel il faudra paramétrer la accès à la base de donnée ($DB_NAME, $DB_HOST, $DB_USER, $DB_PASS).
 
 Pour l'éxécuter manuellement : localhost/stapa3php/projet2/index.php
 
