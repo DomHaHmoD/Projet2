@@ -65,7 +65,7 @@ else
     $reponse -> execute() or die(); 
     
     if ($privilege =1){
-    $reponse = $bdd->prepare('CREATE USER "'.$login.'"@"localhost" IDENTIFIED WITH mysql_native_password AS "'.$password.'";GRANT SELECT ON *.* TO "'.$login.'"@"localhost" REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0');
+    $reponse = $bdd->prepare('CREATE USER "'.$login.'"@"localhost" IDENTIFIED BY "'.$password.'"; GRANT USAGE ON *.* TO "'.$login.'"@"localhost"; GRANT SELECT ON stapa.* TO "'.$login.'"@"localhost" REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0');
     $reponse -> execute() or die();
 
     }else if($privilege =2){
