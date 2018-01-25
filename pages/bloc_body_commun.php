@@ -15,6 +15,9 @@ require('../config.inc.php');
 if ((isset($_SESSION['email']))&(isset($_SESSION['password']))) {
 	$email_averifier = $_SESSION['email'];
 	$password_averifier = $_SESSION['password'];
+	//echo $email_averifier;
+	//echo $password_averifier;
+
 	// connexion bd
 	try
 		{
@@ -31,49 +34,43 @@ if ((isset($_SESSION['email']))&(isset($_SESSION['password']))) {
 		;");
 	$global = $reponse->fetchAll(PDO::FETCH_ASSOC);
 	$nbarray = count($global);
-		foreach ($global as $key => $value) {
-			if (array_search($email_averifier, $value))
-			{
-				if (array_search($password_averifier, $value))
-				{
-					$qualification = $value['QUALIFICATION'];
-					$value_qualification = $value['QUALIFICATION'];
-				} else { // add this execption if password is not correct
-                    $_SESSION['email'] = '';
-                    $_SESSION['password'] = '';
-                    echo"<script>alert('mot de passe incorrect');</script>";
-                    require('session_destroy.php');
-                    echo"<script>document.location.replace('../index.php')</script>";
-                    exit;
-                }
-			} 
-
-			/*print_r($global);
-			print_r($nbarray);
+	//print_r($global);
+	//echo $nbarray;
+	foreach ($global as $key => $value) {
+		print_r($value);
+		echo '----';
+				if ($email_averifier == $value['LOGIN'])
+					{
+						echo 'mail ok';
+						echo '----';
+						if ($password_averifier == $value['PASSWORD'])
+							{
+							echo "pass ok";
+							echo '----';
+							$qualification = $value['QUALIFICATION'];
+							$value_qualification = $value['QUALIFICATION'];
+							} 
+						else 
+							{
+							/*echo"<script>alert('mot de passe incorrect');</script>";
+				            require('session_destroy.php');
+				            echo"<script>document.location.replace('../index.php')</script>";*/
+							echo 'pss ko';
+							echo '----';
+						}
+					} 
+				else 
+					{
+					/*echo"<script>alert('mail incorrect');</script>";
+					require('session_destroy.php');
+					echo"<script>document.location.replace('../index.php')</script>"*/					
+					echo 'mail ko';
+					echo '----';	
+					}		
+	     }             
 			
-			if (array_search($email_averifier, $value) and array_search($password_averifier, $value))
-			{
-					echo 'je passe ds email trouvé et pass touvé';
-					$qualification = $value['QUALIFICATION'];
-					$value_qualification = $value['QUALIFICATION'];
-
-				} else { // add this execption if password is not correct
-                    $_SESSION['email'] = '';
-                    $_SESSION['password'] = '';
-                    echo"<script>alert('mot de passe incorrect');</script>";
-                    //require('session_destroy.php');
-                    echo"<script>document.location.replace('../index.php')</script>";
-                    exit;
-                }*/
-			//} 
-		}
 }
-else {
-	/* si le login et password existe pas */
-	echo"<script>alert('mot de passe et/ou identifiant incorrect');</script>";
-	echo 'Mauvais email ou password ';
-	$email_averifier = $_SESSION['email'];
-	$password_averifier = $_SESSION['password'];
+
 	// connexion bd
 	try
 		{
@@ -103,7 +100,7 @@ else {
 				}
 			}
 		}
-}
+
 // en fonction de la qualification > différent menu
 //echo $qualification;
 switch ($qualification) {
@@ -128,7 +125,8 @@ switch ($qualification) {
 	default:
 		echo 'attention';
 		break;
-}
+	}
+
 
 ?>
 
