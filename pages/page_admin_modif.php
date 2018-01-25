@@ -1,3 +1,12 @@
+<!--*****************************************************************************************************
+    *                                       "PAGE" de ADMIN                                             *
+    *                             Page Aministrateur affiche le formulaire de modification              *
+    *                                                                                                   *
+    *       Author = Equipe projet 2                                                                    *
+    *       Version = 1.0                                                                               *
+    *       Date = 26/01/2018                                                                           *
+    *****************************************************************************************************
+-->
 <?php
  //appel config.inc.php
 session_start();
@@ -171,17 +180,17 @@ require('../config.inc.php');
     <fieldset id="bloc_infos">
         <legend><h5>Informations</h5></legend>
         <form>
-            <p>pour les privilèges, utiliser les codes:
+            <p>Pour les privilèges, utiliser les codes:
                 <br />
                 1- utilisateur
                 <br />
                 2- gestionnaire
                 <br />
                 3- adminsitrateur
-                <br />
-                <br />
-                Vous aurez un bouton "revenir" aux requêtes,
-                pour revenir sur cette page.
+                <br/>
+                <br/>
+
+                Vous aurez un bouton "revenir" à la page précédente.
             </p>
             <form>
     </fieldset>

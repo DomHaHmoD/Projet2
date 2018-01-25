@@ -1,3 +1,12 @@
+<!--*****************************************************************************************************
+    *                                       "CODE" de UTILISATEUR                                       *
+    *                            Code utilisateur permet de dialoguer avec la BDD                       *
+    *                                 et affiche le résultat des requêtes                               *
+    *       Author = Equipe projet 2                                                                    *
+    *       Version = 1.0                                                                               *
+    *       Date = 26/01/2018                                                                           *
+    *****************************************************************************************************
+-->
 <?php
 //require('session_start.php');
 
@@ -176,7 +185,7 @@ if (empty($_POST['requete_input'])) {
 foreach ($nom_requete[0] as $key => $value) {
     $nom_requetetitre = $value;
 }
-echo '<p>voici le résultat pour : <b>' . $nom_requetetitre . '</b></p>';
+echo '<p>Voici le résultat pour : <b>' . $nom_requetetitre . '</b></p>';
 
 /* LA VRAI REQUETE POUR LES DATAS DU TABLEAU */
 foreach ($requete[0] as $key => $value) {

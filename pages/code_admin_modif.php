@@ -1,3 +1,12 @@
+<!--*****************************************************************************************************
+    *                                       "CODE" de l' ADMINISTRATEUR                                 *
+    *                            Code administrateur permet de dialoguer avec le bdd                    *
+    *         d'enregistrer les modifications  d'un utlisateur ou de supprimer un utilisateur           *
+    *       Author = Equipe projet 2                                                                    *
+    *       Version = 1.0                                                                               *
+    *       Date = 26/01/2018                                                                           *
+    *****************************************************************************************************
+-->
 
 <?php 
 // On commence par récupérer les champs 

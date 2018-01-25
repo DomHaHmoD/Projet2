@@ -1,7 +1,7 @@
 <!--*****************************************************************************************************
-	*			      						"PAGE" 2 / Accès au 3 pages									*
-	*							Utilisateur, Gestionnaire et Administrateur								*
-	*				                   		                                                        	*
+	*			      						"PAGE" 2 / PAGE CONTENEUR									*
+	*							de Utilisateur, Gestionnaire et Administrateur							*
+	*				                   		dans le bloc body commun                                    *
 	* 		Author = Equipe projet 2																	*
 	* 		Version = 1.0																	            *
 	* 		Date = 26/01/2018													        				*

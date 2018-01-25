@@ -1,3 +1,13 @@
+<!--*****************************************************************************************************
+    *                                       "CODE" du GESTIONNAIRE                                      *
+    *                            Code gestionnaire permet de dialoguer avec la BDD                      *
+    *                              et de modifier les informations un utilisateur                       *
+    *       Author = Equipe projet 2                                                                    *
+    *       Version = 1.0                                                                               *
+    *       Date = 26/01/2018                                                                           *
+    *****************************************************************************************************
+-->
+
 <?php
 // On commence par récupérer les champs
 if (isset($_POST['nom'])) {

@@ -1,3 +1,13 @@
+<!--*****************************************************************************************************
+    *                                       "CODE" de l' ADMINISTRATEUR                                 *
+    *                            Code administrateur permet de dialoguer avec la BDD                    *
+    *                                 et affiche le résultat de la recherche d'un utilisateur           *
+    *       Author = Equipe projet 2                                                                    *
+    *       Version = 1.0                                                                               *
+    *       Date = 26/01/2018                                                                           *
+    *****************************************************************************************************
+-->
+
 <?php
 
 //require('../config.inc.php');

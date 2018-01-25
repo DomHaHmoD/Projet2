@@ -2,7 +2,10 @@
 	*			      			PROFIL "GESTIONNAIRE" - AFFICHAGE RESULTATS RECHERCHE					*
 	*																									*
 	*						Le gestionnaire peut voir l'aboutissement de sa recherche.					*
-	* 																									*	*****************************************************************************************************
+	* 																									*	*       Author = Equipe projet 2                                                                    *
+    *       Version = 1.0                                                                               *
+    *       Date = 26/01/2018                                                                           *
+    *****************************************************************************************************
 -->
 
 <?php
@@ -73,35 +76,20 @@ session_start();
     } else {
         
         echo"<script>alert('Merci de saisir le nom ou la date de naissance');</script>";
-        /*require('session_destroy.php';
-        echo"<script>document.location.replace('../index.php')</script>";*/
-        /*echo'<div id="modal1" class="modal">
-                    <div class="modal-content">
-                        <h4>Modal Header</h4>
-                        <p>A bunch of text</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-                    </div>
-                </div>';*/
-        /*require('session_destroy.php');*/
         echo"<script>document.location.replace('page2.php')</script>";
         exit;
     }
-    //die();
-
+    
 
     // prepare the data
     $requete = $req->fetchAll(PDO::FETCH_ASSOC);
-    //$nom_requete = $nomreq->fetchAll(PDO::FETCH_ASSOC);
-    //print_r($requete);
-    //echo $nom_requete
-    //die();
-    // display the title (one of 8 request)
-    /*foreach ($nom_requete[0] as $key => $value) {
-        $nom_requetetitre = $value;
+
+
+    // test si la réponse est vide > l'utilisateur n'existe pas
+    if (empty($requete)) {
+        echo"<script>alert('aucun abonné existe');</script>";
+        echo"<script>document.location.replace('page2.php')</script>";
     }
-    echo '<p>voici le résultat pour : ' .$nom_requetetitre.'</p>';*/
 
     foreach ($requete[0] as $key => $value) {
         /*echo 'requete[0] =';

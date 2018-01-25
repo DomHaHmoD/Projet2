@@ -1,3 +1,14 @@
+<!--*****************************************************************************************************
+	*			      				PAGE D'ACCUEIL DU PROFIL "GESTIONNAIRE"								*
+	*																									*
+	*			Lorsque le gestionnaire se connecte, il est dirigé sur cette page d'accueil.			*
+	*			ce bloc est contenu dans page2 / body_bloc_commun / page_gestionnaire_abonne 			*
+	*				recherche de l'abonné à modifier.						*
+	* 		Author = Equipe projet 2																	*
+	* 		Version = 1.0																	            *
+	* 		Date = 26/01/2018													        				*
+	*****************************************************************************************************
+-->
 
 <div class="row" id="bloc_body_global">
     <div class="col s9"> <!-- zone data de gauche-->

@@ -1,4 +1,12 @@
-<!-- page bloc_body_userrequete -->
+<!--*****************************************************************************************************
+	*			      						"BLOC" du BODY USERREQUETE 				                    *
+	*				Bloc des boutons de requêtes / dans page 2-Bloc_body_commun              			*
+	*				                                                                         			*
+	* 		Author = Equipe projet 2																	*
+	* 		Version = 1.0																	            *
+	* 		Date = 26/01/2018													        				*
+	*****************************************************************************************************
+--><!-- page bloc_body_userrequete -->
 
 <!-- Bloc de body pour la page
 	User Requete -->

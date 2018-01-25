@@ -10,7 +10,7 @@
 <div class="row" id="bloc_body_global">
     <div class="col s9">
         <fieldset id="login">
-                <legend id="legend_login"><h4>Bienvenue sur STAPA | Login</h4></legend>
+                <legend id="legend_login"><h4>STAPA | Identification</h4></legend>
 
                 <label for="action_type"><h5>Merci de saisir vos identifiants</h5></label>
 

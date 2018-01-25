@@ -1,5 +1,5 @@
 <!--*****************************************************************************************************
-	*			      						"BLOC" TITRE											*
+	*			      						"BLOC" TITRE												*
 	*																									*
 	*				Barre de navigation commune en "haut" pour toutes les pages sauf l'index.			*
 	* 		Author = Equipe projet 2																	*

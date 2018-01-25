@@ -1,3 +1,12 @@
+<!--*****************************************************************************************************
+    *                                       "PAGE" de UTILISATEUR                                       *
+    *                             Page utilisateur affiche le résultat des requêtes                     *
+    *                                                                                                   *
+    *       Author = Equipe projet 2                                                                    *
+    *       Version = 1.0                                                                               *
+    *       Date = 26/01/2018                                                                           *
+    *****************************************************************************************************
+-->
 <?php 
 // appel config.inc.php
 session_start();

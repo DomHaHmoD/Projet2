@@ -1,3 +1,13 @@
+<!--*****************************************************************************************************
+    *                                       "CODE" de UTILISATEUR                                       *
+    *                            Code utilisateur permet de dialoguer avec la BDD                       *
+    *                                 et affiche le résultat des requêtes                               *
+    *       Author = Equipe projet 2                                                                    *
+    *       Version = 1.0                                                                               *
+    *       Date = 26/01/2018                                                                           *
+    *****************************************************************************************************
+-->
+
 <?php 
 
 		// teste si c'est une requete avec un input

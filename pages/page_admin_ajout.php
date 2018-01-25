@@ -1,3 +1,13 @@
+<!--*****************************************************************************************************
+    *                                       "PAGE" de l' ADMINISTRATEUR                                 *
+    *                            Page administrateur permet d'afficher                                  *
+    *                                 le formulaire d'ajout d'un utilisateur                            *
+    *       Author = Equipe projet 2                                                                    *
+    *       Version = 1.0                                                                               *
+    *       Date = 26/01/2018                                                                           *
+    *****************************************************************************************************
+-->
+
 <?php
  //appel config.inc.php
 session_start();

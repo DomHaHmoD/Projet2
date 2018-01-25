@@ -1,3 +1,12 @@
+<!--*****************************************************************************************************
+    *                                       "PAGE" de ADMIN                                             *
+    *                             Page Aministrateur affiche le résultat de recherche                   *
+    *                                                                                                   *
+    *       Author = Equipe projet 2                                                                    *
+    *       Version = 1.0                                                                               *
+    *       Date = 26/01/2018                                                                           *
+    *****************************************************************************************************
+-->
 <?php 
 // appel config.inc.php
 session_start();
@@ -51,7 +60,7 @@ echo '<br />';*/
                 <p> <!-- il faudra revenir au user menu -->
                     <button type="button" class="btn btn-primary" ONCLICK="window.location.href='http://localhost/stapa3php/projet2/pages/page2.php'">
                     <i class="material-icons left">keyboard_arrow_left</i>
-                    Revenir à la page requête</button>
+                    Revenir à la page précédente</button>
                 </p>
             </fieldset>
             
@@ -60,11 +69,12 @@ echo '<br />';*/
             <fieldset id="bloc_infos4">
                 <legend><h5>Informations</h5></legend>
                 
-                <p>cliquez sur la requête que vous souhaitez
-                    visualisez.
+                <p>Cliquez sur l'utilisateur que vous souhaitez
+                    modifier.
+                    <br/>
+                    <br/>
 
-                    Vous aurez un bouton "revenir" aux requêtes,
-                    pour revenir sur cette page.
+                    Vous aurez un bouton "revenir" à la page précédente.
                 </p>
             </fieldset>
         </div>
